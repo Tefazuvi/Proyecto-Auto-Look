@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="ContactPage" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:AutoLook.View;assembly=AutoLook" x:Class="AutoLook.View.Contacto" Title="Contacto">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All" Scale="1.2">
+                <!--Logo Image-->
+                <StackLayout Margin="0,100,0,0">
+                    <Image Source="AutoLookLogo.png" />
+                    <Label Text="CONTACTO" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" FontSize="20" />
+                </StackLayout>
+                <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10">
+                        <!--Mapa-->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="30">
+                            <Image Source="map.png" HeightRequest="30" Margin="20,0,10,0" />
+                            <Label Text="Calle Blancos,      150 m. Oeste de Amazon, contiguo a la línea del tren." TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                            <Image Source="waze.png" HeightRequest="50" Margin="10,0,10,0">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateWazeCommand, Source={x:Reference ContactPage}}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="10">
+                            <Image Source="phone.png" HeightRequest="30" Margin="48,0,10,0" />
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="(+506) 2221-8972" TextColor="White" HorizontalOptions="Center" />
+                                <Label Text="(+506) 8911-2424" TextColor="White" HorizontalOptions="Center" />
+                                <Label Text="(+506) 7202-7387" TextColor="White" HorizontalOptions="Center" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="10">
+                            <Image Source="mail.png" HeightRequest="30" Margin="0,0,10,0" />
+                            <Label Text="auto-look@hotmail.com" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="10">
+                            <Image Source="clock.png" HeightRequest="30" Margin="0,0,10,0" />
+                            <Label Text="L-S 8:00 a.m. - 6:00 p.m." TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

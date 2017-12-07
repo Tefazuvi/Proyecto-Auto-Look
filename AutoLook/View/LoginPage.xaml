@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.LoginPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
+                <!--Login Panel-->
+                <StackLayout Padding="30" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="StartAndExpand" Scale="1.2" Margin="0,50,0,0">
+                    <!--Logo Image-->
+                    <StackLayout Padding="0,30">
+                        <Image Source="AutoLookLogo.png"/>
+                    </StackLayout>
+                    <Label Text="Usuario" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" />
+                    <Entry Text="{Binding User}" Placeholder="Ingresar Usuario" TextColor="#9b9b9b" HorizontalTextAlignment="Center" />
+                    <Label Text="Contraseña" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" />
+                    <Entry Text="{Binding Password}" Placeholder="Ingresar Contraseña" TextColor="#9b9b9b" IsPassword="true" HorizontalTextAlignment="Center" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+                        <Label Text="Recordar" TextColor="#9b9b9b" VerticalTextAlignment="Center"/>
+                        <Switch IsToggled="{Binding Recordar}" Scale="0.8" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <Label Text="¿Olvidó su Contraseña?" TextColor="Blue" HorizontalOptions="Center" HeightRequest="20" VerticalTextAlignment="Center" />
+                    <StackLayout Padding="80,10">
+                        <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#000066" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
+                    </StackLayout>
+                    <Label Text="Crear Cuenta" TextColor="Blue" HorizontalOptions="Center" HeightRequest="20" VerticalTextAlignment="Center" />
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
