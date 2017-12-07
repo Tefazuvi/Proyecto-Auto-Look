@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="ContactPage" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:AutoLook.View;assembly=AutoLook" x:Class="AutoLook.View.Contacto" Title="Contacto">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                x:Name="ContactPage" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                xmlns:pages="clr-namespace:AutoLook.View;assembly=AutoLook" 
+                x:Class="AutoLook.View.Contacto" 
+                Title="Contacto">
     <ContentPage.Content>
         <AbsoluteLayout BackgroundColor="White">
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All" Scale="1.2">
