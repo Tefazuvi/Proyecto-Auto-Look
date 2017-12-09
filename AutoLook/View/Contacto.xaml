@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
                 x:Name="ContactPage" 
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<<<<<<< HEAD
                 xmlns:pages="clr-namespace:AutoLook.View" 
+=======
+                xmlns:pages="clr-namespace:AutoLook.View;assembly=AutoLook" 
+>>>>>>> 0eab0fec5f32cce79069a8dc6ecfb88e6750ffeb
                 x:Class="AutoLook.View.Contacto" 
                 Title="Contacto">
     <ContentPage.Content>

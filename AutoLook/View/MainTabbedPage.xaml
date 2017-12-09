@@ -3,7 +3,14 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             xmlns:pages="clr-namespace:AutoLook.View"
             x:Class="AutoLook.View.MainTabbedPage">
+<<<<<<< HEAD
     
         <pages:Contacto Icon="car.png"/>
     
 </TabbedPage>
+=======
+	
+        <pages:Contacto/>
+	
+</TabbedPage>
+>>>>>>> 0eab0fec5f32cce79069a8dc6ecfb88e6750ffeb

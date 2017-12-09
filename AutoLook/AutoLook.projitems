@@ -14,14 +14,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\MainTabbedPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Contacto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\MainTabbedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SendPassword.xaml">
       <SubType>Designer</SubType>
@@ -51,13 +51,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)View\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)View\MainTabbedPage.xaml.cs">
-      <DependentUpon>MainTabbedPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\Contacto.xaml.cs">
       <DependentUpon>Contacto.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AutoLookViewModel.cs" />
+<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)View\SendPassword.xaml.cs">
       <DependentUpon>SendPassword.xaml</DependentUpon>
     </Compile>
@@ -74,6 +72,11 @@
       <DependentUpon>SideMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\MasterPageItem.cs" />
+=======
+    <Compile Include="$(MSBuildThisFileDirectory)View\MainTabbedPage.xaml.cs">
+      <DependentUpon>MainTabbedPage.xaml</DependentUpon>
+    </Compile>
+>>>>>>> 0eab0fec5f32cce79069a8dc6ecfb88e6750ffeb
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />
