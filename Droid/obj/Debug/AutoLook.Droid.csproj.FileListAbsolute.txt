@@ -38,8 +38,8 @@
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.csproj.CoreCompileInputs.cache
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.App.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.LoginPage.xaml.g.cs
-/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.MainTabbedPage.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.Contacto.xaml.g.cs
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.MainTabbedPage.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.SendPassword.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.CreateUser.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.UserInfo.xaml.g.cs
