@@ -40,6 +40,11 @@
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.LoginPage.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.MainTabbedPage.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.Contacto.xaml.g.cs
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.SendPassword.xaml.g.cs
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.CreateUser.xaml.g.cs
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.UserInfo.xaml.g.cs
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.MainPage.xaml.g.cs
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.View.SideMenu.xaml.g.cs
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.dll
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.pdb
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/android/bin/com.companyname.AutoLook.apk
@@ -56,6 +61,12 @@
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/phone.png
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/map.png
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/waze.png
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/blueperson.png
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/bluelock.png
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/bluemail.png
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/bluephone.png
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/car.png
+/Users/tefa/Projects/AutoLook/Droid/obj/Debug/res/drawable/menu.png
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/R.cs.flag
 /Users/tefa/Projects/AutoLook/Droid/obj/Debug/uploadflags.txt
 bin/Debug/Mono.Android.pdb

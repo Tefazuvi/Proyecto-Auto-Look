@@ -1,5 +1,35 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.SideMenu">
-	<ContentPage.Content>
-	</ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="AutoLook.View.SideMenu" 
+    xmlns:local="using:AutoLook.Model" 
+    xmlns:pages="using:AutoLook.View" 
+    Title="Menú" 
+    Icon="menu.png"
+    Padding="10,60,0,0">
+    <StackLayout>
+        <ListView x:Name="listView">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:MasterPageItem}">
+                    <local:MasterPageItem Title="Login" IconSource="blueperson.png" TargetType="{x:Type pages:LoginPage}" />
+                    <local:MasterPageItem Title="HomePage" IconSource="blueperson.png" TargetType="{x:Type pages:MainTabbedPage}" />
+                    <local:MasterPageItem Title="Información" IconSource="blueperson.png" TargetType="{x:Type pages:UserInfo}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
