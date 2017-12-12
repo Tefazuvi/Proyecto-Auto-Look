@@ -7,6 +7,8 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using AutoLook.View;
+using Plugin.Media;
+using AutoLook.Model;
 
 namespace AutoLook.ViewModel
 {
@@ -20,6 +22,26 @@ namespace AutoLook.ViewModel
         #region Instances
 
         public ICommand NavigateWazeCommand { get; set; }
+        public ICommand AddImageCommand { get; set; }
+
+        private ObservableCollection<ImageFile> _lstImages { get; set; }
+
+        public ObservableCollection<ImageFile> lstImages
+
+        {
+            get
+            {
+                return _lstImages;
+
+            }
+            set
+            {
+                _lstImages = value;
+                OnPropertyChanged("lstImages");
+
+            }
+
+        }
 
         #endregion
 
@@ -30,6 +52,25 @@ namespace AutoLook.ViewModel
             
         }
 
+        private async void AddImage()
+        {
+            
+            await CrossMedia.Current.Initialize();
+
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            {
+
+                var file = await CrossMedia.Current.PickPhotoAsync();
+
+                if (file != null)
+                {
+                    lstImages.Add(new ImageFile { Path= file.Path});
+                }
+
+                return;
+            }
+        }
+
         /*private async Task InitClass()
         {
             
@@ -38,6 +79,7 @@ namespace AutoLook.ViewModel
         private void InitCommands()
         {
             NavigateWazeCommand = new Command(NavigateWaze);
+            AddImageCommand = new Command(AddImage);
         }
 
         #endregion

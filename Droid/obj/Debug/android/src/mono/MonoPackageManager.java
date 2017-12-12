@@ -108,6 +108,12 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "AutoLook.Droid.dll" comes first in this list. */
 		"AutoLook.Droid.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Media.Abstractions.dll",
+		"Plugin.Media.dll",
+		"Plugin.Permissions.Abstractions.dll",
+		"Plugin.Permissions.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",

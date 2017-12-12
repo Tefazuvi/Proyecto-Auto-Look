@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using AutoLook.Model;
+using AutoLook.ViewModel;
 
 namespace AutoLook.View
 {
@@ -10,6 +12,8 @@ namespace AutoLook.View
         public LoginPage()
         {
             InitializeComponent();
+
+            BindingContext = new LoginViewModel();
         }
     }
 }

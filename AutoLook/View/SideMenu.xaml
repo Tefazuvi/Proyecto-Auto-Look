@@ -16,7 +16,7 @@
                     <local:MasterPageItem Title="Información" IconSource="blueperson.png" TargetType="{x:Type pages:UserInfo}" />
                 </x:Array>
             </ListView.ItemsSource>
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate> 
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="5,10">

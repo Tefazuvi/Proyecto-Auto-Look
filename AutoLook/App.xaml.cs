@@ -9,7 +9,9 @@ namespace AutoLook
         {
             InitializeComponent();
 
-            MainPage = new AutoLook.View.MainPage();
+            MainPage = new AutoLook.View.ReceiveCar();
+
+            //MainPage = new AutoLook.View.MainPage();
 
             /*
             NavigationPage navigation = new NavigationPage(new MainTabbedPage());

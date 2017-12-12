@@ -2,6 +2,14 @@ AutoLook.Droid.MainActivity, AutoLook.Droid;md59e86e92d00bf18886e299565ceea54c9.
 AutoLook.Droid.MainActivity, AutoLook.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md59e86e92d00bf18886e299565ceea54c9.MainActivity
 AutoLook.Droid.MainActivity;md59e86e92d00bf18886e299565ceea54c9.MainActivity
 autolook.droid.MainActivity;md59e86e92d00bf18886e299565ceea54c9.MainActivity
+AutoLook.Droid.MainApplication, AutoLook.Droid;md59e86e92d00bf18886e299565ceea54c9.MainApplication
+AutoLook.Droid.MainApplication, AutoLook.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md59e86e92d00bf18886e299565ceea54c9.MainApplication
+AutoLook.Droid.MainApplication;md59e86e92d00bf18886e299565ceea54c9.MainApplication
+autolook.droid.MainApplication;md59e86e92d00bf18886e299565ceea54c9.MainApplication
+Plugin.Media.MediaPickerActivity, Plugin.Media;md5f1b52d9f1d5d1981437e7e130649468a.MediaPickerActivity
+Plugin.Media.MediaPickerActivity, Plugin.Media, Version=3.0.1.0, Culture=neutral, PublicKeyToken=null;md5f1b52d9f1d5d1981437e7e130649468a.MediaPickerActivity
+Plugin.Media.MediaPickerActivity;md5f1b52d9f1d5d1981437e7e130649468a.MediaPickerActivity
+plugin.media.MediaPickerActivity;md5f1b52d9f1d5d1981437e7e130649468a.MediaPickerActivity
 Android.Support.V4.Widget.SearchViewCompat/IOnCloseListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat.IOnCloseListenerImplementor;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor

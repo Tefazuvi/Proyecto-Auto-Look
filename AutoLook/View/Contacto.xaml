@@ -9,7 +9,7 @@
         <AbsoluteLayout BackgroundColor="White">
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All" Scale="1.2">
                 <!--Logo Image-->
-                <StackLayout Margin="0,100,0,0" >
+                <StackLayout Margin="0,70,0,0" >
                     <Image Source="AutoLookLogo.png" HeightRequest="110"/>
                     <Label Text="CONTACTO" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" FontSize="20" />
                 </StackLayout>

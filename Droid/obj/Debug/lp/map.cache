@@ -1,4 +1,10 @@
 FormsViewGroup
+Newtonsoft.Json
+Plugin.CurrentActivity
+Plugin.Media.Abstractions
+Plugin.Media
+Plugin.Permissions.Abstractions
+Plugin.Permissions
 System.Runtime
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.Annotations
