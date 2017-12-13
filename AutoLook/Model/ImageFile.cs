@@ -1,19 +1,20 @@
 ﻿
 using System;
+using System.IO;
 
 using Xamarin.Forms;
 
 namespace AutoLook.Model
 {
-    public class ImageFile 
+    public class ImageFile
     {
         public string Path
         {
             get;
             set;
         }
-   
-            public Byte[] Image
+
+        public Byte[] Image
         {
             get;
             set;
@@ -21,8 +22,6 @@ namespace AutoLook.Model
 
         public ImageFile()
         {
-
-
         }
     }
 }

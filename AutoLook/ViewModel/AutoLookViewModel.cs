@@ -24,7 +24,7 @@ namespace AutoLook.ViewModel
         public ICommand NavigateWazeCommand { get; set; }
         public ICommand AddImageCommand { get; set; }
 
-        private ObservableCollection<ImageFile> _lstImages { get; set; }
+        private ObservableCollection<ImageFile> _lstImages = new ObservableCollection<ImageFile>();
 
         public ObservableCollection<ImageFile> lstImages
 
@@ -43,13 +43,15 @@ namespace AutoLook.ViewModel
 
         }
 
+        //private Image image = new Image();
+
         #endregion
 
         #region Methods
 
         private void NavigateWaze()
         {
-            
+
         }
 
         private async void AddImage()
@@ -64,7 +66,8 @@ namespace AutoLook.ViewModel
 
                 if (file != null)
                 {
-                    lstImages.Add(new ImageFile { Path= file.Path});
+                    ImageFile image = new ImageFile { Path = file.Path };
+                    lstImages.Add(image);
                 }
 
                 return;

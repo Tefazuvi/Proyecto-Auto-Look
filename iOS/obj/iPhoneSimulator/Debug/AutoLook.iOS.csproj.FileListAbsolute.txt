@@ -151,4 +151,7 @@
 /Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.View.Financing.xaml.g.cs
 /Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.exe
 /Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.pdb
+/Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-11.2/optimized/addImage.png
+/Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-11.2/optimized/info.png
+/Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-11.2/optimized/addImageWhite.png
 /Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.csprojResolveAssemblyReference.cache

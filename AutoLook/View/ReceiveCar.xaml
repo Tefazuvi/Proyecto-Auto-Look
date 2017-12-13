@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.ReceiveCar">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="ReceiveCar" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.ReceiveCar" Title="Recibimos">
     <ContentPage.Content>
         <AbsoluteLayout>
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
-                <StackLayout Margin="0,40,0,15" Scale="1.2">
-                    <Image Source="AutoLookLogo.png" HeightRequest="110" />
-                    <Label Text="RECIBIMOS SU CARRO" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" FontSize="20" />
+                <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="RECIBIMOS SU CARRO" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="20" Margin="0,20,0,10" />
                 </StackLayout>
                 <!--Login Panel-->
-                <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
-                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="60">
-                        <Entry Text="{Binding Marca}" Placeholder="Marca" TextColor="#9b9b9b" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,5,0,5" />
-                        <Entry Text="{Binding Año}" Placeholder="Año" TextColor="#9b9b9b" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,5,0,5" />
-                        <Entry Text="{Binding Modelo}" Placeholder="Modelo" TextColor="#9b9b9b" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,5,0,5" />
-                        <Entry Text="{Binding Millas}" Placeholder="Millas" TextColor="#9b9b9b" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,5,0,5" />
-                        <Entry Text="{Binding Daños}" Placeholder="Daños" TextColor="#9b9b9b" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,5,0,5" />
-
-                        <StackLayout>
-                            <ListView x:Name="lstvImages" ItemsSource="{Binding lstImages}">
+                <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30,10">
+                        <Entry Text="{Binding Marca}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding Año}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding Modelo}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding Millas}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding Daños}" Placeholder="Daños" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <StackLayout VerticalOptions="StartAndExpand">
+                            <ListView x:Name="lstvImages" ItemsSource="{Binding lstImages}" HasUnevenRows="True">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
@@ -26,10 +24,14 @@
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
-                            <Button Text="Agregar Imagen" Command="{Binding AddImageCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="40" />
                         </StackLayout>
-                        <StackLayout Padding="60,30" VerticalOptions="CenterAndExpand" Orientation="Vertical">
-                            <Button Text="Enviar Consulta" Command="{Binding ReceiveCarCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="40" />
+                        <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                            <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="addImage.png" HeightRequest="35" WidthRequest="35">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path = BindingContext.AddImageCommand, Source={x:Reference ReceiveCar}}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Button Text="Enviar Consulta" Command="{Binding ReceiveCarCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>

@@ -142,6 +142,9 @@
     <BundleResource Include="Resources\bluephone.png" />
     <BundleResource Include="Resources\car.png" />
     <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\addImage.png" />
+    <BundleResource Include="Resources\info.png" />
+    <BundleResource Include="Resources\addImageWhite.png" />
   </ItemGroup>
   <Import Project="..\AutoLook\AutoLook.projitems" Label="Shared" Condition="Exists('..\AutoLook\AutoLook.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
