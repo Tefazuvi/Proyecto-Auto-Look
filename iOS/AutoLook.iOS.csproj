@@ -145,6 +145,15 @@
     <BundleResource Include="Resources\addImage.png" />
     <BundleResource Include="Resources\info.png" />
     <BundleResource Include="Resources\addImageWhite.png" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\dollar.png" />
+    <BundleResource Include="Resources\Jeep1.jpg" />
+    <BundleResource Include="Resources\Jeep2.jpg" />
+    <BundleResource Include="Resources\Jeep3.jpg" />
+    <BundleResource Include="Resources\Pin.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\heart.png" />
+    <BundleResource Include="Resources\right.png" />
   </ItemGroup>
   <Import Project="..\AutoLook\AutoLook.projitems" Label="Shared" Condition="Exists('..\AutoLook\AutoLook.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

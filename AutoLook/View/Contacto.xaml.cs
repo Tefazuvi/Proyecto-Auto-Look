@@ -11,7 +11,7 @@ namespace AutoLook.View
         public Contacto()
         {
             InitializeComponent();
-            BindingContext = new AutoLookViewModel();
+            BindingContext = AutoLookViewModel.GetInstance();
         }
     }
 }

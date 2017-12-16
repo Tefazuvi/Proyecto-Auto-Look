@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.About">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
+                <!--Logo Image-->
+                <StackLayout Margin="0,20,0,0">
+                    <Image Source="AutoLookLogo.png" HeightRequest="132" />
+                    <Label Text="INFORMACION GENERAL" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" FontSize="24" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="FillAndExpand" BackgroundColor="#000066">
+                    <StackLayout VerticalOptions="CenterAndExpand" Padding="50">
+                        <Label Text="Venta de vehículos usados con 27 años de experiencia en el mercado Costarricense." TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10" FontSize="24" />
+                        <Label Text="Importación directa desde Estados Unidos." TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10" FontSize="24" />
+                        <Label Text="Servicio personalizado, se traen vehículos por encargo a petición del cliente. " TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10" FontSize="24" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

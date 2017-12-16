@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using AutoLook.ViewModel;
 using Xamarin.Forms;
 
 namespace AutoLook.View
@@ -10,6 +10,7 @@ namespace AutoLook.View
         public UserInfo()
         {
             InitializeComponent();
+            BindingContext = AutoLookViewModel.GetInstance();
         }
     }
 }

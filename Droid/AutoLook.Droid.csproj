@@ -163,6 +163,15 @@
     <AndroidResource Include="Resources\drawable\addImage.png" />
     <AndroidResource Include="Resources\drawable\info.png" />
     <AndroidResource Include="Resources\drawable\addImageWhite.png" />
+    <AndroidResource Include="Resources\drawable\check.png" />
+    <AndroidResource Include="Resources\drawable\dollar.png" />
+    <AndroidResource Include="Resources\drawable\Jeep1.jpg" />
+    <AndroidResource Include="Resources\drawable\Jeep2.jpg" />
+    <AndroidResource Include="Resources\drawable\Jeep3.jpg" />
+    <AndroidResource Include="Resources\drawable\Pin.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\heart.png" />
+    <AndroidResource Include="Resources\drawable\right.png" />
   </ItemGroup>
   <Import Project="..\AutoLook\AutoLook.projitems" Label="Shared" Condition="Exists('..\AutoLook\AutoLook.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

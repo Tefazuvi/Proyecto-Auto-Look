@@ -1,14 +1,8 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/ReceiveCar.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="AutoLook/View/ChangeInfo.xaml" Line="33" Column="15" />
-      <File FileName="AutoLook/View/CreateUser.xaml" Line="45" Column="15" />
-      <File FileName="AutoLook/Model/Car.cs" Line="28" Column="1" />
-      <File FileName="AutoLook/Model/User.cs" Line="6" Column="1" />
-      <File FileName="AutoLook/View/ReceiveCar.xaml" Line="33" Column="37" />
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="72" Column="1" />
-      <File FileName="AutoLook/Model/ImageFile.cs" Line="22" Column="9" />
-      <File FileName="AutoLook/View/UserInfo.xaml" Line="6" Column="1" />
+      <File FileName="AutoLook/View/LoginPage.xaml" Line="24" Column="98" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -17,6 +11,7 @@
       <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/ViewModel/LoginViewModel.cs" relfile="AutoLook/ViewModel/LoginViewModel.cs" line="55" column="1" />
       <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/Model/LoginModel.cs" relfile="AutoLook/Model/LoginModel.cs" line="22" column="1" />
       <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/Model/LoginModel.cs" relfile="AutoLook/Model/LoginModel.cs" line="37" column="1" />
+      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/View/SideMenu.xaml" relfile="AutoLook/View/SideMenu.xaml" line="19" column="39" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:AutoLook.View" x:Class="AutoLook.View.MainTabbedPage">
+    <pages:HomePage Icon="home.png" />
+    <pages:Favorites Icon="heart.png" />
+    <pages:Financing Icon="dollar.png" />
     <pages:ReceiveCar Icon="car.png" />
-    <pages:Contacto Icon="info.png" />
+    <pages:Contacto Icon="Pin.png" />
 </TabbedPage>
