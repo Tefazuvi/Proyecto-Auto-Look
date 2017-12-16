@@ -1,20 +1,24 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/HomePage.xaml">
     <Files>
-      <File FileName="AutoLook/View/LoginPage.xaml" Line="24" Column="98" />
+      <File FileName="AutoLook/View/LoginPage.xaml" Line="23" Column="35" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="140" Column="15" />
+      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="61" Column="47" />
+      <File FileName="AutoLook/Model/CarModel.cs" Line="55" Column="1" />
+      <File FileName="AutoLook/View/HomePage.xaml" Line="55" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/ViewModel/LoginViewModel.cs" relfile="AutoLook/ViewModel/LoginViewModel.cs" line="55" column="1" />
-      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/Model/LoginModel.cs" relfile="AutoLook/Model/LoginModel.cs" line="22" column="1" />
-      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/Model/LoginModel.cs" relfile="AutoLook/Model/LoginModel.cs" line="37" column="1" />
-      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/View/SideMenu.xaml" relfile="AutoLook/View/SideMenu.xaml" line="19" column="39" />
+      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/ViewModel/LoginViewModel.cs" relfile="AutoLook/ViewModel/LoginViewModel.cs" line="55" column="1" />
+      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/Model/LoginModel.cs" relfile="AutoLook/Model/LoginModel.cs" line="22" column="1" />
+      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/Model/LoginModel.cs" relfile="AutoLook/Model/LoginModel.cs" line="37" column="1" />
+      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/View/SideMenu.xaml" relfile="AutoLook/View/SideMenu.xaml" line="19" column="39" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.28EB52E3-551A-4E16-89A2-EACB180B72E7" automaticSigning="False" />
+  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EB1D6CD1-541E-42F4-95FF-41A29A4C016D" automaticSigning="False" />
 </Properties>

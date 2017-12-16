@@ -4,16 +4,19 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Runtime.InteropServices;
 using System.Linq;
+using Realms;
 
 namespace AutoLook.Model
 {
     public class CarModel
     {
+        //[PrimaryKey]
         public int Id { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
         public string Colour { get; set; }
         public int Year { get; set; }
+        public int Miles { get; set; }
         public string Type { get; set; }
         public double Price { get; set; }
         public int DoorsQuantity { get; set; }
@@ -44,8 +47,8 @@ namespace AutoLook.Model
             lstFotos.Add(new ImageFile { Path = "Jeep2.jpg" });
             lstFotos.Add(new ImageFile { Path = "Jeep3.jpg" });
 
-            lstVehiculos.Add(new CarModel { Id = 1, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Type = "4x4", Price = 10000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
-            lstVehiculos.Add(new CarModel { Id = 2, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Type = "4x4", Price = 10000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
+            lstVehiculos.Add(new CarModel { Id = 1, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2012, Miles=3000, Type = "4x4", Price = 90000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
+            lstVehiculos.Add(new CarModel { Id = 2, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Miles=2000, Type = "4x4", Price = 100000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
            
             return lstVehiculos;
         }

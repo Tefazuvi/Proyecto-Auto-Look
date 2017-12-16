@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using AutoLook.View;
 using Plugin.Media;
 using AutoLook.Model;
+using Realms;
 
 namespace AutoLook.ViewModel
 {
@@ -80,9 +81,12 @@ namespace AutoLook.ViewModel
             set
             {
                 _FiltroOrdenar = value;
+                OrdenarVehiculos(_FiltroOrdenar);
                 OnPropertyChanged("FiltroOrdenar");
             }
         }
+
+        private List<CarModel> lstOriginalVehiculos = new List<CarModel>();
 
         private ObservableCollection<CarModel> _lstVehiculos = new ObservableCollection<CarModel>();
 
@@ -98,6 +102,11 @@ namespace AutoLook.ViewModel
                 OnPropertyChanged("lstVehiculos");
             }
         }
+        /*
+        public CarModel(){
+            var realm = Realm.GetInstance();
+            return;
+        }*/
 
 
         #endregion
@@ -132,6 +141,37 @@ namespace AutoLook.ViewModel
 
         }
 
+        private void OrdenarVehiculos(int Orden)
+        {
+            //lstVehiculos.Clear();
+            //lstOriginalVehiculos.Where(x => x.Nombre.ToLower().Contains(textoBuscar.ToLower())).ToList().ForEach(x => lstPersonas.Add(x));
+
+            switch (Orden)
+            {
+                case 1:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos.OrderBy(car => car.Price));
+                    break;
+                case 2:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos.OrderByDescending(car => car.Price));
+                    break;
+                case 3:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos.OrderBy(car => car.Miles));
+                    break;
+                case 4:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos.OrderByDescending(car => car.Miles));
+                    break;
+                case 5:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos.OrderBy(car => car.Year));
+                    break;
+                case 6:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos.OrderByDescending(car => car.Year));
+                    break;
+                default:
+                    lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
+                    break;
+            }
+        }
+
         private void NavigateWaze()
         {
 
@@ -160,6 +200,7 @@ namespace AutoLook.ViewModel
         private async Task InitClass()
         {
             lstVehiculos = await CarModel.ObtenerVehiculos();
+            lstOriginalVehiculos = lstVehiculos.ToList();
         }
 
         private void InitCommands()
