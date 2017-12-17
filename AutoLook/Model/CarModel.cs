@@ -5,6 +5,9 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using System.Linq;
 using Realms;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace AutoLook.Model
 {
@@ -51,6 +54,34 @@ namespace AutoLook.Model
             lstVehiculos.Add(new CarModel { Id = 2, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Miles=2000, Type = "4x4", Price = 100000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
            
             return lstVehiculos;
+        }
+
+        public static async Task<bool> SaveCar(CarModel car)
+        {
+
+            try
+            {
+                
+                using (HttpClient client = new HttpClient())
+                {
+                    var uri = new Uri("");
+
+                    var json = JsonConvert.SerializeObject(car);
+
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
+                    string ans = await response.Content.ReadAsStringAsync();
+
+                    bool rqSaveCar = JsonConvert.DeserializeObject<bool>(ans);
+
+                    return rqSaveCar;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

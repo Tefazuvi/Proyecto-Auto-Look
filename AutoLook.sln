@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLook.iOS", "iOS\AutoLoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLook.Droid", "Droid\AutoLook.Droid.csproj", "{771E9941-FFB7-47B9-A995-FB86B420DE1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLookBackend", "AutoLookBackend\AutoLookBackend.csproj", "{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -41,5 +43,17 @@ Global
 		{771E9941-FFB7-47B9-A995-FB86B420DE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{771E9941-FFB7-47B9-A995-FB86B420DE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{771E9941-FFB7-47B9-A995-FB86B420DE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Release|iPhone.Build.0 = Release|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
