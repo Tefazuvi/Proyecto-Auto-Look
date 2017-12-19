@@ -12,6 +12,8 @@ namespace AutoLook.ViewModel
         #region Instances
 
         public ICommand LoginCommand { get; set; }
+        public ICommand OpenCreateUserCommand { get; set; }
+        public ICommand OpenSendPasswordCommand { get; set; }
 
         private string _User { get; set; }
 
@@ -24,6 +26,7 @@ namespace AutoLook.ViewModel
             set
             {
                 _User = value;
+                OnPropertyChanged("User");
             }
 
         }
@@ -39,6 +42,7 @@ namespace AutoLook.ViewModel
             set
             {
                 _Password = value;
+                OnPropertyChanged("Password");
             }
 
         }
@@ -54,11 +58,30 @@ namespace AutoLook.ViewModel
         {
             User user = await LoginModel.Authenticate(User, Password);
 
+            if (User == "Admin")
+            {
+                AutoLookViewModel.GetInstance().IsAdmin = true;
+            }else{
+                AutoLookViewModel.GetInstance().IsAdmin = false;
+            }
+
+        }
+
+        private void OpenCreateUser()
+        {
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new CreateUser());
+        }
+
+        private void OpenSendPassword()
+        {
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new SendPassword());
         }
 
         private void InitCommands()
         {
             LoginCommand = new Command(Login);
+            OpenCreateUserCommand = new Command(OpenCreateUser);
+            OpenSendPasswordCommand = new Command(OpenSendPassword);
         }
 
         #endregion

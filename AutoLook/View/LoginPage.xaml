@@ -17,11 +17,11 @@
                         <Label Text="Recordar" TextColor="#9b9b9b" VerticalTextAlignment="Center"/>
                         <Switch IsToggled="{Binding Recordar}" Scale="0.8" VerticalOptions="Center"/>
                     </StackLayout>
-                    <Label Text="¿Olvidó su Contraseña?" TextColor="Blue" HorizontalOptions="Center" HeightRequest="20" VerticalTextAlignment="Center" />
+                    <Button Text="¿Olvidó su Contraseña?" Command="{Binding OpenSendPasswordCommand}" TextColor="Blue" HorizontalOptions="Center" HeightRequest="25" />
                     <StackLayout Padding="80,10">
                         <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#000066" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
                     </StackLayout>
-                    <Button Text="Crear Cuenta" Command="{Binding LoginCommand}" TextColor="Blue" HorizontalOptions="Center" HeightRequest="20" />
+                    <Button Text="Crear Cuenta" Command="{Binding OpenCreateUserCommand}" TextColor="Blue" HorizontalOptions="Center" HeightRequest="25" />
                 </StackLayout>
             </StackLayout>
         </AbsoluteLayout>

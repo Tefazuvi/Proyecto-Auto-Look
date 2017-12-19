@@ -44,14 +44,26 @@ namespace AutoLookBackend.Models
                 string query = string.Empty;
 
                 lstParams.Add(new ParameterSchema("Brand", car.Brand));
-                lstParams.Add(new ParameterSchema("Model", car.Brand));
-                lstParams.Add(new ParameterSchema("Colour", car.Brand));
-                lstParams.Add(new ParameterSchema("Years", car.Brand));
-                lstParams.Add(new ParameterSchema("Miles", car.Brand));
-                //Segui agregando los demas xq me dio pereza
+                lstParams.Add(new ParameterSchema("Model", car.Model));
+                lstParams.Add(new ParameterSchema("Colour", car.Colour));
+                lstParams.Add(new ParameterSchema("Year", car.Year));
+                lstParams.Add(new ParameterSchema("Miles", car.Miles));
+                lstParams.Add(new ParameterSchema("Type", car.Type));
+                lstParams.Add(new ParameterSchema("Price", car.Price));
+                lstParams.Add(new ParameterSchema("DoorsQuantity", car.DoorsQuantity));
+                lstParams.Add(new ParameterSchema("Capacity", car.Capacity));
+                lstParams.Add(new ParameterSchema("Motor", car.Motor));
+                lstParams.Add(new ParameterSchema("Gas", car.Gas));
+                lstParams.Add(new ParameterSchema("ElectricWindows", car.ElectricWindows));
+                lstParams.Add(new ParameterSchema("CentralLock", car.CentralLock));
+                lstParams.Add(new ParameterSchema("HydraulicSteering", car.HydraulicSteering));
+                lstParams.Add(new ParameterSchema("ElectricRearView", car.ElectricRearView));
+                lstParams.Add(new ParameterSchema("Alarm", car.Alarm));
+                lstParams.Add(new ParameterSchema("AirConditioner", car.AirConditioner));
+                lstParams.Add(new ParameterSchema("LuxuryHoops", car.LuxuryHoops));
 
-                query = "Insert into Car (Brand,Model,Colour,Years,Miles) " +
-                                    "values(@Brand,@Model,@Colour,@Years,@Miles)";
+                query = "Insert into Car (Brand,Model,Colour,Years,Miles,Type,Price,DoorsQuantity,Capacity,Motor,Gas,ElectricWindows,CentralLock,HydraulicSteering,ElectricRearview,Alarm,AirConditioner,LuxuryHoops) " +
+                    "values(@Brand,@Model,@Colour,@Year,@Miles,@Type,@Price,@DoorsQuantity,@Capacity,@Motor,@Gas,@ElectricWindows,@CentralLock,@HydraulicSteering,@ElectricRearview,@Alarm,@AirConditioner,@LuxuryHoops)";
 
                 return conexionM.setExecuteQuery(query, lstParams);
             }

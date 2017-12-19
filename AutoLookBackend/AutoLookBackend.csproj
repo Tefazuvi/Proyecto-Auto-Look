@@ -92,6 +92,9 @@
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Models\CarModel.cs" />
     <Compile Include="Models\Conexion.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />

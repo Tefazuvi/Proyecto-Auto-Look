@@ -12,6 +12,7 @@
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30,10">
                             <Entry Text="{Binding Brand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding Model}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Miles}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding Colour}" Placeholder="Color" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding Year}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding Type}" Placeholder="Tipo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />

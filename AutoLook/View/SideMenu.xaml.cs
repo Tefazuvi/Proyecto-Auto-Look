@@ -7,7 +7,6 @@ namespace AutoLook.View
 {
     public partial class SideMenu : ContentPage
     {
-        public ListView ListView { get { return listView; } }
 
         public SideMenu()
         {

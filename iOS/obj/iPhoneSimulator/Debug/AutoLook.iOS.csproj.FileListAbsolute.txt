@@ -335,3 +335,5 @@
 /Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.View.Filters.xaml.g.cs
 /Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.exe
 /Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.pdb
+/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/CarouselView.FormsPlugin.Abstractions.dll
+/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/CarouselView.FormsPlugin.iOS.dll

@@ -10,9 +10,6 @@ namespace AutoLook.Model
 {
     public class LoginModel
     {
-
-       
-
         public LoginModel()
         {
         }

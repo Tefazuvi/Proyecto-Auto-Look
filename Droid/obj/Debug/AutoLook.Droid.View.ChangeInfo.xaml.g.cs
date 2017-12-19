@@ -11,7 +11,7 @@
 namespace AutoLook.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/tefa/Projects/AutoLook/AutoLook/View/ChangeInfo.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Edgar/Projects/AutoLook/AutoLook/View/ChangeInfo.xaml")]
     public partial class ChangeInfo : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

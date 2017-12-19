@@ -11,16 +11,16 @@
 namespace AutoLook.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/tefa/Projects/AutoLook/AutoLook/View/SideMenu.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Edgar/Projects/AutoLook/AutoLook/View/SideMenu.xaml")]
     public partial class SideMenu : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView listView;
+        private global::Xamarin.Forms.ListView lstvPages;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SideMenu));
-            listView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "listView");
+            lstvPages = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lstvPages");
         }
     }
 }
