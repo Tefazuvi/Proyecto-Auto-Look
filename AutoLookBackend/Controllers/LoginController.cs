@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
+using System.Web.Mvc.Ajax;
 using System.Web.Mvc;
 using AutoLookBackend.Models;
 
 namespace AutoLookBackend.Controllers
 {
-    public class LoginController : ApiController
+    public class LoginController : Controller
     {
-        [System.Web.Http.HttpPost]
-
-        public void Login(string user, string pass)
+        
+        [HttpPost]
+        public string Autheticate(string User, string Pass)
         {
+
             LoginModel login = new LoginModel();
 
-            login.Login(user, pass);
+            //ogin.Login(user, pass);
+
+            return "HOLA";
         }
     }
 }

@@ -20,5 +20,12 @@ namespace AutoLookBackend.Controllers
 
             return View();
         }
+
+        public void Login(string user, string pass)
+        {
+            LoginModel login = new LoginModel();
+
+            login.Login(user, pass);
+        }
     }
 }
