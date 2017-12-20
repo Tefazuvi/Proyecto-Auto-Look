@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 
 namespace AutoLookBackend.Models
 {
@@ -32,7 +33,7 @@ namespace AutoLookBackend.Models
             set;
         }
 
-        public LoginModel Login(string user, string pass)
+        public string Login(string user, string pass)
         {
             string query = "Select * from User where Email=" + user + "and Password=" + pass + "";
 
@@ -47,7 +48,9 @@ namespace AutoLookBackend.Models
                 login.UserType = Int32.Parse(reader["Type"].ToString());
             }
 
-            return login;
+            var json = JsonConvert.SerializeObject(login);
+
+            return json;
         }
     }
 }

@@ -17,9 +17,9 @@ namespace AutoLookBackend.Controllers
 
             LoginModel login = new LoginModel();
 
-            //ogin.Login(user, pass);
+            string user = login.Login(User, Pass);
 
-            return "HOLA";
+            return user;
         }
     }
 }

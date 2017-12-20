@@ -5,23 +5,20 @@
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
       <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="109" Column="1" />
       <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="61" Column="33" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="88" Column="1" />
-      <File FileName="AutoLook/View/HomePage.xaml" Line="55" Column="15" />
-      <File FileName="AutoLookBackend/Controllers/HomeController.cs" Line="6" Column="27" />
+      <File FileName="AutoLook/Model/CarModel.cs" Line="9" Column="1" />
       <File FileName="AutoLookBackend/Controllers/CarController.cs" Line="22" Column="1" />
       <File FileName="AutoLookBackend/Models/CarModel.cs" Line="38" Column="44" />
       <File FileName="AutoLookBackend/Models/Conexion.cs" Line="81" Column="31" />
-      <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="18" Column="1" />
-      <File FileName="AutoLookBackend/App_Start/WebApiConfig.cs" Line="1" Column="1" />
-      <File FileName="AutoLook/Model/LoginModel.cs" Line="27" Column="36" />
+      <File FileName="AutoLookBackend/Models/LoginModel.cs" Line="45" Column="14" />
+      <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="20" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/ViewModel/LoginViewModel.cs" relfile="AutoLook/ViewModel/LoginViewModel.cs" line="55" column="1" />
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/View/SideMenu.xaml" relfile="AutoLook/View/SideMenu.xaml" line="19" column="39" />
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLookBackend/Controllers/LoginController.cs" relfile="AutoLookBackend/Controllers/LoginController.cs" line="17" column="1" />
+      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/ViewModel/LoginViewModel.cs" relfile="AutoLook/ViewModel/LoginViewModel.cs" line="55" column="1" />
+      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLook/View/SideMenu.xaml" relfile="AutoLook/View/SideMenu.xaml" line="19" column="39" />
+      <Breakpoint file="/Users/tefa/Projects/AutoLook/AutoLookBackend/Controllers/LoginController.cs" relfile="AutoLookBackend/Controllers/LoginController.cs" line="17" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
