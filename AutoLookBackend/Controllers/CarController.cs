@@ -10,11 +10,14 @@ namespace AutoLookBackend.Controllers
 {
     public class CarController : ApiController
     {
-        [System.Web.Http.HttpPost]
-        public bool SaveCar(CarModel car)
-        {
 
-            return true;
+
+        [System.Web.Http.HttpPost]
+        public string SaveCar(CarModel car)
+        {
+            
+            return CarModel.SaveCar(car);
+
         }
     }
 }

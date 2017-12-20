@@ -35,7 +35,7 @@ namespace AutoLookBackend.Models
         {
         }
 
-        public string SaveCar(CarModel car)
+        public static string SaveCar(CarModel car)
         {
 
             try

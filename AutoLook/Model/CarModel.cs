@@ -56,7 +56,7 @@ namespace AutoLook.Model
             return lstVehiculos;
         }
 
-        public static async Task<bool> SaveCar(CarModel car)
+        public static async Task<string> SaveCar(CarModel car)
         {
 
             try
@@ -72,7 +72,7 @@ namespace AutoLook.Model
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
                     string ans = await response.Content.ReadAsStringAsync();
 
-                    bool rqSaveCar = JsonConvert.DeserializeObject<bool>(ans);
+                    string rqSaveCar = JsonConvert.DeserializeObject<string>(ans);
 
                     return rqSaveCar;
                 }
