@@ -20,6 +20,13 @@
 	--symbollist \
 	/Users/tefa/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-11.2/mtouch-symbols.list \
 	--dsym=no \
+	--cxx \
+	--gcc_flags \
+	'-L/Users/tefa/Projects/AutoLook/packages/Realm.2.1.0/build/../native/ios/universal -lrealm-wrappers -lz -framework Security' \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
 	-r \
@@ -33,6 +40,10 @@
 	-r \
 	/Users/tefa/Projects/AutoLook/packages/Xam.Plugin.Media.3.0.1/lib/Xamarin.iOS10/Plugin.Media.dll \
 	-r \
+	/Users/tefa/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/Remotion.Linq.2.1.2/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
@@ -40,6 +51,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.IO.Compression.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/System.Runtime.CompilerServices.Unsafe.4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
 	-r \
@@ -327,6 +340,14 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
+	/Users/tefa/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.Sync.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
+	-r \
 	/Users/tefa/Downloads/MySql.Data.dll \
 	-r \
 	/Users/tefa/Projects/AutoLook/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
@@ -334,6 +355,12 @@
 	/Users/tefa/Projects/AutoLook/packages/Xam.Plugin.Media.3.0.1/lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll \
 	-r \
 	/Users/tefa/Projects/AutoLook/packages/Xam.Plugin.Media.3.0.1/lib/Xamarin.iOS10/Plugin.Media.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/Remotion.Linq.2.1.2/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
+	-r \
+	/Users/tefa/Projects/AutoLook/packages/System.Runtime.CompilerServices.Unsafe.4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	-r \
 	/Users/tefa/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \

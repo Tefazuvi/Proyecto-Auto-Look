@@ -15,9 +15,10 @@ namespace AutoLookBackend.Controllers
         [System.Web.Http.HttpPost]
         public string SaveCar(CarModel car)
         {
-            
-            return CarModel.SaveCar(car);
 
+            CarModel newcar = new CarModel();
+            //newcar.SaveCar(car);
+            return "";
         }
     }
 }

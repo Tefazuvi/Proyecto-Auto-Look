@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="SideMenu" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.SideMenu" xmlns:local="using:AutoLook.Model" xmlns:pages="using:AutoLook.View" Title="Menú" Icon="menu.png" Padding="10,60,0,0">
     <StackLayout>
-        <ListView x:Name="listView">
-            <ListView.ItemsSource>
-                <x:Array Type="{x:Type local:MasterPageItem}">
-                    <local:MasterPageItem Id="0" Title="Login" IconSource="blueperson.png" TargetType="{x:Type pages:LoginPage}" />
-                    <local:MasterPageItem Id="1" Title="HomePage" IconSource="blueperson.png" TargetType="{x:Type pages:MainTabbedPage}" />
-                    <local:MasterPageItem Id="2" Title="Información" IconSource="blueperson.png" TargetType="{x:Type pages:UserInfo}" />
-                    <local:MasterPageItem Id="3" Title="Auto-Look" IconSource="info.png" TargetType="{x:Type pages:About}" />
-                    <local:MasterPageItem Id="4" Title="Agregar vehículo" IconSource="car.png" TargetType="{x:Type pages:AddCar}" />
-                </x:Array>
-            </ListView.ItemsSource>
+        <ListView x:Name="lstvPages" ItemsSource="{Binding lstPages}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

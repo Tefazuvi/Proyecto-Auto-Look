@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using AutoLookBackend.Models;
 
 namespace AutoLookBackend.Controllers
 {
@@ -19,5 +20,6 @@ namespace AutoLookBackend.Controllers
 
             return View();
         }
+
     }
 }

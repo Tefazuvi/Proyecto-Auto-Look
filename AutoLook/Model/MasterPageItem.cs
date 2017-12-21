@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Threading;
+
 namespace AutoLook.Model
 {
     public class MasterPageItem
@@ -9,6 +13,18 @@ namespace AutoLook.Model
 
         public string IconSource { get; set; }
 
-        public Type TargetType { get; set; }
+        //public Type TargetType { get; set; }
+
+        public static async Task<ObservableCollection<MasterPageItem>> GetPages()
+        {
+            ObservableCollection<MasterPageItem> lstPages = new ObservableCollection<MasterPageItem>();
+
+            lstPages.Add(new MasterPageItem { Id = 0, Title = "Login", IconSource = "blueperson.png" });
+            lstPages.Add(new MasterPageItem { Id = 1, Title = "HomePage", IconSource = "blueperson.png" });
+            lstPages.Add(new MasterPageItem { Id = 2, Title = "Información", IconSource = "blueperson.png" });
+            lstPages.Add(new MasterPageItem { Id = 3, Title = "Auto-Look", IconSource = "info.png" });
+
+            return lstPages;
+        }
     }
 }

@@ -31,26 +31,27 @@
                         <Label Text="CALCULADORA" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" FontSize="20" Margin="0,0,0,10" />
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             <Label Text="Precio: " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
-                            <Entry Text="{Binding Precio}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150"/>
+                            <Entry Text="{Binding VehiclePrice}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             <Label Text="Prima: " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
-                            <Entry Text="{Binding Prima}" Placeholder="Prima" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150"/>
+                            <Entry Text="{Binding DownPayment}" Placeholder="Prima" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             <Label Text="Interés: " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
-                            <Entry Text="{Binding Interés}" Placeholder="Interés" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150"/>
+                            <Entry Text="{Binding InterestRate}" Placeholder="Interés" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             <Label Text="Plazo: " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
-                            <Entry Text="{Binding Plazo}" Placeholder="Plazo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150"/>
+                            <Entry Text="{Binding TermMonths}" Placeholder="Meses" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" Margin="0,0,0,5" WidthRequest="150" />
                         </StackLayout>
                         <StackLayout Padding="60,5" VerticalOptions="StartAndExpand" Orientation="Vertical">
-                            <Button Text="CALCULAR CUOTA" Command="{Binding ReceiveCarCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
+                            <Button Text="CALCULAR CUOTA" Command="{Binding CalculateCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             <Label Text="CUOTA: " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="20" />
-                            <Label Text="{Binding Cuota}" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="{Binding MonthlyPayment}" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="100" VerticalTextAlignment="Center"/>
+                            <Label Text="CRC" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="EndAndExpand" HeightRequest="30" WidthRequest="40" VerticalTextAlignment="Center"/>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>

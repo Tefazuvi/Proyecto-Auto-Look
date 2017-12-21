@@ -70,6 +70,41 @@ namespace AutoLook.ViewModel
 
         }
 
+        private ObservableCollection<MasterPageItem> _lstPages = new ObservableCollection<MasterPageItem>();
+
+        public ObservableCollection<MasterPageItem> lstPages
+
+        {
+            get
+            {
+                return _lstPages;
+
+            }
+            set
+            {
+                _lstPages = value;
+                OnPropertyChanged("lstPages");
+
+            }
+
+        }
+
+        private bool _IsAdmin { get; set; }
+
+        public bool IsAdmin
+        {
+            get
+            {
+                return _IsAdmin;
+            }
+            set
+            {
+                _IsAdmin = value;
+                UpdatePages(_IsAdmin);
+                OnPropertyChanged("IsAdmin");
+            }
+        }
+
         private int _FiltroOrdenar { get; set; }
 
         public int FiltroOrdenar
@@ -141,7 +176,7 @@ namespace AutoLook.ViewModel
 
         }
 
-        private void OrdenarVehiculos(int Orden)
+        private async void OrdenarVehiculos(int Orden)
         {
             //lstVehiculos.Clear();
             //lstOriginalVehiculos.Where(x => x.Nombre.ToLower().Contains(textoBuscar.ToLower())).ToList().ForEach(x => lstPersonas.Add(x));
@@ -197,9 +232,19 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private void UpdatePages(bool Admin)
+        {
+            if (IsAdmin)
+            {
+                lstPages.Add(new MasterPageItem { Id = 4, Title = "Agregar vehículo", IconSource = "car.png" });
+            }
+
+        }
+
         private async Task InitClass()
         {
             lstVehiculos = await CarModel.ObtenerVehiculos();
+            lstPages = await MasterPageItem.GetPages();
             lstOriginalVehiculos = lstVehiculos.ToList();
         }
 

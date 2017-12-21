@@ -11,8 +11,7 @@
 namespace AutoLook.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/View/MainTabbedPage.xam" +
-        "l")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Edgar/Projects/AutoLook/AutoLook/View/MainTabbedPage.xaml")]
     public partial class MainTabbedPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

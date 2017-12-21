@@ -24,6 +24,10 @@
 	--gcc_flags \
 	'-L/Users/carlosmendez/OutOfCloud/Projects/AutoLook/packages/Realm.2.1.0/build/../native/ios/universal -lrealm-wrappers -lz -framework Security' \
 	-r \
+	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
+	-r \
+	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
@@ -339,6 +343,10 @@
 	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.dll \
 	-r \
 	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.Sync.dll \
+	-r \
+	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
+	-r \
+	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
 	-r \
 	/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/MySql.Data.dll \
 	-r \

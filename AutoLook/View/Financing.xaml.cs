@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using AutoLook.ViewModel;
+using AutoLook.Model;
 using Xamarin.Forms;
 
 namespace AutoLook.View
@@ -10,7 +10,7 @@ namespace AutoLook.View
         public Financing()
         {
             InitializeComponent();
-            BindingContext = AutoLookViewModel.GetInstance();
+            BindingContext = new Calculator();
         }
     }
 }
