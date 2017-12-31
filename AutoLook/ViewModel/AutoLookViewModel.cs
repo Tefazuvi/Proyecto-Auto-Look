@@ -50,6 +50,7 @@ namespace AutoLook.ViewModel
         public ICommand NavigateWazeCommand { get; set; }
         public ICommand AddImageCommand { get; set; }
         public ICommand PageManagerCommand { get; set; }
+        public ICommand VerVehiculoCommand { get; set; }
 
         private ObservableCollection<ImageFile> _lstImages = new ObservableCollection<ImageFile>();
 
@@ -121,6 +122,52 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private CarModel _VehiculoActual { get; set; }
+
+        public CarModel VehiculoActual
+        {
+            get
+            {
+                return _VehiculoActual;
+            }
+            set
+            {
+                _VehiculoActual = value;
+                OnPropertyChanged("VehiculoActual");
+            }
+        }
+
+        private int _ImagenActual { get; set; }
+
+        public int ImagenActual
+        {
+            get
+            {
+                return _ImagenActual;
+            }
+            set
+            {
+                _ImagenActual = value;
+                Posicion = _ImagenActual + 1;
+                OnPropertyChanged("ImagenActual");
+            }
+        }
+
+        private int _Posicion = 1;
+
+        public int Posicion
+        {
+            get
+            {
+                return _Posicion;
+            }
+            set
+            {
+                _Posicion = value;
+                OnPropertyChanged("Posicion");
+            }
+        }
+
         private List<CarModel> lstOriginalVehiculos = new List<CarModel>();
 
         private ObservableCollection<CarModel> _lstVehiculos = new ObservableCollection<CarModel>();
@@ -176,8 +223,17 @@ namespace AutoLook.ViewModel
 
         }
 
+        private void VerVehiculo(int id)
+        {
+            VehiculoActual = lstOriginalVehiculos.Where(x => x.Id == id).FirstOrDefault();
+
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new CarDetails());
+
+        }
+
         private async void OrdenarVehiculos(int Orden)
         {
+            //Filtros
             //lstVehiculos.Clear();
             //lstOriginalVehiculos.Where(x => x.Nombre.ToLower().Contains(textoBuscar.ToLower())).ToList().ForEach(x => lstPersonas.Add(x));
 
@@ -253,6 +309,7 @@ namespace AutoLook.ViewModel
             NavigateWazeCommand = new Command(NavigateWaze);
             AddImageCommand = new Command(AddImage);
             PageManagerCommand = new Command<int>(PageManager);
+            VerVehiculoCommand = new Command<int>(VerVehiculo);
         }
 
         #endregion

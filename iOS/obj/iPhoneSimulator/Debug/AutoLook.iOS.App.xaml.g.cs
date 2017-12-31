@@ -11,7 +11,7 @@
 namespace AutoLook {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Edgar/Projects/AutoLook/AutoLook/App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/stephanie/Projects/AutoLook/AutoLook/App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

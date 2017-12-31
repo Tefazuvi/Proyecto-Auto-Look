@@ -11,14 +11,11 @@
 namespace AutoLook.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Edgar/Projects/AutoLook/AutoLook/View/CarDetails.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/stephanie/Projects/AutoLook/AutoLook/View/CarDetails.xaml")]
     public partial class CarDetails : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.StackLayout stkContainer;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView lstvImages;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image imgAdd;
@@ -27,7 +24,6 @@ namespace AutoLook.View {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CarDetails));
             stkContainer = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "stkContainer");
-            lstvImages = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lstvImages");
             imgAdd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imgAdd");
         }
     }

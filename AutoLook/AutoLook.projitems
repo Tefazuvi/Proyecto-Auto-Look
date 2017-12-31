@@ -155,6 +155,7 @@
       <DependentUpon>Filters.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Calculator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\CalculatorViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />

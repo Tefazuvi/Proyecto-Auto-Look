@@ -1,3 +1,5 @@
+CarouselView.FormsPlugin.Abstractions
+CarouselView.FormsPlugin.Android
 FormsViewGroup
 Newtonsoft.Json
 Plugin.CurrentActivity
@@ -5,6 +7,11 @@ Plugin.Media.Abstractions
 Plugin.Media
 Plugin.Permissions.Abstractions
 Plugin.Permissions
+Realm.DataBinding
+Realm
+Realm.Sync
+Remotion.Linq
+System.Runtime.CompilerServices.Unsafe
 System.Runtime
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.Annotations
@@ -26,10 +33,3 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-CarouselView.FormsPlugin.Abstractions
-CarouselView.FormsPlugin.Android
-Realm.DataBinding
-Realm
-Realm.Sync
-Remotion.Linq
-System.Runtime.CompilerServices.Unsafe

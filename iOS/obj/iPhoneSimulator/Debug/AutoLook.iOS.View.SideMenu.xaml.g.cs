@@ -11,7 +11,7 @@
 namespace AutoLook.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Edgar/Projects/AutoLook/AutoLook/View/SideMenu.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/stephanie/Projects/AutoLook/AutoLook/View/SideMenu.xaml")]
     public partial class SideMenu : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
