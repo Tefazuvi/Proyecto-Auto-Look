@@ -10,7 +10,7 @@ namespace AutoLook.View
         public UserInfo()
         {
             InitializeComponent();
-            BindingContext = new LoginViewModel();
+            BindingContext = AutoLookViewModel.GetInstance();
         }
     }
 }

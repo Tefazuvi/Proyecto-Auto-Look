@@ -52,6 +52,56 @@ namespace AutoLook.ViewModel
         public ICommand PageManagerCommand { get; set; }
         public ICommand VerVehiculoCommand { get; set; }
 
+        private string _UserEmail { get; set; }
+
+        public string UserEmail
+        {
+            get
+            {
+                return _UserEmail;
+            }
+            set
+            {
+                _UserEmail = value;
+                OnPropertyChanged("UserEmail");
+            }
+
+        }
+
+        private string _UserPhone { get; set; }
+
+        public string UserPhone
+        {
+            get
+            {
+                return _UserPhone;
+            }
+            set
+            {
+                _UserPhone = value;
+                OnPropertyChanged("UserPhone");
+            }
+
+        }
+
+        public User LoggedUser = new User();
+
+        private string _UserFullName { get; set; }
+
+        public string UserFullName
+        {
+            get
+            {
+                return _UserFullName;
+            }
+            set
+            {
+                _UserFullName = value;
+                OnPropertyChanged("UserFullName");
+            }
+
+        }
+
         private ObservableCollection<ImageFile> _lstImages = new ObservableCollection<ImageFile>();
 
         public ObservableCollection<ImageFile> lstImages
@@ -228,6 +278,15 @@ namespace AutoLook.ViewModel
             VehiculoActual = lstOriginalVehiculos.Where(x => x.Id == id).FirstOrDefault();
 
             ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new CarDetails());
+
+        }
+
+        public void setLoggedUser(User usuario)
+        {
+            LoggedUser = usuario;
+            UserEmail = LoggedUser.Email;
+            UserFullName = LoggedUser.Name + " " + LoggedUser.LastName;
+            UserPhone = LoggedUser.Phone;
 
         }
 
