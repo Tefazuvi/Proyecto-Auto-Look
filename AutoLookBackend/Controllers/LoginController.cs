@@ -12,7 +12,7 @@ namespace AutoLookBackend.Controllers
     {
         
         [HttpPost]
-        public string Autheticate(string User, string Pass)
+        public string Authenticate(string User, string Pass)
         {
 
             LoginModel login = new LoginModel();
