@@ -17,6 +17,8 @@ namespace AutoLook.ViewModel
 
         public User usuario = new User();
 
+        public AutoLookViewModel autoLookViewModel = AutoLookViewModel.GetInstance();
+
         private string _User { get; set; }
 
         public string User
@@ -49,53 +51,6 @@ namespace AutoLook.ViewModel
 
         }
 
-        private string _UserEmail { get; set; }
-
-        public string UserEmail
-        {
-            get
-            {
-                return _UserEmail;
-            }
-            set
-            {
-                _UserEmail = value;
-                OnPropertyChanged("UserEmail");
-            }
-
-        }
-
-        private string _UserPhone { get; set; }
-
-        public string UserPhone
-        {
-            get
-            {
-                return _UserPhone;
-            }
-            set
-            {
-                _UserPhone = value;
-                OnPropertyChanged("UserPhone");
-            }
-
-        }
-
-        private string _UserFullName { get; set; }
-
-        public string UserFullName
-        {
-            get
-            {
-                return _UserFullName;
-            }
-            set
-            {
-                _UserFullName = value;
-                OnPropertyChanged("UserFullName");
-            }
-
-        }
 
         #endregion
         public LoginViewModel()
@@ -108,9 +63,7 @@ namespace AutoLook.ViewModel
         {
             usuario = await LoginModel.Authenticate(User, Password);
 
-            UserEmail = usuario.Email;
-            UserFullName = usuario.Name + " " + usuario.LastName;
-            UserPhone = usuario.Phone;
+            autoLookViewModel.setLoggedUser(usuario);
 
             if (usuario.Type == 0) //Admin = 0
             {

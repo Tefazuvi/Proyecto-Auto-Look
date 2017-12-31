@@ -1,18 +1,14 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLookBackend/App_Start/WebApiConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/CarDetails.xaml.cs">
     <Files>
-      <File FileName="AutoLook/View/CarDetails.xaml" Line="145" Column="15" />
-      <File FileName="AutoLook/Model/User.cs" Line="8" Column="41" />
-      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="109" Column="1" />
-      <File FileName="AutoLook/View/UserInfo.xaml" Line="28" Column="27" />
+      <File FileName="AutoLook/Model/User.cs" Line="18" Column="1" />
+      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="64" Column="30" />
       <File FileName="AutoLook/View/Financing.xaml" Line="34" Column="42" />
-      <File FileName="AutoLook/Model/LoginModel.cs" Line="29" Column="17" />
       <File FileName="AutoLookBackend/Models/CarModel.cs" Line="60" Column="17" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="26" Column="1" />
-      <File FileName="AutoLookBackend/App_Start/RouteConfig.cs" Line="15" Column="80" />
-      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="79" Column="45" />
-      <File FileName="AutoLookBackend/App_Start/WebApiConfig.cs" Line="1" Column="1" />
+      <File FileName="AutoLook/View/UserInfo.xaml.cs" Line="17" Column="1" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="290" Column="13" />
+      <File FileName="AutoLook/View/CarDetails.xaml.cs" Line="15" Column="6" />
+      <File FileName="AutoLook/ViewModel/CalculatorViewModel.cs" Line="103" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -21,6 +17,7 @@
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Controllers/LoginController.cs" relfile="AutoLookBackend/Controllers/LoginController.cs" line="16" column="1" />
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/Conexion.cs" relfile="AutoLookBackend/Models/Conexion.cs" line="78" column="1" />
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="68" column="24" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/ViewModel/LoginViewModel.cs" relfile="AutoLook/ViewModel/LoginViewModel.cs" line="63" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
