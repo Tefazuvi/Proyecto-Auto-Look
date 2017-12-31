@@ -99,6 +99,7 @@ namespace AutoLook.ViewModel
             Calc.VehiclePrice = VehiclePrice;
             Calc.DownPayment = DownPayment;
             Calc.TermMonths = TermMonths;
+            Calc.InterestRate = InterestRate;
             MonthlyPayment = Calc.Calculate();
         }
 
