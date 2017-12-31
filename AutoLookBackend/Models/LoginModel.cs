@@ -33,6 +33,24 @@ namespace AutoLookBackend.Models
             set;
         }
 
+        public string UserName
+        {
+            get;
+            set;
+        }
+
+        public string UserLastName
+        {
+            get;
+            set;
+        }
+
+        public string UserPhone
+        {
+            get;
+            set;
+        }
+
         public string Login(string user, string pass)
         {
             string query = "Select * from User where Email='" + user + "' and Password='" + pass + "'";
@@ -46,6 +64,9 @@ namespace AutoLookBackend.Models
                 login.User = reader["Email"].ToString();
                 login.UserPassword = reader["Password"].ToString();
                 login.UserType = Int32.Parse(reader["Type"].ToString());
+                login.UserName = reader["Name"].ToString();
+                login.UserLastName = reader["LastName"].ToString();
+                login.UserPhone = reader["Phone"].ToString();
             }
 
             var json = JsonConvert.SerializeObject(login);

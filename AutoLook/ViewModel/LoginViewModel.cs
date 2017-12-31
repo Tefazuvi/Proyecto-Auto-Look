@@ -15,6 +15,8 @@ namespace AutoLook.ViewModel
         public ICommand OpenCreateUserCommand { get; set; }
         public ICommand OpenSendPasswordCommand { get; set; }
 
+        public User usuario = new User();
+
         private string _User { get; set; }
 
         public string User
@@ -47,6 +49,54 @@ namespace AutoLook.ViewModel
 
         }
 
+        private string _UserEmail { get; set; }
+
+        public string UserEmail
+        {
+            get
+            {
+                return _UserEmail;
+            }
+            set
+            {
+                _UserEmail = value;
+                OnPropertyChanged("UserEmail");
+            }
+
+        }
+
+        private string _UserPhone { get; set; }
+
+        public string UserPhone
+        {
+            get
+            {
+                return _UserPhone;
+            }
+            set
+            {
+                _UserPhone = value;
+                OnPropertyChanged("UserPhone");
+            }
+
+        }
+
+        private string _UserFullName { get; set; }
+
+        public string UserFullName
+        {
+            get
+            {
+                return _UserFullName;
+            }
+            set
+            {
+                _UserFullName = value;
+                OnPropertyChanged("UserFullName");
+            }
+
+        }
+
         #endregion
         public LoginViewModel()
         {
@@ -56,9 +106,13 @@ namespace AutoLook.ViewModel
         #region Methods
         private async void Login()
         {
-            User user = await LoginModel.Authenticate(User, Password);
+            usuario = await LoginModel.Authenticate(User, Password);
 
-            if (User == "Admin")
+            UserEmail = usuario.Email;
+            UserFullName = usuario.Name + " " + usuario.LastName;
+            UserPhone = usuario.Phone;
+
+            if (usuario.Type == 0) //Admin = 0
             {
                 AutoLookViewModel.GetInstance().IsAdmin = true;
             }else{
