@@ -12,7 +12,7 @@ namespace AutoLookBackend
             routes.MapRoute(
                 name: "Login",
                 url: "Login/",
-                defaults: new { controller = "Login", action = "Autheticate" }
+                defaults: new { controller = "Login", action = "Authenticate" }
             );
 
             routes.MapRoute(

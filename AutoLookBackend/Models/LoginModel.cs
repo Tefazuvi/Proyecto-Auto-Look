@@ -15,37 +15,37 @@ namespace AutoLookBackend.Models
         {
         }
 
-        public string User
+        public string Email
         {
             get;
             set;
         }
 
-        public string UserPassword
+        public string Password
         {
             get;
             set;
         }
 
-        public int UserType
+        public int Type
         {
             get;
             set;
         }
 
-        public string UserName
+        public string Name
         {
             get;
             set;
         }
 
-        public string UserLastName
+        public string LastName
         {
             get;
             set;
         }
 
-        public string UserPhone
+        public string Phone
         {
             get;
             set;
@@ -61,12 +61,12 @@ namespace AutoLookBackend.Models
 
             while (reader.Read())
             {
-                login.User = reader["Email"].ToString();
-                login.UserPassword = reader["Password"].ToString();
-                login.UserType = Int32.Parse(reader["Type"].ToString());
-                login.UserName = reader["Name"].ToString();
-                login.UserLastName = reader["LastName"].ToString();
-                login.UserPhone = reader["Phone"].ToString();
+                login.Email = reader["Email"].ToString();
+                login.Password = reader["Password"].ToString();
+                login.Type = Int32.Parse(reader["Type"].ToString());
+                login.Name = reader["Name"].ToString();
+                login.LastName = reader["LastName"].ToString();
+                login.Phone = reader["Phone"].ToString();
             }
 
             var json = JsonConvert.SerializeObject(login);
