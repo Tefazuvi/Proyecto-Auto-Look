@@ -42,18 +42,17 @@ namespace AutoLookBackend.Models
                 openConection();
                 string ans = string.Empty;
 
-                MySqlCommand command = connection.CreateCommand();
+                MySqlCommand query = connection.CreateCommand();
+                query.CommandText = stringQuery;
 
                 for (int i = 0; i < lstParameters.Count; i++)
                 {
-                    command.Parameters.AddWithValue("@" + lstParameters[i].ParamName, lstParameters[i].ParamValue);
+                    query.Parameters.AddWithValue("@" + lstParameters[i].ParamName, lstParameters[i].ParamValue);
                 }
 
-                command.CommandText = stringQuery;
-
-                if (command.ExecuteNonQuery() > 0)
+                if (query.ExecuteNonQuery() > 0)
                 {
-                    ans = command.LastInsertedId.ToString() == "0" ? "" : "ID:" + command.LastInsertedId.ToString();
+                    ans = query.LastInsertedId.ToString() == "0" ? "" : "ID:" + query.LastInsertedId.ToString();
                 }
                 else
                 {

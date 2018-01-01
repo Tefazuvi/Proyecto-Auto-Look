@@ -67,11 +67,11 @@ namespace AutoLook.ViewModel
 
             if (usuario.Type == 0) //Admin = 0
             {
-                AutoLookViewModel.GetInstance().IsAdmin = true;
+                autoLookViewModel.IsAdmin = true;
             }else{
-                AutoLookViewModel.GetInstance().IsAdmin = false;
+                autoLookViewModel.IsAdmin = false;
             }
-
+            autoLookViewModel.goHome();
         }
 
         private void OpenCreateUser()

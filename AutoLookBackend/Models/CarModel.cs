@@ -30,7 +30,7 @@ namespace AutoLookBackend.Models
         {
         }
 
-        public static string SaveCar(CarModel car)
+        public string SaveCar(CarModel car)
         {
             Conexion conexionM = new Conexion();
 

@@ -53,6 +53,7 @@ namespace AutoLook.ViewModel
         public ICommand PageManagerCommand { get; set; }
         public ICommand VerVehiculoCommand { get; set; }
         public ICommand SaveUserCommand { get; set; }
+        public ICommand DeleteUserCommand { get; set; }
 
         private string _Name { get; set; }
 
@@ -117,6 +118,9 @@ namespace AutoLook.ViewModel
             }
 
         }
+
+        private int UserID = 0;
+        //private int UserID { get; set; }
 
         private string _Phone { get; set; }
 
@@ -367,6 +371,7 @@ namespace AutoLook.ViewModel
         public void setLoggedUser(User usuario)
         {
             LoggedUser = usuario;
+            UserID = usuario.ID;
             UserEmail = LoggedUser.Email;
             UserFullName = LoggedUser.Name + " " + LoggedUser.LastName;
             UserPhone = LoggedUser.Phone;
@@ -384,6 +389,19 @@ namespace AutoLook.ViewModel
             usuario.Type = 1;
             string saved = "";
             saved = await User.SaveUser(usuario);
+            if(Int32.Parse(saved)>0)
+            {
+                goHome();
+            }
+        }
+
+        private async void DeleteUser()
+        {
+            string deleted = await User.DeleteUser(UserID);
+            if (Int32.Parse(deleted) > 0)
+            {
+                goHome();
+            }
         }
 
         private async void OrdenarVehiculos(int Orden)
@@ -423,7 +441,7 @@ namespace AutoLook.ViewModel
 
         }
 
-        private void goHome()
+        public void goHome()
         {
             PageManager(1);
         }
@@ -472,6 +490,7 @@ namespace AutoLook.ViewModel
             CancelCommand = new Command(goHome);
             PageManagerCommand = new Command<int>(PageManager);
             VerVehiculoCommand = new Command<int>(VerVehiculo);
+            DeleteUserCommand = new Command(DeleteUser);
         }
 
         #endregion

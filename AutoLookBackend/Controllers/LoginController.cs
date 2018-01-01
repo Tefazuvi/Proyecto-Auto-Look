@@ -14,12 +14,16 @@ namespace AutoLookBackend.Controllers
         [HttpPost]
         public string Authenticate(string User, string Pass)
         {
-
             LoginModel login = new LoginModel();
-
             string user = login.Login(User, Pass);
-
             return user;
+        }
+
+        public string SaveUser(LoginModel user)
+        {
+            LoginModel newuser = new LoginModel();
+            string saved = newuser.SaveUser(newuser);
+            return saved;
         }
     }
 }
