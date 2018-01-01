@@ -33,6 +33,12 @@ namespace AutoLookBackend.Models
             set;
         }
 
+        public int ID
+        {
+            get;
+            set;
+        }
+
         public string Name
         {
             get;
@@ -61,6 +67,7 @@ namespace AutoLookBackend.Models
 
             while (reader.Read())
             {
+                login.ID = Int32.Parse(reader["ID"].ToString());
                 login.Email = reader["Email"].ToString();
                 login.Password = reader["Password"].ToString();
                 login.Type = Int32.Parse(reader["Type"].ToString());
@@ -92,6 +99,24 @@ namespace AutoLookBackend.Models
                     "values(@Email,@Password,@Type,@Name,@LastName,@Phone)";
 
                 return conexionM.setExecuteQuery(query, lstParams);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public string DeleteUser(int id)
+        {
+            try
+            {
+                string query = "DELETE FROM User WHERE id=" + id;
+
+                MySqlDataReader reader = conexionM.getExecuteQuery(query);
+
+                return "";
+
+                //return conexionM.setExecuteQuery(query, lstParams);
             }
             catch (Exception ex)
             {

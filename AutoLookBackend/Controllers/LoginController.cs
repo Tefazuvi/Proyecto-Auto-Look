@@ -19,11 +19,19 @@ namespace AutoLookBackend.Controllers
             return user;
         }
 
+        [HttpPost]
         public string SaveUser(LoginModel user)
         {
-            LoginModel newuser = new LoginModel();
-            string saved = newuser.SaveUser(newuser);
+            string saved = user.SaveUser(user);
             return saved;
+        }
+
+        [HttpPost]
+        public string DeleteUser(int id)
+        {
+            LoginModel user = new LoginModel();
+            string deleted = user.DeleteUser(id);
+            return deleted;
         }
     }
 }

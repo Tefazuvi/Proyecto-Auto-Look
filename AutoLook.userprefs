@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/Model/User.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLookBackend/Models/Conexion.cs">
     <Files>
       <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="122" Column="32" />
       <File FileName="AutoLook/ViewModel/CalculatorViewModel.cs" Line="103" Column="47" />
       <File FileName="AutoLook/Model/CarModel.cs" Line="2" Column="1" />
-      <File FileName="AutoLook/Model/User.cs" Line="65" Column="1" />
+      <File FileName="AutoLook/Model/User.cs" Line="76" Column="1" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="55" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
