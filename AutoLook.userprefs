@@ -1,29 +1,23 @@
-﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/ViewModel/LoginViewModel.cs">
+﻿<Properties StartupConfiguration="{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLookBackend/Models/Conexion.cs">
     <Files>
-      <File FileName="AutoLook/Model/User.cs" Line="18" Column="1" />
-      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="69" Column="14" />
-      <File FileName="AutoLook/View/Financing.xaml" Line="34" Column="42" />
-      <File FileName="AutoLookBackend/Models/CarModel.cs" Line="60" Column="17" />
-      <File FileName="AutoLook/View/UserInfo.xaml.cs" Line="17" Column="1" />
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="290" Column="13" />
-      <File FileName="AutoLook/View/CarDetails.xaml.cs" Line="13" Column="30" />
-      <File FileName="AutoLook/ViewModel/CalculatorViewModel.cs" Line="103" Column="47" />
-      <File FileName="AutoLook/Model/LoginModel.cs" Line="35" Column="1" />
-      <File FileName="AutoLookBackend/Models/LoginModel.cs" Line="22" Column="9" />
-      <File FileName="AutoLook/View/UserInfo.xaml" Line="31" Column="15" />
+      <File FileName="AutoLookBackend/Models/LoginModel.cs" Line="94" Column="68" />
+      <File FileName="AutoLookBackend/App_Start/RouteConfig.cs" Line="1" Column="1" />
+      <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="18" Column="51" />
+      <File FileName="AutoLookBackend/Models/CarModel.cs" Line="31" Column="10" />
+      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="45" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Controllers/LoginController.cs" relfile="AutoLookBackend/Controllers/LoginController.cs" line="16" column="1" />
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/Conexion.cs" relfile="AutoLookBackend/Models/Conexion.cs" line="78" column="1" />
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="68" column="24" />
+      <Breakpoint file="/Users/Edgar/Projects/AutoLook/AutoLookBackend/Models/Conexion.cs" relfile="AutoLookBackend/Models/Conexion.cs" line="78" column="1" />
+      <Breakpoint file="/Users/Edgar/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="68" column="24" />
+      <Breakpoint file="/Users/Edgar/Projects/AutoLook/AutoLookBackend/Models/LoginModel.cs" relfile="AutoLookBackend/Models/LoginModel.cs" line="94" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AutoLookBackend PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.87E7F225-CC40-4AA9-8B5E-908AACB9DF39" />
+  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A5D78FDE-8E42-46BD-9717-777A12DFFE83" />
 </Properties>

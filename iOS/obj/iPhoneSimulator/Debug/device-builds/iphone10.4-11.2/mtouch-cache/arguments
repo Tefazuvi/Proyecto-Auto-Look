@@ -1,9 +1,9 @@
 # Version: 11.6.1.2 (xcode9.2: 6857dfcc)
 # [first argument, ignore] # --cache
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.6.1.2/lib/mtouch/mtouch.exe \
-	/Users/stephanie/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-cache \
+	/Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-cache \
 	--sim \
-	/Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/AutoLook.iOS.app \
+	/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/AutoLook.iOS.app \
 	--executable \
 	AutoLook.iOS \
 	--debug \
@@ -18,35 +18,35 @@
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/stephanie/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-symbols.list \
+	/Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-symbols.list \
 	--dsym=no \
 	--cxx \
 	--gcc_flags \
-	'-L/Users/stephanie/Projects/AutoLook/packages/Realm.2.1.0/build/../native/ios/universal -lrealm-wrappers -lz -framework Security' \
+	'-L/Users/Edgar/Projects/AutoLook/packages/Realm.2.1.0/build/../native/ios/universal -lrealm-wrappers -lz -framework Security' \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
+	/Users/Edgar/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/MySql.Data.dll \
+	/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/MySql.Data.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Remotion.Linq.2.1.2/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Remotion.Linq.2.1.2/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -56,17 +56,17 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/System.Runtime.CompilerServices.Unsafe.4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
+	/Users/Edgar/Projects/AutoLook/packages/System.Runtime.CompilerServices.Unsafe.4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
@@ -344,107 +344,107 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.dll \
+	/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.Sync.dll \
+	/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Realm.Sync.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
+	/Users/Edgar/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/MySql.Data.dll \
+	/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/MySql.Data.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Remotion.Linq.2.1.2/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Remotion.Linq.2.1.2/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/System.Runtime.CompilerServices.Unsafe.4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
+	/Users/Edgar/Projects/AutoLook/packages/System.Runtime.CompilerServices.Unsafe.4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/tr/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
+	/Users/Edgar/Projects/AutoLook/packages/Xamarin.Forms.2.5.0.121934/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll \
 	--target-framework \
 	'Xamarin.iOS,v1.0' \
-	/Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/AutoLook.iOS.exe \
+	/Users/Edgar/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/AutoLook.iOS.exe \

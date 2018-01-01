@@ -73,5 +73,30 @@ namespace AutoLookBackend.Models
 
             return json;
         }
+
+        public string SaveUser(LoginModel NewUser)
+        {
+            try
+            {
+                List<ParameterSchema> lstParams = new List<ParameterSchema>();
+                string query = string.Empty;
+
+                lstParams.Add(new ParameterSchema("Email", NewUser.Email));
+                lstParams.Add(new ParameterSchema("Password", NewUser.Password));
+                lstParams.Add(new ParameterSchema("Type", NewUser.Type));
+                lstParams.Add(new ParameterSchema("Name", NewUser.Name)); 
+                lstParams.Add(new ParameterSchema("LastName", NewUser.LastName));
+                lstParams.Add(new ParameterSchema("Phone", NewUser.Phone));
+
+                query = "INSERT INTO User (Email,Password,Type,Name,LastName,Phone) " +
+                    "values(@Email,@Password,@Type,@Name,@LastName,@Phone)";
+
+                return conexionM.setExecuteQuery(query, lstParams);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
