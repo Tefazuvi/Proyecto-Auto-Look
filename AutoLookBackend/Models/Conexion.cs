@@ -42,22 +42,21 @@ namespace AutoLookBackend.Models
                 openConection();
                 string ans = string.Empty;
 
-                MySqlCommand query = connection.CreateCommand();
-                query.CommandText = stringQuery;
+                MySqlCommand command = connection.CreateCommand();
 
                 for (int i = 0; i < lstParameters.Count; i++)
                 {
-                    query.Parameters.AddWithValue("@" + lstParameters[i].ParamName, lstParameters[i].ParamValue);
+                    command.Parameters.AddWithValue("@" + lstParameters[i].ParamName, lstParameters[i].ParamValue);
                 }
 
-                // query.CommandText = stringQuery;
-                if (query.ExecuteNonQuery() > 0)
+                command.CommandText = stringQuery;
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    ans = query.LastInsertedId.ToString() == "0" ? "" : "ID:" + query.LastInsertedId.ToString();
+                    ans = command.LastInsertedId.ToString() == "0" ? "" : command.LastInsertedId.ToString();
                 }
                 else
                 {
-                    ans = "Error de ejecucion en el Servidor de Base de Datos";
+                    ans = "0";
                 }
 
                 closeConection();
