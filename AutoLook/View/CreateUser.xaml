@@ -36,7 +36,7 @@
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Padding="60,10" VerticalOptions="StartAndExpand">
-                    <Button Text="Crear cuenta" Command="{Binding LoginCommand}" BackgroundColor="#000066" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
+                    <Button Text="Crear cuenta" Command="{Binding SaveUserCommand}" BackgroundColor="#000066" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
                     <Button Text="Cancelar" Command="{Binding CancelCommand}" BackgroundColor="#990000" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
                 </StackLayout>
             </StackLayout>

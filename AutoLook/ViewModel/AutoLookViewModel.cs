@@ -49,8 +49,91 @@ namespace AutoLook.ViewModel
 
         public ICommand NavigateWazeCommand { get; set; }
         public ICommand AddImageCommand { get; set; }
+        public ICommand CancelCommand { get; set; }
         public ICommand PageManagerCommand { get; set; }
         public ICommand VerVehiculoCommand { get; set; }
+        public ICommand SaveUserCommand { get; set; }
+
+        private string _Name { get; set; }
+
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                _Name = value;
+                OnPropertyChanged("Name");
+            }
+
+        }
+
+        private string _LastName { get; set; }
+
+        public string LastName
+        {
+            get
+            {
+                return _LastName;
+            }
+            set
+            {
+                _LastName = value;
+                OnPropertyChanged("LastName");
+            }
+
+        }
+
+        private string _Email { get; set; }
+
+        public string Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                _Email = value;
+                OnPropertyChanged("Email");
+            }
+
+        }
+
+        private string _Password { get; set; }
+
+        public string Password
+        {
+            get
+            {
+                return _Password;
+            }
+            set
+            {
+                _Password = value;
+                OnPropertyChanged("Password");
+            }
+
+        }
+
+        private string _Phone { get; set; }
+
+        public string Phone
+        {
+            get
+            {
+                return _Phone;
+            }
+            set
+            {
+                _Phone = value;
+                OnPropertyChanged("Phone");
+            }
+
+        }
+
 
         private string _UserEmail { get; set; }
 
@@ -290,6 +373,19 @@ namespace AutoLook.ViewModel
 
         }
 
+        private async void SaveUser()
+        {
+            User usuario = new User();
+            usuario.Email = Email;
+            usuario.Password = Password;
+            usuario.Name = Name;
+            usuario.LastName = LastName;
+            usuario.Phone = Phone;
+            usuario.Type = 1;
+            string saved = "";
+            saved = await User.SaveUser(usuario);
+        }
+
         private async void OrdenarVehiculos(int Orden)
         {
             //Filtros
@@ -325,6 +421,11 @@ namespace AutoLook.ViewModel
         private void NavigateWaze()
         {
 
+        }
+
+        private void goHome()
+        {
+            PageManager(1);
         }
 
         private async void AddImage()
@@ -366,7 +467,9 @@ namespace AutoLook.ViewModel
         private void InitCommands()
         {
             NavigateWazeCommand = new Command(NavigateWaze);
+            SaveUserCommand = new Command(SaveUser);
             AddImageCommand = new Command(AddImage);
+            CancelCommand = new Command(goHome);
             PageManagerCommand = new Command<int>(PageManager);
             VerVehiculoCommand = new Command<int>(VerVehiculo);
         }
