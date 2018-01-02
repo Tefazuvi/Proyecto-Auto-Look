@@ -56,6 +56,7 @@ namespace AutoLook.ViewModel
         public ICommand DeleteUserCommand { get; set; }
         public ICommand UpdateUserCommand { get; set; }
         public ICommand ChangeInfoCommand { get; set; }
+        public ICommand AddCarCommand { get; set; }
 
         private string _Name { get; set; }
 
@@ -353,6 +354,279 @@ namespace AutoLook.ViewModel
                 OnPropertyChanged("lstVehiculos");
             }
         }
+
+        private int CarId { get; set; }
+
+        private string _CarBrand { get; set; }
+
+        public string CarBrand
+        {
+            get
+            {
+                return _CarBrand;
+            }
+            set
+            {
+                _CarBrand = value;
+                OnPropertyChanged("CarBrand");
+            }
+        }
+
+        private string _CarModelo { get; set; }
+
+        public string CarModelo
+        {
+            get
+            {
+                return _CarModelo;
+            }
+            set
+            {
+                _CarModelo = value;
+                OnPropertyChanged("CarModelo");
+            }
+        }
+
+        private string _CarColour { get; set; }
+
+        public string CarColour
+        {
+            get
+            {
+                return _CarColour;
+            }
+            set
+            {
+                _CarColour = value;
+                OnPropertyChanged("CarColour");
+            }
+        }
+
+        private int _CarYear { get; set; }
+
+        public int CarYear
+        {
+            get
+            {
+                return _CarYear;
+            }
+            set
+            {
+                _CarYear = value;
+                OnPropertyChanged("CarYear");
+            }
+        }
+
+        private int _CarMiles { get; set; }
+
+        public int CarMiles
+        {
+            get
+            {
+                return _CarMiles;
+            }
+            set
+            {
+                _CarMiles = value;
+                OnPropertyChanged("CarMiles");
+            }
+        }
+
+        private string _CarType { get; set; }
+
+        public string CarType
+        {
+            get
+            {
+                return _CarType;
+            }
+            set
+            {
+                _CarType = value;
+                OnPropertyChanged("CarType");
+            }
+        }
+
+        private double _CarPrice { get; set; }
+
+        public double CarPrice
+        {
+            get
+            {
+                return _CarPrice;
+            }
+            set
+            {
+                _CarPrice = value;
+                OnPropertyChanged("CarPrice");
+            }
+        }
+
+        private int _CarDoorsQuantity { get; set; }
+
+        public int CarDoorsQuantity
+        {
+            get
+            {
+                return _CarDoorsQuantity;
+            }
+            set
+            {
+                _CarDoorsQuantity = value;
+                OnPropertyChanged("CarDoorsQuantity");
+            }
+        }
+
+        private int _CarCapacity{ get; set; }
+
+        public int CarCapacity
+        {
+            get
+            {
+                return _CarCapacity;
+            }
+            set
+            {
+                _CarCapacity = value;
+                OnPropertyChanged("CarCapacity");
+            }
+        }
+
+        private string _CarMotor { get; set; }
+
+        public string CarMotor
+        {
+            get
+            {
+                return _CarMotor;
+            }
+            set
+            {
+                _CarMotor = value;
+                OnPropertyChanged("CarMotor");
+            }
+        }
+
+        private string _CarGas { get; set; }
+
+        public string CarGas
+        {
+            get
+            {
+                return _CarGas;
+            }
+            set
+            {
+                _CarGas = value;
+                OnPropertyChanged("CarGas");
+            }
+        }
+
+        private bool _CarElectricWindows { get; set; }
+
+        public bool CarElectricWindows
+        {
+            get
+            {
+                return _CarElectricWindows;
+            }
+            set
+            {
+                _CarElectricWindows = value;
+                OnPropertyChanged("CarElectricWindows");
+            }
+        }
+
+        private bool _CarCentralLock { get; set; }
+
+        public bool CarCentralLock
+        {
+            get
+            {
+                return _CarCentralLock;
+            }
+            set
+            {
+                _CarCentralLock = value;
+                OnPropertyChanged("CarCentralLock");
+            }
+        }
+
+        private bool _CarHydraulicSteering { get; set; }
+
+        public bool CarHydraulicSteering
+        {
+            get
+            {
+                return _CarHydraulicSteering;
+            }
+            set
+            {
+                _CarHydraulicSteering = value;
+                OnPropertyChanged("CarHydraulicSteering");
+            }
+        }
+
+        private bool _CarElectricRearView { get; set; }
+
+        public bool CarElectricRearView
+        {
+            get
+            {
+                return _CarElectricRearView;
+            }
+            set
+            {
+                _CarElectricRearView = value;
+                OnPropertyChanged("CarElectricRearView");
+            }
+        }
+
+        private bool _CarAlarm { get; set; }
+
+        public bool CarAlarm
+        {
+            get
+            {
+                return _CarAlarm;
+            }
+            set
+            {
+                _CarAlarm = value;
+                OnPropertyChanged("CarAlarm");
+            }
+        }
+
+        private bool _CarAirConditioner { get; set; }
+
+        public bool CarAirConditioner
+        {
+            get
+            {
+                return _CarAirConditioner;
+            }
+            set
+            {
+                _CarAirConditioner = value;
+                OnPropertyChanged("CarAirConditioner");
+            }
+        }
+
+        private bool _CarLuxuryHoops { get; set; }
+
+        public bool CarLuxuryHoops
+        {
+            get
+            {
+                return _CarLuxuryHoops;
+            }
+            set
+            {
+                _CarLuxuryHoops = value;
+                OnPropertyChanged("CarLuxuryHoops");
+            }
+        }
+
         /*
         public CarModel(){
             var realm = Realm.GetInstance();
@@ -422,6 +696,38 @@ namespace AutoLook.ViewModel
             usuario.Type = 1;
             string saved = "";
             saved = await User.SaveUser(usuario);
+            if (Int32.Parse(saved) > 0)
+            {
+                PageManager(1);
+            }
+        }
+
+        private async void AddCar()
+        {
+            CarModel car = new CarModel();
+
+            car.Brand = CarBrand;
+            car.Model = CarModelo;
+            car.Colour = CarColour;
+            car.Year = CarYear;
+            car.Miles = CarMiles;
+            car.Type = CarType;
+            car.Price = CarPrice;
+            car.DoorsQuantity = CarDoorsQuantity;
+            car.Capacity = CarCapacity;
+            car.Motor = CarMotor;
+            car.Gas = CarGas;
+
+            car.ElectricWindows = true;
+            car.CentralLock = true;
+            car.HydraulicSteering = true;
+            car.ElectricRearView = true;
+            car.Alarm = true;
+            car.AirConditioner = true;
+            car.LuxuryHoops = true;
+
+            string saved = "";
+            saved = await CarModel.SaveCar(car);
             if (Int32.Parse(saved) > 0)
             {
                 PageManager(1);
@@ -546,6 +852,7 @@ namespace AutoLook.ViewModel
             VerVehiculoCommand = new Command<int>(VerVehiculo);
             DeleteUserCommand = new Command(DeleteUser);
             ChangeInfoCommand = new Command(OpenChangeInfo);
+            AddCarCommand = new Command(AddCar);
         }
 
         #endregion

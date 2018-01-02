@@ -10,17 +10,17 @@
                 <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30,10">
-                            <Entry Text="{Binding Brand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Model}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Miles}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Colour}" Placeholder="Color" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Year}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Type}" Placeholder="Tipo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Price}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding DoorsQ}" Placeholder="Cantidad de Puertas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Capacity}" Placeholder="Capacidad" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Motor}" Placeholder="Motor" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding Gas}" Placeholder="Gas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarBrand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarModel}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarMiles}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarColour}" Placeholder="Color" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarYear}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarType}" Placeholder="Tipo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarPrice}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarDoorsQ}" Placeholder="Cantidad de Puertas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarCapacity}" Placeholder="Capacidad" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarMotor}" Placeholder="Motor" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarGas}" Placeholder="Gas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />

@@ -64,7 +64,7 @@ namespace AutoLook.Model
                 
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("");
+                    var uri = new Uri("http://6c7c0456.ngrok.io/Car/SaveCar");
 
                     var json = JsonConvert.SerializeObject(car);
 
