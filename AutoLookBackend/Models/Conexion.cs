@@ -24,7 +24,6 @@ namespace AutoLookBackend.Models
 
                 MySqlDataReader reader = query.ExecuteReader();
 
-
                 return reader;
             }
             catch (MySqlException ex)
@@ -33,6 +32,38 @@ namespace AutoLookBackend.Models
                 throw ex;
             }
 
+        }
+
+        public string deleteExecuteQuery(string stringQuery)
+        {
+            try
+            {
+                openConection();
+                string ans = string.Empty;
+
+                MySqlCommand query = connection.CreateCommand();
+                query.CommandText = stringQuery;
+
+                //MySqlDataReader reader = query.ExecuteReader();
+
+                if (query.ExecuteNonQuery() > 0)
+                {
+                    ans = "1";
+                }
+                else
+                {
+                    ans = "0";
+                }
+
+                closeConection();
+
+                return ans;
+            }
+            catch (MySqlException ex)
+            {
+                closeConection();
+                return ex.Message;
+            }
         }
 
         public string setExecuteQuery(string stringQuery, List<ParameterSchema> lstParameters)

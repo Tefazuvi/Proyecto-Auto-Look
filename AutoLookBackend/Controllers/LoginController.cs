@@ -30,5 +30,11 @@ namespace AutoLookBackend.Controllers
             string deleted = user.DeleteUser(user);
             return deleted;
         }
+
+        public string UpdateUser(LoginModel user)
+        {
+            string updated = user.UpdateUser(user);
+            return updated;
+        }
     }
 }
