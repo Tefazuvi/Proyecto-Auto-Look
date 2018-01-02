@@ -102,7 +102,8 @@ namespace AutoLookBackend.Models
             }
             catch (Exception ex)
             {
-                throw ex;
+                //throw ex;
+                return ex.Message;
             }
         }
 
@@ -111,16 +112,30 @@ namespace AutoLookBackend.Models
             try
             {
                 string query = "DELETE FROM User WHERE id=" + user.ID;
-
-                MySqlDataReader reader = conexionM.getExecuteQuery(query);
-
-                return "";
-
+                string ans = conexionM.deleteExecuteQuery(query);
+                return ans;
                 //return conexionM.setExecuteQuery(query, lstParams);
             }
             catch (Exception ex)
             {
-                throw ex;
+                //throw ex;
+                return ex.Message;
+            }
+        }
+
+        public string UpdateUser(LoginModel user)
+        {
+            try
+            {
+                string query = "UPDATE User set Name='"+ user.Name + "',LastName='" + user.LastName + "',Email='" + user.Email + "',Phone='" + user.Phone +"' WHERE id=" + user.ID;
+                string ans = conexionM.deleteExecuteQuery(query);
+                return ans;
+                //return conexionM.setExecuteQuery(query, lstParams);
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+                return ex.Message;
             }
         }
     }
