@@ -1,19 +1,20 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLookBackend/Models/Conexion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLookBackend/Controllers/LoginController.cs">
     <Files>
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="122" Column="32" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="390" Column="14" />
       <File FileName="AutoLook/ViewModel/CalculatorViewModel.cs" Line="103" Column="47" />
       <File FileName="AutoLook/Model/CarModel.cs" Line="2" Column="1" />
-      <File FileName="AutoLook/Model/User.cs" Line="76" Column="1" />
+      <File FileName="AutoLook/Model/User.cs" Line="61" Column="21" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="55" Column="24" />
+      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="10" Column="6" />
+      <File FileName="AutoLookBackend/Models/LoginModel.cs" Line="122" Column="14" />
+      <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="24" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Controllers/LoginController.cs" relfile="AutoLookBackend/Controllers/LoginController.cs" line="16" column="1" />
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/Conexion.cs" relfile="AutoLookBackend/Models/Conexion.cs" line="77" column="1" />
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="68" column="24" />
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/Model/User.cs" relfile="AutoLook/Model/User.cs" line="65" column="1" />
     </BreakpointStore>
