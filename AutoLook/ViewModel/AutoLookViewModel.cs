@@ -119,9 +119,6 @@ namespace AutoLook.ViewModel
 
         }
 
-        private int UserID = 0;
-        //private int UserID { get; set; }
-
         private string _Phone { get; set; }
 
         public string Phone
@@ -137,7 +134,6 @@ namespace AutoLook.ViewModel
             }
 
         }
-
 
         private string _UserEmail { get; set; }
 
@@ -371,7 +367,6 @@ namespace AutoLook.ViewModel
         public void setLoggedUser(User usuario)
         {
             LoggedUser = usuario;
-            UserID = usuario.ID;
             UserEmail = LoggedUser.Email;
             UserFullName = LoggedUser.Name + " " + LoggedUser.LastName;
             UserPhone = LoggedUser.Phone;
@@ -397,7 +392,7 @@ namespace AutoLook.ViewModel
 
         private async void DeleteUser()
         {
-            string deleted = await User.DeleteUser(UserID);
+            string deleted = await User.DeleteUser(LoggedUser);
             if (Int32.Parse(deleted) > 0)
             {
                 goHome();

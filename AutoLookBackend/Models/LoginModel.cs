@@ -106,11 +106,11 @@ namespace AutoLookBackend.Models
             }
         }
 
-        public string DeleteUser(int id)
+        public string DeleteUser(LoginModel user)
         {
             try
             {
-                string query = "DELETE FROM User WHERE id=" + id;
+                string query = "DELETE FROM User WHERE id=" + user.ID;
 
                 MySqlDataReader reader = conexionM.getExecuteQuery(query);
 

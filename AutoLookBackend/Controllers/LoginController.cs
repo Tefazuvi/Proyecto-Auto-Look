@@ -27,10 +27,9 @@ namespace AutoLookBackend.Controllers
         }
 
         [HttpPost]
-        public string DeleteUser(int id)
+        public string DeleteUser(LoginModel user)
         {
-            LoginModel user = new LoginModel();
-            string deleted = user.DeleteUser(id);
+            string deleted = user.DeleteUser(user);
             return deleted;
         }
     }

@@ -51,7 +51,7 @@ namespace AutoLook.Model
             }
         }
 
-        public static async Task<string> DeleteUser(int UserID)
+        public static async Task<string> DeleteUser(User usuario)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace AutoLook.Model
                 {
                     var uri = new Uri("http://064aaab2.ngrok.io/Login/DeleteUser");
 
-                    var json = JsonConvert.SerializeObject(UserID);
+                    var json = JsonConvert.SerializeObject(usuario);
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
