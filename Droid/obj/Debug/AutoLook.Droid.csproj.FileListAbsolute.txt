@@ -358,6 +358,7 @@
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/res/drawable/home.png
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/res/drawable/heart.png
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/res/drawable/right.png
+/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/res/drawable/people.png
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/R.cs.flag
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/uploadflags.txt
 bin/Debug/Mono.Android.pdb

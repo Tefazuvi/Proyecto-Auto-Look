@@ -31,7 +31,7 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.6.1.2/lib/mono/Xamarin.iOS/Facades/System.Reflection.Extensions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.6.1.2/lib/mono/Xamarin.iOS/Facades/System.Text.RegularExpressions.dll
 /Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.Abstractions.dll
-/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll
+/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll
 /Users/stephanie/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.iOS.dll
 /Users/stephanie/Projects/AutoLook/packages/CarouselView.FormsPlugin.5.0.2/lib/Xamarin.iOS10/CarouselView.FormsPlugin.Abstractions.dll
 /Users/stephanie/Projects/AutoLook/packages/Newtonsoft.Json.10.0.3/lib/netstandard1.3/Newtonsoft.Json.dll
@@ -49,4 +49,4 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.6.1.2/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.Extensions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.6.1.2/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll
 /Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll
-/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll
+/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/Xamarin.iOS10/Plugin.Permissions.dll

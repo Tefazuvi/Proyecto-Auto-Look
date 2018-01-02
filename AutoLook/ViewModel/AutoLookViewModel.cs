@@ -7,8 +7,8 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using AutoLook.View;
-using Plugin.Media;
 using AutoLook.Model;
+using Plugin.Media;
 using Realms;
 
 namespace AutoLook.ViewModel
@@ -54,6 +54,8 @@ namespace AutoLook.ViewModel
         public ICommand VerVehiculoCommand { get; set; }
         public ICommand SaveUserCommand { get; set; }
         public ICommand DeleteUserCommand { get; set; }
+        public ICommand UpdateUserCommand { get; set; }
+        public ICommand ChangeInfoCommand { get; set; }
 
         private string _Name { get; set; }
 
@@ -135,6 +137,8 @@ namespace AutoLook.ViewModel
 
         }
 
+        private int UserId { get; set; }
+
         private string _UserEmail { get; set; }
 
         public string UserEmail
@@ -181,6 +185,38 @@ namespace AutoLook.ViewModel
             {
                 _UserFullName = value;
                 OnPropertyChanged("UserFullName");
+            }
+
+        }
+
+        private string _UserName { get; set; }
+
+        public string UserName
+        {
+            get
+            {
+                return _UserName;
+            }
+            set
+            {
+                _UserName = value;
+                OnPropertyChanged("UserName");
+            }
+
+        }
+
+        private string _UserLastName { get; set; }
+
+        public string UserLastName
+        {
+            get
+            {
+                return _UserLastName;
+            }
+            set
+            {
+                _UserLastName = value;
+                OnPropertyChanged("UserLastName");
             }
 
         }
@@ -328,7 +364,7 @@ namespace AutoLook.ViewModel
 
         #region Methods
 
-        private void PageManager(int Id)
+        public void PageManager(int Id)
         {
             switch (Id)
             {
@@ -348,7 +384,7 @@ namespace AutoLook.ViewModel
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new AddCar());
                     break;
                 default:
-                    ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new HomePage());
+                    ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new MainTabbedPage());
                     break;
             }
 
@@ -367,10 +403,12 @@ namespace AutoLook.ViewModel
         public void setLoggedUser(User usuario)
         {
             LoggedUser = usuario;
+            UserId = LoggedUser.ID;
             UserEmail = LoggedUser.Email;
-            UserFullName = LoggedUser.Name + " " + LoggedUser.LastName;
+            UserName = LoggedUser.Name;
+            UserLastName = LoggedUser.LastName;
+            UserFullName = UserName + " " + UserLastName;
             UserPhone = LoggedUser.Phone;
-
         }
 
         private async void SaveUser()
@@ -384,9 +422,9 @@ namespace AutoLook.ViewModel
             usuario.Type = 1;
             string saved = "";
             saved = await User.SaveUser(usuario);
-            if(Int32.Parse(saved)>0)
+            if (Int32.Parse(saved) > 0)
             {
-                goHome();
+                PageManager(1);
             }
         }
 
@@ -395,8 +433,33 @@ namespace AutoLook.ViewModel
             string deleted = await User.DeleteUser(LoggedUser);
             if (Int32.Parse(deleted) > 0)
             {
-                goHome();
+                PageManager(1);
             }
+        }
+
+        private async void UpdateUser()
+        {
+            LoggedUser.Name = UserName;
+            LoggedUser.LastName = UserLastName;
+            LoggedUser.Email = UserEmail;
+            LoggedUser.Phone = UserPhone;
+            UserFullName = UserName + " " + UserLastName;
+
+            string updated = await User.UpdateUser(LoggedUser);
+            if (Int32.Parse(updated) > 0)
+            {
+                PageManager(2);
+            }
+        }
+
+        private void goHome()
+        {
+            PageManager(1);
+        }
+
+        private void OpenChangeInfo()
+        {
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ChangeInfo());
         }
 
         private async void OrdenarVehiculos(int Orden)
@@ -434,11 +497,6 @@ namespace AutoLook.ViewModel
         private void NavigateWaze()
         {
 
-        }
-
-        public void goHome()
-        {
-            PageManager(1);
         }
 
         private async void AddImage()
@@ -481,11 +539,13 @@ namespace AutoLook.ViewModel
         {
             NavigateWazeCommand = new Command(NavigateWaze);
             SaveUserCommand = new Command(SaveUser);
+            UpdateUserCommand = new Command(UpdateUser);
             AddImageCommand = new Command(AddImage);
             CancelCommand = new Command(goHome);
             PageManagerCommand = new Command<int>(PageManager);
             VerVehiculoCommand = new Command<int>(VerVehiculo);
             DeleteUserCommand = new Command(DeleteUser);
+            ChangeInfoCommand = new Command(OpenChangeInfo);
         }
 
         #endregion

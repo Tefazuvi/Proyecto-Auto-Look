@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 using AutoLook.Model;
-using AVFoundation;
 
 namespace AutoLook.ViewModel
 {

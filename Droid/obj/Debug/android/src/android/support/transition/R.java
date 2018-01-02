@@ -2930,13 +2930,13 @@ containing a value of this type.
         public static int addimagewhite=0x7f020054;
         public static int autolooklogo=0x7f020055;
         public static int avd_hide_password=0x7f020056;
-        public static int avd_hide_password_1=0x7f02012a;
-        public static int avd_hide_password_2=0x7f02012b;
-        public static int avd_hide_password_3=0x7f02012c;
+        public static int avd_hide_password_1=0x7f02012b;
+        public static int avd_hide_password_2=0x7f02012c;
+        public static int avd_hide_password_3=0x7f02012d;
         public static int avd_show_password=0x7f020057;
-        public static int avd_show_password_1=0x7f02012d;
-        public static int avd_show_password_2=0x7f02012e;
-        public static int avd_show_password_3=0x7f02012f;
+        public static int avd_show_password_1=0x7f02012e;
+        public static int avd_show_password_2=0x7f02012f;
+        public static int avd_show_password_3=0x7f020130;
         public static int bluelock=0x7f020058;
         public static int bluemail=0x7f020059;
         public static int blueperson=0x7f02005a;
@@ -3137,16 +3137,17 @@ containing a value of this type.
         public static int notification_bg_normal=0x7f02011d;
         public static int notification_bg_normal_pressed=0x7f02011e;
         public static int notification_icon_background=0x7f02011f;
-        public static int notification_template_icon_bg=0x7f020128;
-        public static int notification_template_icon_low_bg=0x7f020129;
+        public static int notification_template_icon_bg=0x7f020129;
+        public static int notification_template_icon_low_bg=0x7f02012a;
         public static int notification_tile_bg=0x7f020120;
         public static int notify_panel_notification_icon_bg=0x7f020121;
-        public static int phone=0x7f020122;
-        public static int pin=0x7f020123;
-        public static int prev=0x7f020124;
-        public static int right=0x7f020125;
-        public static int up=0x7f020126;
-        public static int waze=0x7f020127;
+        public static int people=0x7f020122;
+        public static int phone=0x7f020123;
+        public static int pin=0x7f020124;
+        public static int prev=0x7f020125;
+        public static int right=0x7f020126;
+        public static int up=0x7f020127;
+        public static int waze=0x7f020128;
     }
     public static final class id {
         public static int action0=0x7f0800a6;

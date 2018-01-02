@@ -31,7 +31,7 @@ namespace AutoLook.Model
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("http://064aaab2.ngrok.io/Login/SaveUser");
+                    var uri = new Uri("http://6c7c0456.ngrok.io/Login/SaveUser");
 
                     var json = JsonConvert.SerializeObject(user);
 
@@ -57,7 +57,7 @@ namespace AutoLook.Model
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("http://064aaab2.ngrok.io/Login/DeleteUser");
+                    var uri = new Uri("http://6c7c0456.ngrok.io/Login/DeleteUser");
 
                     var json = JsonConvert.SerializeObject(usuario);
 
@@ -68,6 +68,32 @@ namespace AutoLook.Model
                     string rqDeleteUser = JsonConvert.DeserializeObject<string>(ans);
 
                     return rqDeleteUser;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static async Task<string> UpdateUser(User usuario)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    var uri = new Uri("http://6c7c0456.ngrok.io/Login/UpdateUser");
+
+                    var json = JsonConvert.SerializeObject(usuario);
+
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
+                    string ans = await response.Content.ReadAsStringAsync();
+
+                    string rqUpdateUser = JsonConvert.DeserializeObject<string>(ans);
+
+                    return rqUpdateUser;
                 }
 
             }

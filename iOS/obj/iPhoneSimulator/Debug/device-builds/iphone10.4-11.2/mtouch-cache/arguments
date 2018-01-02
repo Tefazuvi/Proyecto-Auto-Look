@@ -40,9 +40,9 @@
 	-r \
 	/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
+	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll \
+	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/Xamarin.iOS10/Plugin.Permissions.dll \
 	-r \
 	/Users/stephanie/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
 	-r \
@@ -360,9 +360,9 @@
 	-r \
 	/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/Xamarin.iOS10/Plugin.Media.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
+	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll \
 	-r \
-	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.dll \
+	/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/Xamarin.iOS10/Plugin.Permissions.dll \
 	-r \
 	/Users/stephanie/Projects/AutoLook/packages/Realm.DataBinding.1.2.0/lib/Xamarin.iOS10/Realm.DataBinding.dll \
 	-r \

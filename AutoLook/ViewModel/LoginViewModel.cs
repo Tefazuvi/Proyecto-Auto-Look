@@ -71,7 +71,7 @@ namespace AutoLook.ViewModel
             }else{
                 autoLookViewModel.IsAdmin = false;
             }
-            autoLookViewModel.goHome();
+            autoLookViewModel.PageManager(1);
         }
 
         private void OpenCreateUser()
