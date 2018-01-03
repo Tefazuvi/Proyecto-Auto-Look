@@ -5,6 +5,14 @@ namespace AutoLookBackend.Models
 {
     public class CarModel
     {
+        #region Variables
+        Conexion conexionM = new Conexion();
+        #endregion
+
+        public CarModel()
+        {
+        }
+
         public int Id { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -24,26 +32,17 @@ namespace AutoLookBackend.Models
         public bool Alarm { get; set; }
         public bool AirConditioner { get; set; }
         public bool LuxuryHoops { get; set; }
-
-
-        public CarModel()
-        {
-        }
+        public List<ImageFile> lstImagenes { get; set; }
 
         public string SaveCar(CarModel car)
         {
-            Conexion conexionM = new Conexion();
-
             try
             {
                 List<ParameterSchema> lstParams = new List<ParameterSchema>();
                 string query = string.Empty;
 
-                lstParams.Add(new ParameterSchema("Brand", car.Brand));
-                lstParams.Add(new ParameterSchema("Model", car.Model));
                 lstParams.Add(new ParameterSchema("Colour", car.Colour));
                 lstParams.Add(new ParameterSchema("Year", car.Year));
-                lstParams.Add(new ParameterSchema("Miles", car.Miles));
                 lstParams.Add(new ParameterSchema("Type", car.Type));
                 lstParams.Add(new ParameterSchema("Price", car.Price));
                 lstParams.Add(new ParameterSchema("DoorsQuantity", car.DoorsQuantity));
@@ -56,16 +55,19 @@ namespace AutoLookBackend.Models
                 lstParams.Add(new ParameterSchema("ElectricRearView", car.ElectricRearView));
                 lstParams.Add(new ParameterSchema("Alarm", car.Alarm));
                 lstParams.Add(new ParameterSchema("AirConditioner", car.AirConditioner));
+                lstParams.Add(new ParameterSchema("Brand", car.Brand));
                 lstParams.Add(new ParameterSchema("LuxuryHoops", car.LuxuryHoops));
+                lstParams.Add(new ParameterSchema("Model", car.Model));
+                lstParams.Add(new ParameterSchema("Miles", car.Miles));
 
-                query = "Insert into Car (Brand,Model,Colour,Years,Miles,Type,Price,DoorsQuantity,Capacity,Motor,Gas,ElectricWindows,CentralLock,HydraulicSteering,ElectricRearview,Alarm,AirConditioner,LuxuryHoops) " +
-                    "values(@Brand,@Model,@Colour,@Year,@Miles,@Type,@Price,@DoorsQuantity,@Capacity,@Motor,@Gas,@ElectricWindows,@CentralLock,@HydraulicSteering,@ElectricRearview,@Alarm,@AirConditioner,@LuxuryHoops)";
+                query = "INSERT INTO Vehicles (Colour,Year,Type,Price,DoorsQuantity,Capacity,Motor,Gas,ElectricWindows,CentralLock,HydraulicSteering,ElectricRearview,Alarm,AirConditioner,Brand,LuxuryHoops,Model,Miles) " +
+                    "values(@Colour,@Year,@Type,@Price,@DoorsQuantity,@Capacity,@Motor,@Gas,@ElectricWindows,@CentralLock,@HydraulicSteering,@ElectricRearview,@Alarm,@AirConditioner,@Brand,@LuxuryHoops,@Model,@Miles)";
 
                 return conexionM.setExecuteQuery(query, lstParams);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return ex.Message;
             }
 
         }

@@ -48,7 +48,6 @@
 /Users/Edgar/Projects/AutoLook/AutoLookBackend/bin/System.Web.Http.xml
 /Users/Edgar/Projects/AutoLook/AutoLookBackend/bin/System.Web.Http.WebHost.xml
 /Users/Edgar/Projects/AutoLook/AutoLookBackend/bin/Newtonsoft.Json.xml
-/Users/Edgar/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.csprojResolveAssemblyReference.cache
 /Users/Edgar/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.csproj.CoreCompileInputs.cache
 /Users/Edgar/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.dll
 /Users/Edgar/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.pdb
@@ -78,3 +77,4 @@
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.csproj.CoreCompileInputs.cache
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.dll
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.pdb
+/Users/Edgar/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.csprojResolveAssemblyReference.cache
