@@ -656,6 +656,7 @@ namespace AutoLook.ViewModel
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new About());
                     break;
                 case 4:
+                    lstImages = new ObservableCollection<ImageFile>();
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new AddCar());
                     break;
                 default:
@@ -726,9 +727,11 @@ namespace AutoLook.ViewModel
             car.Alarm = CarAlarm;
             car.AirConditioner = CarAirConditioner;
             car.LuxuryHoops = CarLuxuryHoops;
+            car.lstImagenes = lstImages;
 
             string saved = "";
             saved = await CarModel.SaveCar(car);
+            lstImages = new ObservableCollection<ImageFile>();
             if (Int32.Parse(saved) > 0)
             {
                 PageManager(1);

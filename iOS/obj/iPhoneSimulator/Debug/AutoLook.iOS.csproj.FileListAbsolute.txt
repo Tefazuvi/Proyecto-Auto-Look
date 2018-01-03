@@ -468,4 +468,3 @@
 /Users/stephanie/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.View.Filters.xaml.g.cs
 /Users/stephanie/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.exe
 /Users/stephanie/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.pdb
-/Users/stephanie/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.csprojResolveAssemblyReference.cache

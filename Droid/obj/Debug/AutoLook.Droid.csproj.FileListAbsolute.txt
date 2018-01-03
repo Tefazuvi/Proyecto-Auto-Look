@@ -295,10 +295,12 @@
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Permissions.Abstractions.pdb
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Permissions.Abstractions.xml
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Permissions.pdb
+/Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Permissions.dll.mdb
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Permissions.xml
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Media.Abstractions.pdb
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Media.Abstractions.xml
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Media.pdb
+/Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Media.dll.mdb
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Plugin.Media.xml
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.csprojResolveAssemblyReference.cache
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.csproj.CoreCompileInputs.cache
@@ -359,10 +361,6 @@
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/res/drawable/people.png
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/R.cs.flag
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/uploadflags.txt
-/Users/stephanie/Projects/AutoLook/packages/Xam.Plugin.Media.3.1.1/lib/MonoAndroid10/Plugin.Media.dll
-/Users/stephanie/Projects/AutoLook/packages/Plugin.Permissions.2.1.0/lib/MonoAndroid10/Plugin.Permissions.dll
-bin/Debug/Plugin.Media.dll.mdb
-bin/Debug/Plugin.Permissions.dll.mdb
 bin/Debug/Mono.Android.pdb
 obj/Debug/linksrc/FormsViewGroup.dll.mdb
 obj/Debug/linksrc/Plugin.Media.dll.mdb

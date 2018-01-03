@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AutoLookBackend.Models
 {
@@ -60,10 +61,13 @@ namespace AutoLookBackend.Models
                 lstParams.Add(new ParameterSchema("Model", car.Model));
                 lstParams.Add(new ParameterSchema("Miles", car.Miles));
 
+
                 query = "INSERT INTO Vehicles (Colour,Year,Type,Price,DoorsQuantity,Capacity,Motor,Gas,ElectricWindows,CentralLock,HydraulicSteering,ElectricRearview,Alarm,AirConditioner,Brand,LuxuryHoops,Model,Miles) " +
                     "values(@Colour,@Year,@Type,@Price,@DoorsQuantity,@Capacity,@Motor,@Gas,@ElectricWindows,@CentralLock,@HydraulicSteering,@ElectricRearview,@Alarm,@AirConditioner,@Brand,@LuxuryHoops,@Model,@Miles)";
+                string ans = conexionM.setExecuteQuery(query, lstParams);
 
-                return conexionM.setExecuteQuery(query, lstParams);
+                lstImagenes.ForEach(file => file.SaveImageFile(file,Int32.Parse(ans)));
+                return ans;
             }
             catch (Exception ex)
             {
