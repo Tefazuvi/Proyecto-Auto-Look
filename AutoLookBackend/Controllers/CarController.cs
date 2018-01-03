@@ -2,23 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
+using System.Web.Mvc.Ajax;
 using System.Web.Mvc;
 using AutoLookBackend.Models;
 
 namespace AutoLookBackend.Controllers
 {
-    public class CarController : ApiController
+    public class CarController : Controller
     {
-
-
-        [System.Web.Http.HttpPost]
+        
+        [HttpPost]
         public string SaveCar(CarModel car)
         {
-
-            CarModel newcar = new CarModel();
-            //newcar.SaveCar(car);
-            return "";
+            string saved = car.SaveCar(car);
+            return saved;
         }
     }
 }

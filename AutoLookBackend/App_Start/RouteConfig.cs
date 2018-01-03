@@ -10,9 +10,15 @@ namespace AutoLookBackend
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Login",
-                url: "Login/",
-                defaults: new { controller = "Login", action = "Authenticate" }
+            name: "Login",
+            url: "Login/",
+            defaults: new { controller = "Login", action = "Authenticate" }
+            );
+
+            routes.MapRoute(
+                name: "Car",
+                url: "Car/",
+                defaults: new { controller = "Car", action = "SaveCar" }
             );
 
             routes.MapRoute(
