@@ -65,7 +65,7 @@ namespace AutoLook.ViewModel
 
             autoLookViewModel.setLoggedUser(usuario);
 
-            if (usuario.Type == 0) //Admin = 0
+            if (usuario.Type == 2) //Admin = 2
             {
                 autoLookViewModel.IsAdmin = true;
             }else{

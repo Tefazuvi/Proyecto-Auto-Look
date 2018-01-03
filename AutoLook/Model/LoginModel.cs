@@ -19,7 +19,7 @@ namespace AutoLook.Model
             using (HttpClient client = new HttpClient())
             {
 
-                var uri = new Uri("http://6c7c0456.ngrok.io/Login/Authenticate");
+                var uri = new Uri("http://b9d162d2.ngrok.io/Login/Authenticate");
 
                 var json = JsonConvert.SerializeObject(new
                 {

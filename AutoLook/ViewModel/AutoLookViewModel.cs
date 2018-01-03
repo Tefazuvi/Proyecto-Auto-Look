@@ -10,6 +10,7 @@ using AutoLook.View;
 using AutoLook.Model;
 using Plugin.Media;
 using Realms;
+using System.IO;
 
 namespace AutoLook.ViewModel
 {
@@ -718,13 +719,13 @@ namespace AutoLook.ViewModel
             car.Motor = CarMotor;
             car.Gas = CarGas;
 
-            car.ElectricWindows = true;
-            car.CentralLock = true;
-            car.HydraulicSteering = true;
-            car.ElectricRearView = true;
-            car.Alarm = true;
-            car.AirConditioner = true;
-            car.LuxuryHoops = true;
+            car.ElectricWindows = CarElectricWindows;
+            car.CentralLock = CarCentralLock;
+            car.HydraulicSteering = CarHydraulicSteering;
+            car.ElectricRearView = CarElectricRearView;
+            car.Alarm = CarAlarm;
+            car.AirConditioner = CarAirConditioner;
+            car.LuxuryHoops = CarLuxuryHoops;
 
             string saved = "";
             saved = await CarModel.SaveCar(car);
@@ -817,10 +818,10 @@ namespace AutoLook.ViewModel
 
                 if (file != null)
                 {
-                    ImageFile image = new ImageFile { Path = file.Path };
+                    ImageFile image = new ImageFile { Path = file.Path};
+                    image.Image = File.ReadAllBytes(image.Path);
                     lstImages.Add(image);
                 }
-
                 return;
             }
         }

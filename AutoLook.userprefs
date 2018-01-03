@@ -1,19 +1,45 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/ViewModel/AutoLookViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/Model/CarModel.cs">
     <Files>
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="717" Column="40" />
-      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="68" Column="34" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="342" Column="9" />
+      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="76" Column="9" />
       <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="34" Column="9" />
-      <File FileName="AutoLookBackend/Models/LoginModel.cs" Line="119" Column="21" />
-      <File FileName="AutoLook/View/AddCar.xaml" Line="28" Column="72" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="67" Column="76" />
-      <File FileName="AutoLook/Model/LoginModel.cs" Line="22" Column="36" />
+      <File FileName="AutoLook/Model/LoginModel.cs" Line="22" Column="51" />
+      <File FileName="AutoLook/Model/User.cs" Line="86" Column="55" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="AutoLook/Model/ImageFile.cs" Line="1" Column="1" />
+      <File FileName="AutoLook/Model/CarModel.cs" Line="83" Column="26" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AutoLook" expanded="True">
+            <Node name="AutoLook" expanded="True">
+              <Node name="Model" expanded="True">
+                <Node name="CarModel.cs" selected="True" />
+              </Node>
+              <Node name="View" expanded="True">
+                <Node name="AddCar.xaml" expanded="True" />
+                <Node name="ReceiveCar.xaml" expanded="True" />
+              </Node>
+              <Node name="ViewModel" expanded="True" />
+            </Node>
+            <Node name="AutoLook.Droid" expanded="True" />
+            <Node name="AutoLook.iOS" expanded="True" />
+            <Node name="AutoLookBackend" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="68" column="24" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/ViewModel/AutoLookViewModel.cs" relfile="AutoLook/ViewModel/AutoLookViewModel.cs" line="239" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
