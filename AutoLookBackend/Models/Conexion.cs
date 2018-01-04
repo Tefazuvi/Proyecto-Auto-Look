@@ -106,7 +106,7 @@ namespace AutoLookBackend.Models
         private void openConection()
         {
             connection.Close();
-            ConecctionString = "Server=127.0.0.1; Port=3306; Database=mydb; Uid=root; Pwd=Tefa1992;";
+            ConecctionString = "Server=127.0.0.1; Port=3306; Database=mydb; Uid=root; Pwd=creativecalo10;";
             connection.ConnectionString = ConecctionString;
             connection.Open();
         }

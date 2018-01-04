@@ -66,7 +66,11 @@ namespace AutoLookBackend.Models
                     "values(@Colour,@Year,@Type,@Price,@DoorsQuantity,@Capacity,@Motor,@Gas,@ElectricWindows,@CentralLock,@HydraulicSteering,@ElectricRearview,@Alarm,@AirConditioner,@Brand,@LuxuryHoops,@Model,@Miles)";
                 string ans = conexionM.setExecuteQuery(query, lstParams);
 
-                lstImagenes.ForEach(file => file.SaveImageFile(file,Int32.Parse(ans)));
+                foreach (var Image in lstImagenes)
+                {
+                    Image.SaveImageFile(Image.Image,Int32.Parse(ans));
+                }
+
                 return ans;
             }
             catch (Exception ex)

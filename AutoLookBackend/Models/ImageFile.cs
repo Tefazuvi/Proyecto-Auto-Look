@@ -25,22 +25,18 @@ namespace AutoLookBackend.Models
             set;
         }
 
-        public string SaveImageFile(ImageFile NewImage, int vehicleID)
+        public string SaveImageFile(Byte[] NewImage, int vehicleID)
         {
             try
             {
                 List<ParameterSchema> lstParams = new List<ParameterSchema>();
                 string query = string.Empty;
 
-                //Convert the byte array to a base 64 encoded string.
-
-                string encodedString = Convert.ToBase64String(NewImage.Image);
-
-                lstParams.Add(new ParameterSchema("Picture", encodedString));
+                lstParams.Add(new ParameterSchema("Picture", NewImage));
                 lstParams.Add(new ParameterSchema("Vehicles_id", vehicleID));
 
                 query = "INSERT INTO Pictures (Picture,Vehicles_id) " +
-                    "values(@encodedString,@vehicleID)";
+                    "values(@Picture,@Vehicles_id)";
 
                 return conexionM.setExecuteQuery(query, lstParams);
             }
