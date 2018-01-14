@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:local="clr-namespace:AutoLook.View" x:Name="CarDetails" x:Class="AutoLook.View.CarDetails">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" 
+    xmlns:local="clr-namespace:AutoLook.View" 
+    x:Name="CarDetails" 
+    x:Class="AutoLook.View.CarDetails">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="cnvImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout>
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
@@ -18,7 +28,7 @@
                             <cv:CarouselViewControl.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
-                                        <Image Aspect="AspectFill" Source="{Binding Path}" />
+                                        <Image Aspect="AspectFill" Source="{Binding Image, Converter={StaticResource cnvImageConverter}}" />
                                     </Grid>
                                 </DataTemplate>
                             </cv:CarouselViewControl.ItemTemplate>

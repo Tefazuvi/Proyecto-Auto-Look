@@ -11,6 +11,7 @@ using AutoLook.Model;
 using Plugin.Media;
 using Realms;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace AutoLook.ViewModel
 {
@@ -838,11 +839,18 @@ namespace AutoLook.ViewModel
 
         }
 
+        private object GetImageSource(Byte[] Image)
+        {
+            return ImageSource.FromStream(() => new MemoryStream(Image));
+        }
+
         private async Task InitClass()
         {
-            lstVehiculos = await CarModel.ObtenerVehiculos();
+            //lstVehiculos = await CarModel.ObtenerVehiculos();
+            lstOriginalVehiculos = await CarModel.GetCars();
+            lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
             lstPages = await MasterPageItem.GetPages();
-            lstOriginalVehiculos = lstVehiculos.ToList();
+            //lstOriginalVehiculos = lstVehiculos.ToList();
         }
 
         private void InitCommands()

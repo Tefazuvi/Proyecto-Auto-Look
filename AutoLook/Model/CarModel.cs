@@ -8,6 +8,8 @@ using Realms;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
+using System.Collections.Generic;
+using System.Web.Extensions;
 
 namespace AutoLook.Model
 {
@@ -33,7 +35,17 @@ namespace AutoLook.Model
         public bool Alarm { get; set; }
         public bool AirConditioner { get; set; }
         public bool LuxuryHoops { get; set; }
-        public ImageFile Cover { get; set; }
+        public ImageFile Cover
+        {
+            get
+            {
+                return lstImagenes.FirstOrDefault();
+            }
+            set
+            {
+
+            }
+        }
 
         public ObservableCollection<ImageFile> lstImagenes { get; set; }
 
@@ -44,15 +56,17 @@ namespace AutoLook.Model
         public static async Task<ObservableCollection<CarModel>> ObtenerVehiculos()
         {
             ObservableCollection<CarModel> lstVehiculos = new ObservableCollection<CarModel>();
-            ObservableCollection<ImageFile> lstFotos = new ObservableCollection<ImageFile>();
+
+            //List<CarModel> listaVehiculos = new List<CarModel>();
+            /*ObservableCollection<ImageFile> lstFotos = new ObservableCollection<ImageFile>();
 
             lstFotos.Add(new ImageFile { Path = "Jeep1.jpg" });
             lstFotos.Add(new ImageFile { Path = "Jeep2.jpg" });
             lstFotos.Add(new ImageFile { Path = "Jeep3.jpg" });
 
             lstVehiculos.Add(new CarModel { Id = 1, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2012, Miles=3000, Type = "4x4", Price = 90000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
-            lstVehiculos.Add(new CarModel { Id = 2, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Miles=2000, Type = "4x4", Price = 100000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
-           
+            lstVehiculos.Add(new CarModel { Id = 2, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Miles=2000, Type = "4x4", Price = 100000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });*/
+
             return lstVehiculos;
         }
 
@@ -61,12 +75,13 @@ namespace AutoLook.Model
 
             try
             {
-                
+
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("http://b9d162d2.ngrok.io/Car/SaveCar");
+                    var uri = new Uri(APIDictionary.API_SaveCar);
 
                     var json = JsonConvert.SerializeObject(car);
+                    json.MaxJsonLength = Int32.MaxValue;
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
@@ -81,6 +96,21 @@ namespace AutoLook.Model
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public static async Task<List<CarModel>> GetCars()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+
+                var uri = new Uri(APIDictionary.API_GetCar);
+
+                HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
+                string ans = await response.Content.ReadAsStringAsync();
+
+                List<CarModel> lstVehiculos = new List<CarModel>();
+                lstVehiculos = JsonConvert.DeserializeObject<List<CarModel>>(ans);
+                return lstVehiculos;
             }
         }
     }

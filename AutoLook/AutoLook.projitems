@@ -156,10 +156,13 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Calculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\CalculatorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\APIDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Converters\ImageConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Converters\" />
   </ItemGroup>
 </Project>

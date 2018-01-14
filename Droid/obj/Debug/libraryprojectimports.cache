@@ -1,38 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars>obj/Debug/__library_projects__/FormsViewGroup/library_project_imports/formsviewgroup.jar;obj/Debug/__library_projects__/Xamarin.Android.Support.Annotations/library_project_imports/support-annotations.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/FormsViewGroup/library_project_imports/formsviewgroup.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Animated.Vector.Drawable/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Annotations/library_project_imports/support-annotations.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Compat/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Core.UI/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Core.Utils/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Design/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Fragment/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Media.Compat/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Transition/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Vector.Drawable/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v4/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.AppCompat/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.CardView/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.MediaRouter/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.Palette/library_project_imports/bin/classes.jar;/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.RecyclerView/library_project_imports/bin/classes.jar</Jars>
+  <Jars>
+    <Jar>obj/Debug/lp/2/jl/formsviewgroup.jar</Jar>
+    <Jar>obj/Debug/lp/16/jl/support-annotations.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/15/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/16/jl/support-annotations.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/17/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/18/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/19/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/2/jl/formsviewgroup.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/20/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/21/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/22/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/23/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/24/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/25/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/26/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/27/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/28/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/29/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/30/jl/bin/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/37/jl/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/38/jl/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/39/jl/classes.jar</Jar>
+    <Jar>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/40/jl/classes.jar</Jar>
+  </Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/CarouselView.FormsPlugin.Android/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Plugin.Permissions/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Realm.DataBinding/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Design/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Transition/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v4/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.AppCompat/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.CardView/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.MediaRouter/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.RecyclerView/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/1/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/4/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/8/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/9/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/20/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/23/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/24/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/25/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/26/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/27/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/29/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/37/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/39/jl/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/40/jl/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>obj/Debug/__library_projects__/CarouselView.FormsPlugin.Android/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Permissions/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Realm.DataBinding/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Android.Support.v4/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/lp/1/jl/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/lp/4/jl/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/lp/8/jl/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/lp/9/jl/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/lp/24/jl/assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/CarouselView.FormsPlugin.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Plugin.Permissions.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Realm.DataBinding.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Design.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.Transition.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v4.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.AppCompat.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.CardView.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.MediaRouter.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/carlosmendez/OutOfCloud/Projects/AutoLook/Droid/obj/Debug/__library_projects__/Xamarin.Android.Support.v7.RecyclerView.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/1.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/4.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/8.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/9.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/20.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/23.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/24.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/25.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/26.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/27.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/29.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/37.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/39.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/lp/40.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
