@@ -48,5 +48,9 @@
 	<string>Yes</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Yes</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>AutoLook esta usando su ubicacion.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>AutoLook desea utilizar su ubicacion.</string>
 </dict>
 </plist>

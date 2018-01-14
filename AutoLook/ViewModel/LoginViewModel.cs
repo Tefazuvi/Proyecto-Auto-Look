@@ -68,10 +68,14 @@ namespace AutoLook.ViewModel
             if (usuario.Type == 2) //Admin = 2
             {
                 autoLookViewModel.IsAdmin = true;
-            }else{
+            }
+            else
+            {
                 autoLookViewModel.IsAdmin = false;
             }
             autoLookViewModel.PageManager(1);
+
+            App.Current.MainPage.DisplayAlert("Success", "Bienvenido " + usuario.Name, "OK");
         }
 
         private void OpenCreateUser()

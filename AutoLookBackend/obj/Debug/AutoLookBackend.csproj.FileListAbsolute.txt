@@ -75,7 +75,6 @@
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/bin/System.Web.Http.xml
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/bin/System.Web.Http.WebHost.xml
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/bin/Newtonsoft.Json.xml
-/Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.csprojResolveAssemblyReference.cache
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.csproj.CoreCompileInputs.cache
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.dll
 /Users/stephanie/Projects/AutoLook/AutoLookBackend/obj/Debug/AutoLookBackend.pdb

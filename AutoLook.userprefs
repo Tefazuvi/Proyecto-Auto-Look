@@ -1,17 +1,20 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/Behaviors/MapBehavior.cs">
     <Files>
-      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="80" Column="1" />
-      <File FileName="AutoLook/Model/LoginModel.cs" Line="17" Column="1" />
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="822" Column="17" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="85" Column="40" />
-      <File FileName="AutoLook/Model/User.cs" Line="60" Column="67" />
-      <File FileName="iOS/Main.cs" Line="20" Column="2" />
-      <File FileName="AutoLook/View/CarDetails.xaml" Line="155" Column="15" />
-      <File FileName="AutoLook/View/HomePage.xaml" Line="65" Column="15" />
-      <File FileName="AutoLook/View/Converters/ImageConverter.cs" Line="8" Column="32" />
-      <File FileName="iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.View.MainPage.xaml.g.cs" Line="22" Column="1" />
-      <File FileName="AutoLook/View/AddCar.xaml" Line="100" Column="15" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="10" Column="22" />
+      <File FileName="AutoLook/View/CarDetails.xaml" Line="150" Column="31" />
+      <File FileName="AutoLook/View/ReceiveCarDetail.xaml" Line="49" Column="43" />
+      <File FileName="AutoLook/View/Filters.xaml" Line="8" Column="1" />
+      <File FileName="AutoLook/View/ReceiveCarList.xaml" Line="4" Column="5" />
+      <File FileName="AutoLook/Model/ReceiveCarModel.cs" Line="49" Column="94" />
+      <File FileName="AutoLook/View/HomePage.xaml" Line="5" Column="1" />
+      <File FileName="AutoLook/View/ReceiveCar.xaml" Line="22" Column="46" />
+      <File FileName="AutoLook/View/AddCar.xaml" Line="24" Column="51" />
+      <File FileName="AutoLook/View/Favorites.xaml" Line="19" Column="66" />
+      <File FileName="AutoLook/Model/Location.cs" Line="14" Column="1" />
+      <File FileName="AutoLook/View/Contacto.xaml" Line="30" Column="42" />
+      <File FileName="AutoLook/ViewModel/MapViewModel.cs" Line="37" Column="70" />
+      <File FileName="AutoLook/View/Behaviors/MapBehavior.cs" Line="35" Column="59" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.AutoLook HideGettingStarted="True" />
@@ -20,11 +23,11 @@
     <BreakpointStore>
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/ImageFile.cs" relfile="AutoLookBackend/Models/ImageFile.cs" line="32" column="1" />
       <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="67" column="1" />
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/Model/CarModel.cs" relfile="AutoLook/Model/CarModel.cs" line="86" column="1" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/Model/CarModel.cs" relfile="AutoLook/Model/CarModel.cs" line="71" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AutoLookBackend PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.87E7F225-CC40-4AA9-8B5E-908AACB9DF39" />
+  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.87E7F225-CC40-4AA9-8B5E-908AACB9DF39" automaticSigning="False" />
 </Properties>

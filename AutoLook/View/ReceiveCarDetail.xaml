@@ -1,5 +1,56 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.ReceiveCarDetail">
-	<ContentPage.Content>
-	</ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.ReceiveCarDetail" xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:local="clr-namespace:AutoLook.View" x:Name="ReceivedCarDetails">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="cnvImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand">
+                    <Label Text="DETALLES DEL CARRO" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="20" Margin="0,20,0,10" />
+                </StackLayout>
+                <!--Carousel View-->
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="38*" />
+                            <RowDefinition Height="7*" />
+                            <RowDefinition Height="55*" />
+                        </Grid.RowDefinitions>
+                        <cv:CarouselViewControl Grid.RowSpan="2" ItemsSource="{Binding ReceivedActual.lstImagenes}" Position="{Binding ImagenActual}" HeightRequest="250">
+                            <cv:CarouselViewControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Image Aspect="AspectFill" Source="{Binding Image, Converter={StaticResource cnvImageConverter}}" />
+                                    </Grid>
+                                </DataTemplate>
+                            </cv:CarouselViewControl.ItemTemplate>
+                        </cv:CarouselViewControl>
+                        <StackLayout Grid.Row="1" WidthRequest="50" HorizontalOptions="EndAndExpand" BackgroundColor="#FFF" Orientation="Horizontal">
+                            <Label Text="{Binding Posicion}" TextColor="Black" FontSize="18" HorizontalOptions="Center" Margin="10,0,0,0" VerticalOptions="CenterAndExpand" />
+                            <Label Text="{Binding ReceivedActual.lstImagenes.Count, StringFormat='/{0}'}" TextColor="Black" FontSize="18" Margin="-5,0,0,0" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <ScrollView Grid.Row="2" BackgroundColor="#F4F4F4" Padding="12">
+                            <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding ReceivedActual.Brand}" TextColor="#000066" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                                        <Label Text="{Binding ReceivedActual.Model}" TextColor="#000066" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                            <Label Text="{Binding ReceivedActual.Miles}" TextColor="#000066" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HeightRequest="30" />
+                                            <Label Text="Km" TextColor="#000066" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="30" />
+                                        </StackLayout>
+                                        <Label Text="{Binding ReceivedActual.Year}" TextColor="#000066" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                                        <Label Text="{Binding ReceivedActual.Damage}" TextColor="#000066" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>

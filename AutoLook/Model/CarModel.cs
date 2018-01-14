@@ -9,7 +9,6 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
 using System.Collections.Generic;
-using System.Web.Extensions;
 
 namespace AutoLook.Model
 {
@@ -53,22 +52,6 @@ namespace AutoLook.Model
         {
         }
 
-        public static async Task<ObservableCollection<CarModel>> ObtenerVehiculos()
-        {
-            ObservableCollection<CarModel> lstVehiculos = new ObservableCollection<CarModel>();
-
-            //List<CarModel> listaVehiculos = new List<CarModel>();
-            /*ObservableCollection<ImageFile> lstFotos = new ObservableCollection<ImageFile>();
-
-            lstFotos.Add(new ImageFile { Path = "Jeep1.jpg" });
-            lstFotos.Add(new ImageFile { Path = "Jeep2.jpg" });
-            lstFotos.Add(new ImageFile { Path = "Jeep3.jpg" });
-
-            lstVehiculos.Add(new CarModel { Id = 1, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2012, Miles=3000, Type = "4x4", Price = 90000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });
-            lstVehiculos.Add(new CarModel { Id = 2, Brand = "Jeep", Model = "Wrangler", Colour = "Azul", Year = 2007, Miles=2000, Type = "4x4", Price = 100000000, DoorsQuantity = 4, Capacity = 5, Motor = "3700 cc", Gas = "Gasolina", ElectricWindows = true, CentralLock = true, HydraulicSteering = true, ElectricRearView = true, Alarm = false, AirConditioner = true, LuxuryHoops = false, lstImagenes = lstFotos, Cover = lstFotos.First() });*/
-
-            return lstVehiculos;
-        }
 
         public static async Task<string> SaveCar(CarModel car)
         {
@@ -81,7 +64,7 @@ namespace AutoLook.Model
                     var uri = new Uri(APIDictionary.API_SaveCar);
 
                     var json = JsonConvert.SerializeObject(car);
-                    json.MaxJsonLength = Int32.MaxValue;
+                    //json.MaxJsonLength = Int32.MaxValue;
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);

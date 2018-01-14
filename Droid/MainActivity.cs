@@ -22,7 +22,12 @@ namespace AutoLook.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            //Initialize CarouselView
             CarouselViewRenderer.Init();
+
+            //Initialize Maps
+            Xamarin.FormsMaps.Init(this, bundle);
 
             LoadApplication(new App());
         }

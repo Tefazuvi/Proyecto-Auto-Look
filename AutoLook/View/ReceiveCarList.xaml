@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    x:Name="ReceivedListPage"  
+    xmlns:local="clr-namespace:AutoLook.View"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="AutoLook.View.ReceiveCarList">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="cnvImageConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
+                <!--Logo Image-->
+                <StackLayout Margin="0,10,0,0">
+                    <Image Source="AutoLookLogo.png" HeightRequest="130" />
+                </StackLayout>
+                <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10">
+                    <ListView x:Name="lstvReceived" ItemsSource="{Binding lstReceived}" RowHeight="100">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="5,10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding Cover.Image, Converter={StaticResource cnvImageConverter}}" />
+                                        <StackLayout Grid.Column="1" Orientation="Vertical">
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Path=BindingContext.VerReceivedCommand, Source={x:Reference ReceivedListPage}}" CommandParameter="{Binding Id}" />
+                                            </StackLayout.GestureRecognizers>
+                                            <Label Text="{Binding Brand}" TextColor="#000066 " FontSize="14" />
+                                            <Label Text="{Binding Model}" TextColor="#000066 " FontSize="14" />
+                                            <Label Text="{Binding Year}" TextColor="#000066 " FontSize="14" />
+                                            <Label Text="{Binding Miles}" TextColor="#000066 " FontSize="14" />
+                                        </StackLayout>
+                                        <Image Grid.Column="2" x:Name="imgView" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="right.png" HeightRequest="25" WidthRequest="25" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

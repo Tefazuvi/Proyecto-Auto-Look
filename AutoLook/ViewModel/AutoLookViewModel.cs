@@ -49,16 +49,18 @@ namespace AutoLook.ViewModel
 
         #region Instances
 
-        public ICommand NavigateWazeCommand { get; set; }
         public ICommand AddImageCommand { get; set; }
         public ICommand CancelCommand { get; set; }
         public ICommand PageManagerCommand { get; set; }
         public ICommand VerVehiculoCommand { get; set; }
+        public ICommand VerReceivedCommand { get; set; }
+        public ICommand AddFavoriteCommand { get; set; }
         public ICommand SaveUserCommand { get; set; }
         public ICommand DeleteUserCommand { get; set; }
         public ICommand UpdateUserCommand { get; set; }
         public ICommand ChangeInfoCommand { get; set; }
         public ICommand AddCarCommand { get; set; }
+        public ICommand ReceiveCarCommand { get; set; }
 
         private string _Name { get; set; }
 
@@ -309,6 +311,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private ReceiveCarModel _ReceivedActual { get; set; }
+
+        public ReceiveCarModel ReceivedActual
+        {
+            get
+            {
+                return _ReceivedActual;
+            }
+            set
+            {
+                _ReceivedActual = value;
+                OnPropertyChanged("ReceivedActual");
+            }
+        }
+
         private int _ImagenActual { get; set; }
 
         public int ImagenActual
@@ -357,6 +374,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private ObservableCollection<ReceiveCarModel> _lstReceived = new ObservableCollection<ReceiveCarModel>();
+
+        public ObservableCollection<ReceiveCarModel> lstReceived
+        {
+            get
+            {
+                return _lstReceived;
+            }
+            set
+            {
+                _lstReceived = value;
+                OnPropertyChanged("lstReceived");
+            }
+        }
+
         private int CarId { get; set; }
 
         private string _CarBrand { get; set; }
@@ -386,6 +418,21 @@ namespace AutoLook.ViewModel
             {
                 _CarModelo = value;
                 OnPropertyChanged("CarModelo");
+            }
+        }
+
+        private string _CarDamage { get; set; }
+
+        public string CarDamage
+        {
+            get
+            {
+                return _CarDamage;
+            }
+            set
+            {
+                _CarDamage = value;
+                OnPropertyChanged("CarDamage");
             }
         }
 
@@ -660,6 +707,10 @@ namespace AutoLook.ViewModel
                     lstImages = new ObservableCollection<ImageFile>();
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new AddCar());
                     break;
+                case 5:
+                    lstImages = new ObservableCollection<ImageFile>();
+                    ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new ReceiveCarList());
+                    break;
                 default:
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new MainTabbedPage());
                     break;
@@ -675,6 +726,20 @@ namespace AutoLook.ViewModel
 
             ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new CarDetails());
 
+        }
+
+        private void VerReceived(int id)
+        {
+            ReceivedActual = lstReceived.Where(x => x.Id == id).FirstOrDefault();
+
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ReceiveCarDetail());
+
+        }
+
+        private void AddFavorite(int id)
+        {
+            
+            //App.Current.MainPage.DisplayAlert("Success", "Ha guardado el vehiculo como favorito.", "OK");
         }
 
         public void setLoggedUser(User usuario)
@@ -701,7 +766,13 @@ namespace AutoLook.ViewModel
             saved = await User.SaveUser(usuario);
             if (Int32.Parse(saved) > 0)
             {
+
+                App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el usuario correctamente.", "OK");
                 PageManager(1);
+            }
+            else
+            {
+                App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
             }
         }
 
@@ -732,10 +803,63 @@ namespace AutoLook.ViewModel
 
             string saved = "";
             saved = await CarModel.SaveCar(car);
+
+            if (Int32.Parse(saved) > 0)
+            {
+                lstImages = new ObservableCollection<ImageFile>();
+                CarBrand = "";
+                CarModelo = "";
+                CarColour = "";
+                CarYear = 0;
+                CarMiles = 0;
+                CarType = "";
+                CarPrice = 0;
+                CarDoorsQuantity = 0;
+                CarCapacity = 0;
+                CarMotor = "";
+                CarGas = "";
+                CarElectricWindows = false;
+                CarCentralLock = false;
+                CarHydraulicSteering = false;
+                CarElectricRearView = false;
+                CarAlarm = false;
+                CarAirConditioner = false;
+                CarLuxuryHoops = false;
+
+                App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el carro correctamente.", "OK");
+                PageManager(1);
+            }else{
+                App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
+            }
+        }
+
+        private async void ReceiveCar()
+        {
+            ReceiveCarModel car = new ReceiveCarModel();
+
+            car.Brand = CarBrand;
+            car.Model = CarModelo;
+            car.Year = CarYear;
+            car.Miles = CarMiles;
+            car.Damage = CarDamage;
+            car.lstImagenes = lstImages;
+
+            string saved = "";
+            saved = await ReceiveCarModel.SaveCar(car);
             lstImages = new ObservableCollection<ImageFile>();
             if (Int32.Parse(saved) > 0)
             {
+                lstImages = new ObservableCollection<ImageFile>();
+                CarBrand = "";
+                CarModelo = "";
+                CarYear = 0;
+                CarMiles = 0;
+                CarDamage = "";
+
+                App.Current.MainPage.DisplayAlert("Success", "Su Consulta ha sido enviada", "OK");
                 PageManager(1);
+            }else{
+                App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
             }
         }
 
@@ -805,11 +929,6 @@ namespace AutoLook.ViewModel
             }
         }
 
-        private void NavigateWaze()
-        {
-
-        }
-
         private async void AddImage()
         {
 
@@ -835,6 +954,7 @@ namespace AutoLook.ViewModel
             if (IsAdmin)
             {
                 lstPages.Add(new MasterPageItem { Id = 4, Title = "Agregar vehículo", IconSource = "car.png" });
+                lstPages.Add(new MasterPageItem { Id = 5, Title = "Ver Consultas", IconSource = "car.png" });
             }
 
         }
@@ -848,6 +968,8 @@ namespace AutoLook.ViewModel
         {
             //lstVehiculos = await CarModel.ObtenerVehiculos();
             lstOriginalVehiculos = await CarModel.GetCars();
+            //lstReceived = await ReceiveCarModel.GetCars();
+            lstReceived = await ReceiveCarModel.ObtenerVehiculos();
             lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
             lstPages = await MasterPageItem.GetPages();
             //lstOriginalVehiculos = lstVehiculos.ToList();
@@ -855,16 +977,18 @@ namespace AutoLook.ViewModel
 
         private void InitCommands()
         {
-            NavigateWazeCommand = new Command(NavigateWaze);
             SaveUserCommand = new Command(SaveUser);
             UpdateUserCommand = new Command(UpdateUser);
             AddImageCommand = new Command(AddImage);
             CancelCommand = new Command(goHome);
             PageManagerCommand = new Command<int>(PageManager);
             VerVehiculoCommand = new Command<int>(VerVehiculo);
+            VerReceivedCommand = new Command<int>(VerReceived);
+            AddFavoriteCommand = new Command<int>(AddFavorite);
             DeleteUserCommand = new Command(DeleteUser);
             ChangeInfoCommand = new Command(OpenChangeInfo);
             AddCarCommand = new Command(AddCar);
+            ReceiveCarCommand = new Command(ReceiveCar);
         }
 
         #endregion

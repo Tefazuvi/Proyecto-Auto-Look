@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                x:Name="ContactPage" 
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                xmlns:pages="clr-namespace:AutoLook.View" 
-                x:Class="AutoLook.View.Contacto" 
-                Title="Contacto">
+    x:Name="ContactPage" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" 
+    xmlns:behaviors="clr-namespace:AutoLook.Behaviors;" 
+    xmlns:pages="clr-namespace:AutoLook.View" 
+    x:Class="AutoLook.View.Contacto" 
+    Title="Contacto">
     <ContentPage.Content>
         <AbsoluteLayout BackgroundColor="White">
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All" Scale="1.2">
                 <!--Logo Image-->
-                <StackLayout Margin="0,70,0,0" >
-                    <Image Source="AutoLookLogo.png" HeightRequest="110"/>
+                <StackLayout Margin="0,70,0,0">
+                    <Image Source="AutoLookLogo.png" HeightRequest="110" />
                     <Label Text="CONTACTO" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" FontSize="20" />
                 </StackLayout>
                 <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10">
                         <!--Mapa-->
+                        <StackLayout>
+                            <maps:Map x:Name="MyMap" WidthRequest="320" HeightRequest="200">
+                                <maps:Map.Behaviors>
+                                    <behaviors:MapBehavior ItemsSource="{Binding lstLocations}" />
+                                </maps:Map.Behaviors>
+                            </maps:Map>
+                        </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="30">
                             <Image Source="map.png" HeightRequest="30" Margin="20,0,10,0" />
                             <Label Text="Calle Blancos,      150 m. Oeste de Amazon, contiguo a la línea del tren." TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />

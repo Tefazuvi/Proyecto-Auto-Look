@@ -135,20 +135,19 @@
                                             <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
-                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Vertical">
-                                        <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="35" WidthRequest="35">
+                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                                        <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25">
                                             <Image.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding Path = BindingContext.AddFavorite, Source={x:Reference CarDetails}}" />
                                             </Image.GestureRecognizers>
                                         </Image>
-                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="30" HorizontalOptions="Center" />
+                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center" />
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>
                         </ScrollView>
                     </Grid>
                 </StackLayout>
-                <!--Login Panel-->
             </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>
