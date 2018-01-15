@@ -24,17 +24,5 @@ namespace AutoLook.Model
         {
         }
 
-        public string Path
-        {
-            get;
-            set;
-        }
-
-        public Byte[] Image
-        {
-            get;
-            set;
-        }
-
     }
 }

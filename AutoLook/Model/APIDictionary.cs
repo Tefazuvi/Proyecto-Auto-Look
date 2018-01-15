@@ -3,11 +3,9 @@ namespace AutoLook.Model
 {
     public abstract class APIDictionary
     {
-<<<<<<< HEAD
+
         public const string Base = "http://16b99ef5.ngrok.io/";
-=======
-        public const string Base = "http://08bb0874.ngrok.io/";
->>>>>>> 31c25e7956176ce32a9fff06d2c810d8c97ce474
+
 
         #region BaseCore APIs
         public const string API_SaveUser = Base + "Login/SaveUser";

@@ -1,30 +1,16 @@
-﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/ViewModel/AutoLookViewModel.cs">
+﻿<Properties StartupConfiguration="{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/Model/ImageFile.cs">
     <Files>
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="10" Column="22" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
-    <Files>
-      <File FileName="AutoLook/View/Filters.xaml" Line="55" Column="15" />
-      <File FileName="AutoLook/Model/ImageFile.cs" Line="24" Column="10" />
-      <File FileName="AutoLook/View/Converters/ImageConverter.cs" Line="1" Column="1" />
-      <File FileName="AutoLook/Model/APIDictionary.cs" Line="6" Column="62" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="71" Column="21" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
->>>>>>> 31c25e7956176ce32a9fff06d2c810d8c97ce474
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="956" Column="10" />
+      <File FileName="AutoLook/Model/APIDictionary.cs" Line="20" Column="1" />
+      <File FileName="AutoLook/Model/ImageFile.cs" Line="28" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-<<<<<<< HEAD
-    <BreakpointStore />
-=======
     <BreakpointStore>
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/ImageFile.cs" relfile="AutoLookBackend/Models/ImageFile.cs" line="32" column="1" />
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="67" column="1" />
+      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/ViewModel/AutoLookViewModel.cs" relfile="AutoLook/ViewModel/AutoLookViewModel.cs" line="957" column="1" />
     </BreakpointStore>
->>>>>>> 31c25e7956176ce32a9fff06d2c810d8c97ce474
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AutoLook.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
