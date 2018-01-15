@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace AutoLookBackend.Models
 {
@@ -44,6 +47,30 @@ namespace AutoLookBackend.Models
             {
                 //throw ex;
                 return ex.Message;
+            }
+        }
+
+        public ObservableCollection<ImageFile> GetImageFile(int vehicleID)
+        {
+
+            ObservableCollection<ImageFile> lstPictures = new ObservableCollection<ImageFile>();
+
+            try
+            {
+                string query = "Select * from Pictures where Vehicles_id='" + vehicleID + "'";
+
+                MySqlDataReader reader = conexionM.getExecuteQuery(query);
+                
+                while (reader.Read())
+                {
+                    lstPictures.Add(new ImageFile {Image= (Byte[])reader["Picture"]});
+                }
+                
+                return lstPictures;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

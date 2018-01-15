@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc.Ajax;
-using System.Web.Mvc;
 using AutoLookBackend.Models;
+using System.Web.Mvc;
 
 namespace AutoLookBackend.Controllers
 {
     public class LoginController : Controller
     {
-        
-        [HttpPost]
+
+        [System.Web.Http.HttpPost]
         public string Authenticate(string User, string Pass)
         {
             LoginModel login = new LoginModel();
@@ -19,18 +19,21 @@ namespace AutoLookBackend.Controllers
             return user;
         }
 
+        [System.Web.Http.HttpPost]
         public string SaveUser(LoginModel user)
         {
             string saved = user.SaveUser(user);
             return saved;
         }
 
+        [System.Web.Http.HttpPost]
         public string DeleteUser(LoginModel user)
         {
             string deleted = user.DeleteUser(user);
             return deleted;
         }
 
+        [System.Web.Http.HttpPost]
         public string UpdateUser(LoginModel user)
         {
             string updated = user.UpdateUser(user);
