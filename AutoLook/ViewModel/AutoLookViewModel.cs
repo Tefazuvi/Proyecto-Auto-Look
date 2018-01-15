@@ -59,6 +59,7 @@ namespace AutoLook.ViewModel
         public ICommand DeleteUserCommand { get; set; }
         public ICommand UpdateUserCommand { get; set; }
         public ICommand ChangeInfoCommand { get; set; }
+        public ICommand FiltersCommand { get; set; }
         public ICommand AddCarCommand { get; set; }
         public ICommand ReceiveCarCommand { get; set; }
 
@@ -511,6 +512,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private double _PriceSlider { get; set; }
+
+        public double PriceSlider
+        {
+            get
+            {
+                return _PriceSlider;
+            }
+            set
+            {
+                _PriceSlider = value;
+                OnPropertyChanged("PriceSlider");
+            }
+        }
+
         private int _CarDoorsQuantity { get; set; }
 
         public int CarDoorsQuantity
@@ -736,6 +752,11 @@ namespace AutoLook.ViewModel
 
         }
 
+        private void Filters()
+        {
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Filters());
+        }
+
         private void AddFavorite(int id)
         {
             
@@ -931,7 +952,6 @@ namespace AutoLook.ViewModel
 
         private async void AddImage()
         {
-
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -989,6 +1009,7 @@ namespace AutoLook.ViewModel
             ChangeInfoCommand = new Command(OpenChangeInfo);
             AddCarCommand = new Command(AddCar);
             ReceiveCarCommand = new Command(ReceiveCar);
+            FiltersCommand = new Command(Filters);
         }
 
         #endregion
