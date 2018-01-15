@@ -12,6 +12,7 @@ using Plugin.Media;
 using Realms;
 using System.IO;
 using System.Security.Cryptography;
+using AutoLook.Helper;
 
 namespace AutoLook.ViewModel
 {
@@ -59,6 +60,7 @@ namespace AutoLook.ViewModel
         public ICommand DeleteUserCommand { get; set; }
         public ICommand UpdateUserCommand { get; set; }
         public ICommand ChangeInfoCommand { get; set; }
+        public ICommand FiltersCommand { get; set; }
         public ICommand AddCarCommand { get; set; }
         public ICommand ReceiveCarCommand { get; set; }
 
@@ -238,6 +240,7 @@ namespace AutoLook.ViewModel
             }
             set
             {
+
                 _lstImages = value;
                 OnPropertyChanged("lstImages");
 
@@ -511,6 +514,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private double _PriceSlider { get; set; }
+
+        public double PriceSlider
+        {
+            get
+            {
+                return _PriceSlider;
+            }
+            set
+            {
+                _PriceSlider = value;
+                OnPropertyChanged("PriceSlider");
+            }
+        }
+
         private int _CarDoorsQuantity { get; set; }
 
         public int CarDoorsQuantity
@@ -736,6 +754,11 @@ namespace AutoLook.ViewModel
 
         }
 
+        private void Filters()
+        {
+            ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Filters());
+        }
+
         private void AddFavorite(int id)
         {
             
@@ -931,7 +954,6 @@ namespace AutoLook.ViewModel
 
         private async void AddImage()
         {
-
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -942,7 +964,7 @@ namespace AutoLook.ViewModel
                 if (file != null)
                 {
                     ImageFile image = new ImageFile { Path = file.Path};
-                    image.Image = File.ReadAllBytes(image.Path);
+                    image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path),100,100);
                     lstImages.Add(image);
                 }
                 return;
@@ -989,6 +1011,7 @@ namespace AutoLook.ViewModel
             ChangeInfoCommand = new Command(OpenChangeInfo);
             AddCarCommand = new Command(AddCar);
             ReceiveCarCommand = new Command(ReceiveCar);
+            FiltersCommand = new Command(Filters);
         }
 
         #endregion

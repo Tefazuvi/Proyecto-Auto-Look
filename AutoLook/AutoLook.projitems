@@ -169,6 +169,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MapViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)View\Behaviors\MapBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)View\Behaviors\BindableBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ImageFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\ImageResizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />
@@ -176,5 +178,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
     <Folder Include="$(MSBuildThisFileDirectory)View\Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)View\Behaviors\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helper\" />
   </ItemGroup>
 </Project>

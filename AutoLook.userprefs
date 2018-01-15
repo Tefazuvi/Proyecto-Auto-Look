@@ -1,23 +1,15 @@
-﻿<Properties StartupConfiguration="{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/Model/CarModel.cs">
+﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/ViewModel/AutoLookViewModel.cs">
     <Files>
-      <File FileName="Droid/MainActivity.cs" Line="26" Column="38" />
-      <File FileName="AutoLookBackend/Controllers/CarController.cs" Line="25" Column="31" />
-      <File FileName="AutoLookBackend/Models/CarModel.cs" Line="127" Column="11" />
-      <File FileName="AutoLookBackend/Web.config" Line="21" Column="17" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="49" Column="44" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="10" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AutoLook HideGettingStarted="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLookBackend/Models/ImageFile.cs" relfile="AutoLookBackend/Models/ImageFile.cs" line="32" column="1" />
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="67" column="1" />
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/Model/CarModel.cs" relfile="AutoLook/Model/CarModel.cs" line="71" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AutoLook.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.AutoLookBackend PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EB1D6CD1-541E-42F4-95FF-41A29A4C016D" automaticSigning="False" />

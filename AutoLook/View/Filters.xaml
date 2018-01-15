@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="AutoLook.View.Filters">
-	<ContentPage.Content>
-	</ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.Filters">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
+                <!--Logo Image-->
+                <StackLayout Padding="10">
+                    <Button Text="Restaurar" Command="{Binding RestaurarCommand}" TextColor="Blue" HorizontalOptions="End" HeightRequest="25" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Marca: " TextColor="#000066" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" />
+                    <Picker x:Name="BrandPicker" SelectedIndex="{Binding FiltroOrdenar}" HorizontalOptions="FillAndExpand" WidthRequest="80">
+                        <Picker.Items>
+                            <!--Binding lista marcas de base de datos-->
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Precio " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                    <!--Slider-->
+                    <Slider x:Name="Slider" Minimum="0" Maximum="100" VerticalOptions="Center" Value="{Binding PriceSlider}" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Millas " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                    <!--Slider-->
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Año " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                    <!--Slider-->
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Transmision: " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+                    <Picker x:Name="TransmisionPicker" SelectedIndex="{Binding FiltroOrdenar}" HorizontalOptions="FillAndExpand" WidthRequest="80">
+                        <Picker.Items>
+                            <x:String>Ninguno</x:String>
+                            <x:String>Automatico</x:String>
+                            <x:String>Manual</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Tipo: " TextColor="#000066" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" />
+                    <Picker x:Name="TypePicker" SelectedIndex="{Binding FiltroOrdenar}" HorizontalOptions="FillAndExpand" WidthRequest="80">
+                        <Picker.Items>
+                            <!--Binding lista tipo de base de datos-->
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                    <Button Text="Mostrar" Command="{Binding ShowFilteredCommand}" VerticalOptions="Start" BackgroundColor="#000066" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -11,7 +11,7 @@
 namespace AutoLook.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/stephanie/Projects/AutoLook/AutoLook/View/ReceiveCar.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/View/ReceiveCar.xaml")]
     public partial class ReceiveCar : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
