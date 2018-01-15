@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Name="AddCar" x:Class="AutoLook.View.AddCar">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Name="AddCar" 
+    xmlns:local="clr-namespace:AutoLook.View" 
+    x:Class="AutoLook.View.AddCar">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="cnvImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout>
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
@@ -28,54 +37,36 @@
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />
-                                </StackLayout.GestureRecognizers>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Cierre central" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                     <Switch IsToggled="{Binding CarCentralLock}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />
-                                </StackLayout.GestureRecognizers>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Dirección hidráulica" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                     <Switch IsToggled="{Binding CarHydraulicSteering}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />
-                                </StackLayout.GestureRecognizers>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Retrovisores eléctricos" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                     <Switch IsToggled="{Binding CarElectricRearView}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />
-                                </StackLayout.GestureRecognizers>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Alarma" HorizontalOptions="Start" VerticalOptions="StartAndExpand" WidthRequest="220" TextColor="Gray" />
                                     <Switch IsToggled="{Binding CarAlarm}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />
-                                </StackLayout.GestureRecognizers>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Aire acondicionado" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                     <Switch IsToggled="{Binding CarAirConditioner}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference AddCar}}" CommandParameter="{Binding Id}" />
-                                </StackLayout.GestureRecognizers>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Aros de Lujo" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                     <Switch IsToggled="{Binding CarLuxuryHoops}" HorizontalOptions="EndAndExpand" />
@@ -86,7 +77,7 @@
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <ViewCell>
-                                                <Image Source="{Binding Path}" />
+                                        <Image Source="{Binding Path}" />
                                             </ViewCell>
                                         </DataTemplate>
                                     </ListView.ItemTemplate>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:local="clr-namespace:AutoLook.View" x:Name="CarDetails" x:Class="AutoLook.View.CarDetails">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" 
+    xmlns:local="clr-namespace:AutoLook.View" 
+    x:Name="CarDetails" 
+    x:Class="AutoLook.View.CarDetails">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="cnvImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout>
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
@@ -18,7 +28,7 @@
                             <cv:CarouselViewControl.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
-                                        <Image Aspect="AspectFill" Source="{Binding Path}" />
+                                        <Image Aspect="AspectFill" Source="{Binding Image, Converter={StaticResource cnvImageConverter}}" />
                                     </Grid>
                                 </DataTemplate>
                             </cv:CarouselViewControl.ItemTemplate>
@@ -125,20 +135,19 @@
                                             <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
-                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Vertical">
-                                        <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="35" WidthRequest="35">
+                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                                        <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25">
                                             <Image.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding Path = BindingContext.AddFavorite, Source={x:Reference CarDetails}}" />
                                             </Image.GestureRecognizers>
                                         </Image>
-                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="30" HorizontalOptions="Center" />
+                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center" />
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>
                         </ScrollView>
                     </Grid>
                 </StackLayout>
-                <!--Login Panel-->
             </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>

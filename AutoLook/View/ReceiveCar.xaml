@@ -9,11 +9,11 @@
                 <!--Login Panel-->
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30,10">
-                        <Entry Text="{Binding Marca}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                        <Entry Text="{Binding Año}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                        <Entry Text="{Binding Modelo}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                        <Entry Text="{Binding Millas}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                        <Entry Text="{Binding Daños}" Placeholder="Daños" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding CarBrand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding CarYear}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding CarModelo}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding CarMiles}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                        <Entry Text="{Binding CarDamage}" Placeholder="Daños" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                         <StackLayout VerticalOptions="StartAndExpand">
                             <ListView x:Name="lstvImages" ItemsSource="{Binding lstImages}" HasUnevenRows="True">
                                 <ListView.ItemTemplate>

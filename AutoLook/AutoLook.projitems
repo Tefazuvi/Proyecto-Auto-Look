@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ReceiveCarList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -155,10 +159,22 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Calculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\CalculatorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\APIDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Converters\ImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\ReceiveCarList.xaml.cs">
+      <DependentUpon>ReceiveCarList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ReceiveCarModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MapViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Behaviors\MapBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Behaviors\BindableBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Behaviors\" />
   </ItemGroup>
 </Project>

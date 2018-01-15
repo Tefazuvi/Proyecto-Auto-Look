@@ -31,7 +31,7 @@ namespace AutoLook.Model
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("http://b9d162d2.ngrok.io/Login/SaveUser");
+                    var uri = new Uri(APIDictionary.API_SaveUser);
 
                     var json = JsonConvert.SerializeObject(user);
 
@@ -57,7 +57,7 @@ namespace AutoLook.Model
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("http://b9d162d2.ngrok.io/Login/DeleteUser");
+                    var uri = new Uri(APIDictionary.API_DeleteUser);
 
                     var json = JsonConvert.SerializeObject(usuario);
 
@@ -83,7 +83,7 @@ namespace AutoLook.Model
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri("http://b9d162d2.ngrok.io/Login/UpdateUser");
+                    var uri = new Uri(APIDictionary.API_UpdateUser);
 
                     var json = JsonConvert.SerializeObject(usuario);
 

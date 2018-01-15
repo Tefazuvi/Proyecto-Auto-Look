@@ -1,23 +1,33 @@
-﻿<Properties StartupConfiguration="{1EAD0429-0CFA-48AD-9817-B7AE3C50E594}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLookBackend/Models/Conexion.cs">
+﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/Behaviors/MapBehavior.cs">
     <Files>
-      <File FileName="AutoLookBackend/Controllers/LoginController.cs" Line="17" Column="1" />
-      <File FileName="AutoLookBackend/Controllers/CarController.cs" Line="17" Column="1" />
-      <File FileName="AutoLookBackend/Models/CarModel.cs" Line="73" Column="1" />
-      <File FileName="AutoLookBackend/Models/ImageFile.cs" Line="45" Column="1" />
-      <File FileName="AutoLookBackend/Models/Conexion.cs" Line="80" Column="1" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="10" Column="22" />
+      <File FileName="AutoLook/View/CarDetails.xaml" Line="150" Column="31" />
+      <File FileName="AutoLook/View/ReceiveCarDetail.xaml" Line="49" Column="43" />
+      <File FileName="AutoLook/View/Filters.xaml" Line="8" Column="1" />
+      <File FileName="AutoLook/View/ReceiveCarList.xaml" Line="4" Column="5" />
+      <File FileName="AutoLook/Model/ReceiveCarModel.cs" Line="49" Column="94" />
+      <File FileName="AutoLook/View/HomePage.xaml" Line="5" Column="1" />
+      <File FileName="AutoLook/View/ReceiveCar.xaml" Line="22" Column="46" />
+      <File FileName="AutoLook/View/AddCar.xaml" Line="24" Column="51" />
+      <File FileName="AutoLook/View/Favorites.xaml" Line="19" Column="66" />
+      <File FileName="AutoLook/Model/Location.cs" Line="14" Column="1" />
+      <File FileName="AutoLook/View/Contacto.xaml" Line="30" Column="42" />
+      <File FileName="AutoLook/ViewModel/MapViewModel.cs" Line="37" Column="70" />
+      <File FileName="AutoLook/View/Behaviors/MapBehavior.cs" Line="35" Column="59" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AutoLook HideGettingStarted="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLook/ViewModel/AutoLookViewModel.cs" relfile="AutoLook/ViewModel/AutoLookViewModel.cs" line="239" column="1" />
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLookBackend/Models/ImageFile.cs" relfile="AutoLookBackend/Models/ImageFile.cs" line="32" column="1" />
-      <Breakpoint file="/Users/carlosmendez/OutOfCloud/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="67" column="1" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/ImageFile.cs" relfile="AutoLookBackend/Models/ImageFile.cs" line="32" column="1" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="67" column="1" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/Model/CarModel.cs" relfile="AutoLook/Model/CarModel.cs" line="71" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AutoLookBackend PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EB1D6CD1-541E-42F4-95FF-41A29A4C016D" />
+  <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.87E7F225-CC40-4AA9-8B5E-908AACB9DF39" automaticSigning="False" />
 </Properties>
