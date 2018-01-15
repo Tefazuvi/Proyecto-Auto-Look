@@ -68,6 +68,7 @@ namespace AutoLook.Model
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
+
                     string ans = await response.Content.ReadAsStringAsync();
 
                     string rqSaveCar = JsonConvert.DeserializeObject<string>(ans);
