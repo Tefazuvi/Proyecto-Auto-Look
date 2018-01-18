@@ -1,24 +1,19 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/Model/ImageFile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="AutoLook/View/Filters.xaml" Line="55" Column="15" />
-      <File FileName="AutoLook/Model/ImageFile.cs" Line="11" Column="1" />
-      <File FileName="AutoLook/View/Converters/ImageConverter.cs" Line="1" Column="1" />
-      <File FileName="AutoLook/Model/APIDictionary.cs" Line="6" Column="62" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="71" Column="21" />
+      <File FileName="AutoLook/View/ReceiveCarDetail.xaml" Line="50" Column="87" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="879" Column="29" />
+      <File FileName="AutoLook/Model/ReceiveCarModel.cs" Line="105" Column="14" />
+      <File FileName="AutoLook/Model/User.cs" Line="16" Column="20" />
+      <File FileName="AutoLook/Model/CarModel.cs" Line="35" Column="49" />
       <File FileName="iOS/Main.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AutoLook HideGettingStarted="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/ImageFile.cs" relfile="AutoLookBackend/Models/ImageFile.cs" line="32" column="1" />
-      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLookBackend/Models/CarModel.cs" relfile="AutoLookBackend/Models/CarModel.cs" line="67" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AutoLookBackend PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.AutoLook.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.87E7F225-CC40-4AA9-8B5E-908AACB9DF39" automaticSigning="False" />
 </Properties>

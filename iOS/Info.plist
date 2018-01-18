@@ -52,5 +52,7 @@
 	<string>AutoLook esta usando su ubicacion.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>AutoLook desea utilizar su ubicacion.</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
 </dict>
 </plist>

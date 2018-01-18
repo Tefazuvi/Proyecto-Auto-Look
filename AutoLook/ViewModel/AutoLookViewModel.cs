@@ -12,6 +12,7 @@ using Plugin.Media;
 using Realms;
 using System.IO;
 using System.Security.Cryptography;
+using AutoLook.Helper;
 
 namespace AutoLook.ViewModel
 {
@@ -239,6 +240,7 @@ namespace AutoLook.ViewModel
             }
             set
             {
+
                 _lstImages = value;
                 OnPropertyChanged("lstImages");
 
@@ -763,15 +765,16 @@ namespace AutoLook.ViewModel
             //App.Current.MainPage.DisplayAlert("Success", "Ha guardado el vehiculo como favorito.", "OK");
         }
 
-        public void setLoggedUser(User usuario)
+        public async Task setLoggedUser(User usuario)
         {
             LoggedUser = usuario;
-            UserId = LoggedUser.ID;
+            UserId = LoggedUser.UserID;
             UserEmail = LoggedUser.Email;
             UserName = LoggedUser.Name;
             UserLastName = LoggedUser.LastName;
             UserFullName = UserName + " " + UserLastName;
             UserPhone = LoggedUser.Phone;
+            lstReceived = await ReceiveCarModel.GetCars();
         }
 
         private async void SaveUser()
@@ -787,7 +790,6 @@ namespace AutoLook.ViewModel
             saved = await User.SaveUser(usuario);
             if (Int32.Parse(saved) > 0)
             {
-
                 App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el usuario correctamente.", "OK");
                 PageManager(1);
             }
@@ -846,7 +848,8 @@ namespace AutoLook.ViewModel
                 CarAlarm = false;
                 CarAirConditioner = false;
                 CarLuxuryHoops = false;
-
+                lstOriginalVehiculos = await CarModel.GetCars();
+                lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
                 App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el carro correctamente.", "OK");
                 PageManager(1);
             }else{
@@ -866,7 +869,7 @@ namespace AutoLook.ViewModel
             car.lstImagenes = lstImages;
 
             string saved = "";
-            saved = await ReceiveCarModel.SaveCar(car);
+            saved = await ReceiveCarModel.SaveCar(car,UserId);
             lstImages = new ObservableCollection<ImageFile>();
             if (Int32.Parse(saved) > 0)
             {
@@ -877,6 +880,7 @@ namespace AutoLook.ViewModel
                 CarMiles = 0;
                 CarDamage = "";
 
+                lstReceived = await ReceiveCarModel.GetCars();
                 App.Current.MainPage.DisplayAlert("Success", "Su Consulta ha sido enviada", "OK");
                 PageManager(1);
             }else{
@@ -962,19 +966,20 @@ namespace AutoLook.ViewModel
                 if (file != null)
                 {
                     ImageFile image = new ImageFile { Path = file.Path};
-                    image.Image = File.ReadAllBytes(image.Path);
+                    image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path),250,250);
                     lstImages.Add(image);
                 }
                 return;
             }
         }
 
-        private void UpdatePages(bool Admin)
+        private async Task UpdatePages(bool Admin)
         {
             if (IsAdmin)
             {
                 lstPages.Add(new MasterPageItem { Id = 4, Title = "Agregar vehículo", IconSource = "car.png" });
                 lstPages.Add(new MasterPageItem { Id = 5, Title = "Ver Consultas", IconSource = "car.png" });
+                //lstReceived = await ReceiveCarModel.GetCars(UserId);
             }
 
         }
@@ -986,12 +991,11 @@ namespace AutoLook.ViewModel
 
         private async Task InitClass()
         {
+            lstPages = await MasterPageItem.GetPages();
             //lstVehiculos = await CarModel.ObtenerVehiculos();
             lstOriginalVehiculos = await CarModel.GetCars();
-            //lstReceived = await ReceiveCarModel.GetCars();
-            lstReceived = await ReceiveCarModel.ObtenerVehiculos();
+            //lstReceived = await ReceiveCarModel.ObtenerVehiculos();
             lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
-            lstPages = await MasterPageItem.GetPages();
             //lstOriginalVehiculos = lstVehiculos.ToList();
         }
 

@@ -345,6 +345,16 @@
 /Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/right.png
 /Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/people.png
 /Users/Edgar/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/optimized/people.png
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/obj/iPhoneSimulator/Debug/AutoLook.iOS.View.ReceiveCarList.xaml.g.cs
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.Abstractions.dll
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.dll
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Maps.dll
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Maps.iOS.dll
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.Abstractions.pdb
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.Abstractions.xml
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.xml
+/Users/carlosmendez/OutOfCloud/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Maps.xml
 /Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/View/Contacto.xaml
 /Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/AutoLook.iOS.exe
 /Users/stephanie/Projects/AutoLook/iOS/bin/iPhoneSimulator/Debug/AutoLook.iOS.pdb

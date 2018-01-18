@@ -6,9 +6,10 @@
                 <!--Login Panel-->
                 <StackLayout Padding="30" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="StartAndExpand" Scale="1.2" Margin="0,10,0,0">
                     <!--Logo Image-->
-                    <StackLayout Padding="0,30">
+                    <StackLayout Margin="0,20,0,0">
                         <Image Source="AutoLookLogo.png"/>
                     </StackLayout>
+                    <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" Color="Red" VerticalOptions="Center" HeightRequest="40" HorizontalOptions="Center"/>
                     <Label Text="Usuario" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" />
                     <Entry Text="{Binding User}" Placeholder="Ingresar Usuario" TextColor="#9b9b9b" HorizontalTextAlignment="Center" />
                     <Label Text="Contraseña" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" />

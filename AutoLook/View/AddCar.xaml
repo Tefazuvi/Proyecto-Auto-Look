@@ -26,7 +26,7 @@
                             <Entry Text="{Binding CarYear}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding CarType}" Placeholder="Tipo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding CarPrice}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarDoorsQ}" Placeholder="Cantidad de Puertas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding CarDoorsQuantity}" Placeholder="Cantidad de Puertas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding CarCapacity}" Placeholder="Capacidad" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding CarMotor}" Placeholder="Motor" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <Entry Text="{Binding CarGas}" Placeholder="Gas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />

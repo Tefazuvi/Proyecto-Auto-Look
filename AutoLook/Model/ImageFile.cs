@@ -23,5 +23,6 @@ namespace AutoLook.Model
         public ImageFile()
         {
         }
+
     }
 }

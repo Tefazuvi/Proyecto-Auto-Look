@@ -13,7 +13,7 @@ using System.IO;
 
 namespace AutoLook.Model
 {
-    public class ReceiveCarModel
+    public class ReceiveCarModel: User
     {
         //[PrimaryKey]
         public int Id { get; set; }
@@ -58,7 +58,7 @@ namespace AutoLook.Model
             return lstVehiculos;
         }
 
-        public static async Task<string> SaveCar(ReceiveCarModel car)
+        public static async Task<string> SaveCar(ReceiveCarModel receivecar, int id)
         {
 
             try
@@ -66,10 +66,13 @@ namespace AutoLook.Model
 
                 using (HttpClient client = new HttpClient())
                 {
-                    var uri = new Uri(APIDictionary.API_SaveCar);
+                    var uri = new Uri(APIDictionary.API_ReceiveSaveCar);
 
-                    var json = JsonConvert.SerializeObject(car);
-                    //json.MaxJsonLength = Int32.MaxValue;
+                    var json = JsonConvert.SerializeObject(new
+                    {
+                        car = receivecar,
+                        userid = id
+                    });
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
@@ -91,7 +94,7 @@ namespace AutoLook.Model
             using (HttpClient client = new HttpClient())
             {
 
-                var uri = new Uri(APIDictionary.API_GetCar);
+                var uri = new Uri(APIDictionary.API_ReceiveGetCar);
 
                 HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
                 string ans = await response.Content.ReadAsStringAsync();

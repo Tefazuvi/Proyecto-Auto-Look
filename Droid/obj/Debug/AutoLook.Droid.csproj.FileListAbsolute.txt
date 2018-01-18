@@ -309,7 +309,6 @@
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Xamarin.Forms.Xaml.xml
 /Users/stephanie/Projects/AutoLook/Droid/bin/Debug/Xamarin.Forms.Maps.xml
-/Users/stephanie/Projects/AutoLook/Droid/obj/Debug/AutoLook.Droid.csprojResolveAssemblyReference.cache
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Basement.dll
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Tasks.dll
 /Users/stephanie/Projects/AutoLook/Droid/obj/Debug/XbdMerge/Xamarin.GooglePlayServices.Base.dll

@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" 
-    xmlns:local="clr-namespace:AutoLook.View" 
-    x:Name="CarDetails" 
-    x:Class="AutoLook.View.CarDetails">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:local="clr-namespace:AutoLook.View" x:Name="CarDetails" x:Class="AutoLook.View.CarDetails">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:ImageConverter x:Key="cnvImageConverter" />
@@ -137,11 +132,11 @@
                                     </StackLayout>
                                     <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
                                         <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Path = BindingContext.AddFavorite, Source={x:Reference CarDetails}}" />
-                                            </Image.GestureRecognizers>
                                         </Image>
                                         <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center" />
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path = BindingContext.AddFavorite, Source={x:Reference CarDetails}}" />
+                                        </StackLayout.GestureRecognizers>
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>

@@ -35,6 +35,22 @@ namespace AutoLook.ViewModel
 
         }
 
+        private bool _IsBusy { get; set; }
+
+        public bool IsBusy
+        {
+            get
+            {
+                return _IsBusy;
+            }
+            set
+            {
+                _IsBusy = value;
+                OnPropertyChanged("IsBusy");
+            }
+
+        }
+
         private string _Password { get; set; }
 
         public string Password
@@ -61,9 +77,10 @@ namespace AutoLook.ViewModel
         #region Methods
         private async void Login()
         {
+            IsBusy = true;
             usuario = await LoginModel.Authenticate(User, Password);
 
-            autoLookViewModel.setLoggedUser(usuario);
+            await autoLookViewModel.setLoggedUser(usuario);
 
             if (usuario.Type == 2) //Admin = 2
             {
@@ -73,9 +90,12 @@ namespace AutoLook.ViewModel
             {
                 autoLookViewModel.IsAdmin = false;
             }
-            autoLookViewModel.PageManager(1);
 
-            App.Current.MainPage.DisplayAlert("Success", "Bienvenido " + usuario.Name, "OK");
+            IsBusy = false;
+
+            await App.Current.MainPage.DisplayAlert("Success", "Bienvenido " + usuario.Name, "OK");
+
+            autoLookViewModel.PageManager(1);
         }
 
         private void OpenCreateUser()
