@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                x:Name="HomePage" 
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                xmlns:local="clr-namespace:AutoLook.View"
-                x:Class="AutoLook.View.HomePage" 
-                Title="Vehículos">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="HomePage" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AutoLook.View" x:Class="AutoLook.View.HomePage" Title="Vehículos">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:ImageConverter x:Key="cnvImageConverter"/>
+            <local:ImageConverter x:Key="cnvImageConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -33,6 +28,7 @@
                     </Picker>
                 </StackLayout>
                 <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10">
+                    <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" Color="White" VerticalOptions="Center" HeightRequest="40" HorizontalOptions="Center" IsVisible="{Binding IsBusy, Mode=TwoWay}"/>
                     <ListView x:Name="lstvVehicles" ItemsSource="{Binding lstVehiculos}" RowHeight="100">
                         <ListView.ItemTemplate>
                             <DataTemplate>

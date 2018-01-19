@@ -11,8 +11,6 @@ namespace AutoLook
 
             MainPage = new AutoLook.View.MainPage();
 
-            //MainPage = new AutoLook.View.CarDetails();
-
         }
 
         protected override void OnStart()

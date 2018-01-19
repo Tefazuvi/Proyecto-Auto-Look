@@ -1,17 +1,27 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/CarDetails.xaml">
     <Files>
-      <File FileName="AutoLook/View/ReceiveCarDetail.xaml" Line="50" Column="87" />
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="879" Column="29" />
-      <File FileName="AutoLook/Model/ReceiveCarModel.cs" Line="105" Column="14" />
-      <File FileName="AutoLook/Model/User.cs" Line="16" Column="20" />
-      <File FileName="AutoLook/Model/CarModel.cs" Line="35" Column="49" />
-      <File FileName="iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="AutoLook/Model/UserSystem.cs" Line="58" Column="14" />
+      <File FileName="AutoLook/View/LoginPage.xaml" Line="12" Column="66" />
+      <File FileName="AutoLook/ViewModel/LoginViewModel.cs" Line="138" Column="34" />
+      <File FileName="AutoLook/View/Filters.xaml" Line="21" Column="117" />
+      <File FileName="AutoLook/Model/CarModel.cs" Line="58" Column="1" />
+      <File FileName="AutoLook/View/UserInfo.xaml" Line="29" Column="27" />
+      <File FileName="iOS/Main.cs" Line="18" Column="1" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="325" Column="34" />
+      <File FileName="AutoLook/Model/User.cs" Line="133" Column="2" />
+      <File FileName="AutoLook/View/AddCar.xaml" Line="22" Column="92" />
+      <File FileName="AutoLook/Model/APIDictionary.cs" Line="18" Column="48" />
+      <File FileName="AutoLook/View/CarDetails.xaml" Line="133" Column="166" />
+      <File FileName="AutoLook/View/CarDetails.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/Model/UserSystem.cs" relfile="AutoLook/Model/UserSystem.cs" line="20" column="1" />
+      <Breakpoint file="/Users/stephanie/Projects/AutoLook/AutoLook/Model/UserSystem.cs" relfile="AutoLook/Model/UserSystem.cs" line="42" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

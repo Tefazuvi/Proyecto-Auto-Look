@@ -21,7 +21,7 @@ namespace AutoLook.View {
         private global::Xamarin.Forms.Picker BrandPicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Slider Slider;
+        private global::Xamarin.Forms.Slider SliderMiles;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Picker TransmisionPicker;
@@ -34,7 +34,7 @@ namespace AutoLook.View {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Filters));
             stkContainer = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "stkContainer");
             BrandPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "BrandPicker");
-            Slider = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Slider>(this, "Slider");
+            SliderMiles = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Slider>(this, "SliderMiles");
             TransmisionPicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "TransmisionPicker");
             TypePicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "TypePicker");
         }

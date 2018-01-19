@@ -31,7 +31,7 @@
                         <Entry Text="{Binding Phone}" Placeholder="Teléfono" TextColor="#9b9b9b" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="20,0,0,0" HeightRequest="30" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,20,0,0">
-                        <Switch IsToggled="{Binding AceptarTerminos}" Scale="0.8" VerticalOptions="Center" HorizontalOptions="Start" />
+                        <Switch IsToggled="{Binding AcceptTerms}" Scale="0.8" VerticalOptions="Center" HorizontalOptions="Start" />
                         <Label Text="Acepto los términos y condiciones de uso y privacidad." TextColor="#9b9b9b" VerticalTextAlignment="Center" FontSize="12" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
                 </StackLayout>

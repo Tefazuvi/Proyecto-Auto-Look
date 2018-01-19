@@ -7,6 +7,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using AutoLook.View;
+using AutoLook.ViewModel;
 using AutoLook.Model;
 using Plugin.Media;
 using Realms;
@@ -62,7 +63,24 @@ namespace AutoLook.ViewModel
         public ICommand ChangeInfoCommand { get; set; }
         public ICommand FiltersCommand { get; set; }
         public ICommand AddCarCommand { get; set; }
+        public ICommand ForgetCommand { get; set; }
         public ICommand ReceiveCarCommand { get; set; }
+
+        private bool _IsBusy { get; set; }
+
+        public bool IsBusy
+        {
+            get
+            {
+                return _IsBusy;
+            }
+            set
+            {
+                _IsBusy = value;
+                OnPropertyChanged("IsBusy");
+            }
+
+        }
 
         private string _Name { get; set; }
 
@@ -124,6 +142,22 @@ namespace AutoLook.ViewModel
             {
                 _Password = value;
                 OnPropertyChanged("Password");
+            }
+
+        }
+
+        private string _VerifyPassword { get; set; }
+
+        public string VerifyPassword
+        {
+            get
+            {
+                return _VerifyPassword;
+            }
+            set
+            {
+                _VerifyPassword = value;
+                OnPropertyChanged("VerifyPassword");
             }
 
         }
@@ -262,7 +296,6 @@ namespace AutoLook.ViewModel
             {
                 _lstPages = value;
                 OnPropertyChanged("lstPages");
-
             }
 
         }
@@ -280,6 +313,37 @@ namespace AutoLook.ViewModel
                 _IsAdmin = value;
                 UpdatePages(_IsAdmin);
                 OnPropertyChanged("IsAdmin");
+            }
+        }
+
+        private bool _IsLogged { get; set; }
+
+        public bool IsLogged
+        {
+            get
+            {
+                return _IsLogged;
+            }
+            set
+            {
+                _IsLogged = value;
+                setLogOption(_IsLogged);
+                OnPropertyChanged("IsLogged");
+            }
+        }
+
+        private bool _AcceptTerms { get; set; }
+
+        public bool AcceptTerms
+        {
+            get
+            {
+                return _AcceptTerms;
+            }
+            set
+            {
+                _AcceptTerms = value;
+                OnPropertyChanged("AcceptTerms");
             }
         }
 
@@ -454,6 +518,7 @@ namespace AutoLook.ViewModel
             }
         }
 
+
         private int _CarYear { get; set; }
 
         public int CarYear
@@ -514,18 +579,18 @@ namespace AutoLook.ViewModel
             }
         }
 
-        private double _PriceSlider { get; set; }
+        private int _MilesSlider { get; set; }
 
-        public double PriceSlider
+        public int MilesSlider
         {
             get
             {
-                return _PriceSlider;
+                return _MilesSlider;
             }
             set
             {
-                _PriceSlider = value;
-                OnPropertyChanged("PriceSlider");
+                _MilesSlider = value;
+                OnPropertyChanged("MilesSlider");
             }
         }
 
@@ -544,7 +609,7 @@ namespace AutoLook.ViewModel
             }
         }
 
-        private int _CarCapacity{ get; set; }
+        private int _CarCapacity { get; set; }
 
         public int CarCapacity
         {
@@ -694,6 +759,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private string _CarTransmision { get; set; }
+
+        public string CarTransmision
+        {
+            get
+            {
+                return _CarTransmision;
+            }
+            set
+            {
+                _CarTransmision = value;
+                OnPropertyChanged("CarTransmision");
+            }
+        }
+
         /*
         public CarModel(){
             var realm = Realm.GetInstance();
@@ -710,12 +790,23 @@ namespace AutoLook.ViewModel
             switch (Id)
             {
                 case 0:
+                    if (lstPages[0].Title.Equals("Logout"))
+                    {
+                        IsLogged = false;
+                        goHome();
+                        break;
+                    }
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new LoginPage());
                     break;
                 case 1:
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new MainTabbedPage());
                     break;
                 case 2:
+                    if (!IsLogged)
+                    {
+                        PageManager(0);
+                        break;
+                    }
                     ((MasterDetailPage)App.Current.MainPage).Detail = new NavigationPage(new UserInfo());
                     break;
                 case 3:
@@ -761,8 +852,22 @@ namespace AutoLook.ViewModel
 
         private void AddFavorite(int id)
         {
-            
+
             //App.Current.MainPage.DisplayAlert("Success", "Ha guardado el vehiculo como favorito.", "OK");
+        }
+
+        private bool PasswordVerification()
+        {
+            if (!Password.Equals(VerifyPassword))
+            {
+                App.Current.MainPage.DisplayAlert("Error", "Las contrasenas no coinciden.", "OK");
+                VerifyPassword = "";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public async Task setLoggedUser(User usuario)
@@ -774,28 +879,51 @@ namespace AutoLook.ViewModel
             UserLastName = LoggedUser.LastName;
             UserFullName = UserName + " " + UserLastName;
             UserPhone = LoggedUser.Phone;
-            lstReceived = await ReceiveCarModel.GetCars();
         }
 
         private async void SaveUser()
         {
-            User usuario = new User();
-            usuario.Email = Email;
-            usuario.Password = Password;
-            usuario.Name = Name;
-            usuario.LastName = LastName;
-            usuario.Phone = Phone;
-            usuario.Type = 1;
-            string saved = "";
-            saved = await User.SaveUser(usuario);
-            if (Int32.Parse(saved) > 0)
+            if (Email != null && Password != null && VerifyPassword != null && Name != null && LastName != null)
             {
-                App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el usuario correctamente.", "OK");
-                PageManager(1);
+                if (PasswordVerification() && AcceptTerms)
+                {
+                    User usuario = new User();
+                    usuario.Email = Email;
+                    usuario.Password = Password;
+                    usuario.Name = Name;
+                    usuario.LastName = LastName;
+                    usuario.Phone = Phone;
+                    usuario.Type = 1;
+                    string saved = "";
+                    saved = await User.SaveUser(usuario);
+                    if (Int32.Parse(saved) > 0)
+                    {
+                        App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el usuario correctamente.", "OK");
+                        PageManager(1);
+                        Email = "";
+                        Password = "";
+                        VerifyPassword = "";
+                        Name = "";
+                        LastName = "";
+                        Phone = "";
+                        AcceptTerms = false;
+                    }
+                    else
+                    {
+                        App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
+                    }
+                }
+                else
+                {
+                    if (AcceptTerms == false)
+                    {
+                        App.Current.MainPage.DisplayAlert("Error", "Por favor aceptar los términos y condiciones de uso y privacidad.", "OK");
+                    }
+                }
             }
             else
             {
-                App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
+                App.Current.MainPage.DisplayAlert("Error", "Debe completar los espacios con asterisco.", "OK");
             }
         }
 
@@ -806,6 +934,7 @@ namespace AutoLook.ViewModel
             car.Brand = CarBrand;
             car.Model = CarModelo;
             car.Colour = CarColour;
+            car.Transmision = CarTransmision;
             car.Year = CarYear;
             car.Miles = CarMiles;
             car.Type = CarType;
@@ -833,6 +962,7 @@ namespace AutoLook.ViewModel
                 CarBrand = "";
                 CarModelo = "";
                 CarColour = "";
+                CarTransmision= "";
                 CarYear = 0;
                 CarMiles = 0;
                 CarType = "";
@@ -852,7 +982,9 @@ namespace AutoLook.ViewModel
                 lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
                 App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el carro correctamente.", "OK");
                 PageManager(1);
-            }else{
+            }
+            else
+            {
                 App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
             }
         }
@@ -869,7 +1001,7 @@ namespace AutoLook.ViewModel
             car.lstImagenes = lstImages;
 
             string saved = "";
-            saved = await ReceiveCarModel.SaveCar(car,UserId);
+            saved = await ReceiveCarModel.SaveCar(car, UserId);
             lstImages = new ObservableCollection<ImageFile>();
             if (Int32.Parse(saved) > 0)
             {
@@ -883,17 +1015,25 @@ namespace AutoLook.ViewModel
                 lstReceived = await ReceiveCarModel.GetCars();
                 App.Current.MainPage.DisplayAlert("Success", "Su Consulta ha sido enviada", "OK");
                 PageManager(1);
-            }else{
+            }
+            else
+            {
                 App.Current.MainPage.DisplayAlert("Error", "Se ha generado un error.", "OK");
             }
         }
 
         private async void DeleteUser()
         {
+            UserSystem.DeleteUserRealm(LoggedUser.UserID);
             string deleted = await User.DeleteUser(LoggedUser);
             if (Int32.Parse(deleted) > 0)
             {
+                await App.Current.MainPage.DisplayAlert("Eliminado", "La informacion del usuario ha sido eliminada.", "OK");
                 PageManager(1);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("OOOPS", "Ha ocurrido un error, intente de nuevo. ", "OK");
             }
         }
 
@@ -908,13 +1048,44 @@ namespace AutoLook.ViewModel
             string updated = await User.UpdateUser(LoggedUser);
             if (Int32.Parse(updated) > 0)
             {
+                await App.Current.MainPage.DisplayAlert("Informacion Actualizada", "Se han guardado los datos correctamente.", "OK");
                 PageManager(2);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("OOOPS", "Ha ocurrido un error, intente de nuevo. ", "OK");
+            }
+        }
+
+        private async Task setLogOption(bool Logged)
+        {
+            if (Logged == true)
+            {
+                lstPages[0] = new MasterPageItem { Id = 0, Title = "Logout", IconSource = "blueperson.png" };
+            }
+            else
+            {
+                IsAdmin = false;
+                LoggedUser = new User();
+                UserId = 0;
+                UserEmail = "";
+                UserName = "";
+                UserLastName = "";
+                UserFullName = "";
+                UserPhone = "";
+                lstPages[0] = new MasterPageItem { Id = 0, Title = "Login", IconSource = "blueperson.png" };
+                goHome();
             }
         }
 
         private void goHome()
         {
             PageManager(1);
+        }
+
+        private void Forget()
+        {
+            UserSystem.DeleteUserRealm(LoggedUser.UserID);
         }
 
         private void OpenChangeInfo()
@@ -965,8 +1136,8 @@ namespace AutoLook.ViewModel
 
                 if (file != null)
                 {
-                    ImageFile image = new ImageFile { Path = file.Path};
-                    image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path),250,250);
+                    ImageFile image = new ImageFile { Path = file.Path };
+                    image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path), 250, 250);
                     lstImages.Add(image);
                 }
                 return;
@@ -978,8 +1149,18 @@ namespace AutoLook.ViewModel
             if (IsAdmin)
             {
                 lstPages.Add(new MasterPageItem { Id = 4, Title = "Agregar vehículo", IconSource = "car.png" });
+                lstReceived = await ReceiveCarModel.GetCars();
                 lstPages.Add(new MasterPageItem { Id = 5, Title = "Ver Consultas", IconSource = "car.png" });
-                //lstReceived = await ReceiveCarModel.GetCars(UserId);
+            }
+            else
+            {
+                var itemToRemove = lstPages.SingleOrDefault(r => r.Id == 4);
+                if (itemToRemove != null)
+                    lstPages.Remove(itemToRemove);
+
+                itemToRemove = lstPages.SingleOrDefault(r => r.Id == 5);
+                if (itemToRemove != null)
+                    lstPages.Remove(itemToRemove);
             }
 
         }
@@ -992,11 +1173,19 @@ namespace AutoLook.ViewModel
         private async Task InitClass()
         {
             lstPages = await MasterPageItem.GetPages();
-            //lstVehiculos = await CarModel.ObtenerVehiculos();
+            IsBusy = true;
             lstOriginalVehiculos = await CarModel.GetCars();
-            //lstReceived = await ReceiveCarModel.ObtenerVehiculos();
             lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
-            //lstOriginalVehiculos = lstVehiculos.ToList();
+            if (UserSystem.CountUserSystem() > 0)
+            {
+                UserSystem usuario = UserSystem.GetUserRealm();
+                LoginViewModel loginViewModel = new LoginViewModel();
+                loginViewModel.User = usuario.Email;
+                loginViewModel.Password = usuario.Pass;
+                loginViewModel.Recordar = false;
+                loginViewModel.Login();
+            }
+            IsBusy = false;
         }
 
         private void InitCommands()
@@ -1013,6 +1202,7 @@ namespace AutoLook.ViewModel
             ChangeInfoCommand = new Command(OpenChangeInfo);
             AddCarCommand = new Command(AddCar);
             ReceiveCarCommand = new Command(ReceiveCar);
+            ForgetCommand = new Command(Forget);
             FiltersCommand = new Command(Filters);
         }
 

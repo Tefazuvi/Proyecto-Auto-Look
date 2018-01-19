@@ -4,6 +4,8 @@ using System.Windows.Input;
 using AutoLook.Model;
 using AutoLook.View;
 using Xamarin.Forms;
+using System.Xml.Serialization;
+
 
 namespace AutoLook.ViewModel
 {
@@ -15,7 +17,7 @@ namespace AutoLook.ViewModel
         public ICommand OpenCreateUserCommand { get; set; }
         public ICommand OpenSendPasswordCommand { get; set; }
 
-        public User usuario = new User();
+        public User usuario;
 
         public AutoLookViewModel autoLookViewModel = AutoLookViewModel.GetInstance();
 
@@ -51,6 +53,22 @@ namespace AutoLook.ViewModel
 
         }
 
+        private bool _Recordar { get; set; }
+
+        public bool Recordar
+        {
+            get
+            {
+                return _Recordar;
+            }
+            set
+            {
+                _Recordar = value;
+                OnPropertyChanged("Recordar");
+            }
+
+        }
+
         private string _Password { get; set; }
 
         public string Password
@@ -75,27 +93,54 @@ namespace AutoLook.ViewModel
         }
 
         #region Methods
-        private async void Login()
+        public async void Login()
         {
             IsBusy = true;
-            usuario = await LoginModel.Authenticate(User, Password);
-
-            await autoLookViewModel.setLoggedUser(usuario);
-
-            if (usuario.Type == 2) //Admin = 2
+            if (User != null && Password != null)
             {
-                autoLookViewModel.IsAdmin = true;
+                usuario = await LoginModel.Authenticate(User, Password);
+
+                if (usuario.UserID > 0)
+                {
+                    await autoLookViewModel.setLoggedUser(usuario);
+
+                    if (usuario.Type == 2) //Admin = 2
+                    {
+                        autoLookViewModel.IsAdmin = true;
+                    }
+                    else
+                    {
+                        autoLookViewModel.IsAdmin = false;
+                    }
+
+                    if(Recordar == true)
+                    {
+                        UserSystem.DeleteUserRealm(usuario.UserID);
+                        UserSystem UserSys = new UserSystem{ UserID = usuario.UserID, Email = usuario.Email, Pass = usuario.Password, Remember=  true};
+                        UserSystem.SaveUserRealm(UserSys);
+                    }
+
+                    autoLookViewModel.IsLogged = true;
+
+                    IsBusy = false;
+
+                    await App.Current.MainPage.DisplayAlert("Bienvenido!", usuario.Name + " " + usuario.LastName, "OK");
+                }
+                else
+                {
+                    autoLookViewModel.IsLogged = false;
+                    await App.Current.MainPage.DisplayAlert("OOOPS", "Error de Login ", "OK");
+                    IsBusy = false;
+                }
+                autoLookViewModel.PageManager(1);
+                User = "";
+                Password = "";
+                Recordar = false;
+            }else{
+                await App.Current.MainPage.DisplayAlert("OOOPS", "Debe completar todos los espacios. ", "OK");
+                IsBusy = false;
             }
-            else
-            {
-                autoLookViewModel.IsAdmin = false;
-            }
 
-            IsBusy = false;
-
-            await App.Current.MainPage.DisplayAlert("Success", "Bienvenido " + usuario.Name, "OK");
-
-            autoLookViewModel.PageManager(1);
         }
 
         private void OpenCreateUser()

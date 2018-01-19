@@ -13,11 +13,12 @@ namespace AutoLook.Model
 {
     public class User
     {
+        //[PrimaryKey]
         public int UserID { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string Email{ get; set; }
-        public string Password{ get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public string Phone { get; set; }
         public int Type { get; set; }
 
@@ -94,6 +95,32 @@ namespace AutoLook.Model
                     string rqUpdateUser = JsonConvert.DeserializeObject<string>(ans);
 
                     return rqUpdateUser;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static async Task<string> SaveFavorite(int UserId, int VehicleId)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    var uri = new Uri(APIDictionary.API_SaveFavorite);
+
+                    var json = JsonConvert.SerializeObject(UserId);
+
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
+                    string ans = await response.Content.ReadAsStringAsync();
+
+                    string rqSaveUser = JsonConvert.DeserializeObject<string>(ans);
+
+                    return rqSaveUser;
                 }
 
             }

@@ -125,15 +125,15 @@
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
                                         </StackLayout.GestureRecognizers>
-                                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,10">
                                             <Label Text="Aros de Lujo" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                             <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
-                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal" IsVisible="{Binding IsLogged}">
                                         <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25">
                                         </Image>
-                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center" />
+                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center"/>
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Path = BindingContext.AddFavorite, Source={x:Reference CarDetails}}" />
                                         </StackLayout.GestureRecognizers>

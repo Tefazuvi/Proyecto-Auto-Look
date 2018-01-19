@@ -19,6 +19,7 @@ namespace AutoLook.Model
         public string Brand { get; set; }
         public string Model { get; set; }
         public string Colour { get; set; }
+        public string Transmision { get; set; }
         public int Year { get; set; }
         public int Miles { get; set; }
         public string Type { get; set; }
@@ -32,8 +33,9 @@ namespace AutoLook.Model
         public bool HydraulicSteering { get; set; }
         public bool ElectricRearView { get; set; }
         public bool Alarm { get; set; }
-        public bool AirConditioner { get; set; }
+        public bool AirConditioner  { get; set; }
         public bool LuxuryHoops { get; set; }
+
         public ImageFile Cover
         {
             get

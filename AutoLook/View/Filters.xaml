@@ -16,13 +16,9 @@
                     </Picker>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Text="Precio " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
-                    <!--Slider-->
-                    <Slider x:Name="Slider" Minimum="0" Maximum="100" VerticalOptions="Center" Value="{Binding PriceSlider}" HorizontalOptions="EndAndExpand" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Label Text="Millas " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
                     <!--Slider-->
+                    <Slider x:Name="SliderMiles" Minimum="0" Maximum="100" VerticalOptions="Center" Value="{Binding MilesSlider}" HorizontalOptions="EndAndExpand" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Label Text="Año " TextColor="#000066" HorizontalOptions="Center" VerticalTextAlignment="Center" />
