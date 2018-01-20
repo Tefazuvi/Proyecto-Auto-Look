@@ -805,7 +805,7 @@ namespace AutoLook.ViewModel
             switch (Id)
             {
                 case 0:
-                    if (lstPages[0].Title.Equals("Logout"))
+                    if (lstPages[0].Title.Equals("Cerrar Sesion"))
                     {
                         IsLogged = false;
                         goHome();
