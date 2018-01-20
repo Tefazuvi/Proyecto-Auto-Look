@@ -441,6 +441,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+        private ObservableCollection<CarModel> _lstFavorites = new ObservableCollection<CarModel>();
+
+        public ObservableCollection<CarModel> lstFavorites
+        {
+            get
+            {
+                return _lstFavorites;
+            }
+            set
+            {
+                _lstFavorites = value;
+                OnPropertyChanged("lstFavorites");
+            }
+        }
+
         private ObservableCollection<ReceiveCarModel> _lstReceived = new ObservableCollection<ReceiveCarModel>();
 
         public ObservableCollection<ReceiveCarModel> lstReceived
@@ -850,10 +865,19 @@ namespace AutoLook.ViewModel
             ((MasterDetailPage)App.Current.MainPage).Detail.Navigation.PushAsync(new Filters());
         }
 
-        private void AddFavorite(int id)
+        private async void AddFavorite(int id)
         {
-
-            //App.Current.MainPage.DisplayAlert("Success", "Ha guardado el vehiculo como favorito.", "OK");
+            string saved = "";
+            saved = await User.SaveFavorite(LoggedUser.UserID,id);
+            if (Int32.Parse(saved) > 0)
+            {
+                GetFavs();
+                await App.Current.MainPage.DisplayAlert("Success", "Ha guardado el vehiculo como favorito.", "OK");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "No se ha guardado el vehiculo como favorito.", "OK");
+            }
         }
 
         private bool PasswordVerification()
@@ -879,6 +903,7 @@ namespace AutoLook.ViewModel
             UserLastName = LoggedUser.LastName;
             UserFullName = UserName + " " + UserLastName;
             UserPhone = LoggedUser.Phone;
+            GetFavs();
         }
 
         private async void SaveUser()
@@ -1061,7 +1086,7 @@ namespace AutoLook.ViewModel
         {
             if (Logged == true)
             {
-                lstPages[0] = new MasterPageItem { Id = 0, Title = "Logout", IconSource = "blueperson.png" };
+                lstPages[0] = new MasterPageItem { Id = 0, Title = "Cerrar Sesion", IconSource = "blueperson.png" };
             }
             else
             {
@@ -1073,7 +1098,7 @@ namespace AutoLook.ViewModel
                 UserLastName = "";
                 UserFullName = "";
                 UserPhone = "";
-                lstPages[0] = new MasterPageItem { Id = 0, Title = "Login", IconSource = "blueperson.png" };
+                lstPages[0] = new MasterPageItem { Id = 0, Title = "Iniciar sesion", IconSource = "blueperson.png" };
                 goHome();
             }
         }
@@ -1136,9 +1161,14 @@ namespace AutoLook.ViewModel
 
                 if (file != null)
                 {
+                    if (lstImages.Count >= 4)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Maximo de imagenes", "Tiene un total de 6 imagenes", "OK");
+                    }else{
                     ImageFile image = new ImageFile { Path = file.Path };
                     image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path), 250, 250);
                     lstImages.Add(image);
+                    }
                 }
                 return;
             }
@@ -1168,6 +1198,12 @@ namespace AutoLook.ViewModel
         private object GetImageSource(Byte[] Image)
         {
             return ImageSource.FromStream(() => new MemoryStream(Image));
+        }
+
+        private async void GetFavs()
+        {
+            List<int> favorites = await User.GetFavorite(LoggedUser.UserID);
+            lstFavorites = new ObservableCollection<CarModel>(lstOriginalVehiculos.Where(r => favorites.Contains(r.Id)));
         }
 
         private async Task InitClass()

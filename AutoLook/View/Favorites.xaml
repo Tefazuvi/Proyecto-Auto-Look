@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="Favorites" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.Favorites" Title="Favoritos">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" x:Name="Favorites" xmlns:local="clr-namespace:AutoLook.View" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AutoLook.View.Favorites" Title="Favoritos">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="cnvImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout BackgroundColor="White">
             <StackLayout x:Name="stkContainer" BackgroundColor="White" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0" AbsoluteLayout.LayoutFlags="All">
@@ -8,7 +13,8 @@
                     <Image Source="AutoLookLogo.png" HeightRequest="130" />
                 </StackLayout>
                 <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10">
-                    <ListView x:Name="lstvVehicles" ItemsSource="{Binding lstVehiculos}" RowHeight="100">
+                    <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" Color="White" VerticalOptions="Center" HeightRequest="40" HorizontalOptions="Center" IsVisible="{Binding IsBusy, Mode=TwoWay}"/>
+                    <ListView x:Name="lstvFavorites" ItemsSource="{Binding lstFavorites}" RowHeight="100">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -17,7 +23,7 @@
                                             <ColumnDefinition Width="150" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <Image Source="{Binding Cover.Path}" />
+                                        <Image Source="{Binding Cover.Image, Converter={StaticResource cnvImageConverter}}" />
                                         <StackLayout Grid.Column="1" Orientation="Vertical">
                                             <StackLayout.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding Path=BindingContext.VerVehiculoCommand, Source={x:Reference Favorites}}" CommandParameter="{Binding Id}" />

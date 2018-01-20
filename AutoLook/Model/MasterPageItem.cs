@@ -19,8 +19,8 @@ namespace AutoLook.Model
         {
             ObservableCollection<MasterPageItem> lstPages = new ObservableCollection<MasterPageItem>();
 
-            lstPages.Add(new MasterPageItem { Id = 0, Title = "Login", IconSource = "blueperson.png" });
-            lstPages.Add(new MasterPageItem { Id = 1, Title = "HomePage", IconSource = "blueperson.png" });
+            lstPages.Add(new MasterPageItem { Id = 0, Title = "Iniciar Sesion", IconSource = "blueperson.png" });
+            lstPages.Add(new MasterPageItem { Id = 1, Title = "Vehiculos", IconSource = "blueperson.png" });
             lstPages.Add(new MasterPageItem { Id = 2, Title = "Información", IconSource = "blueperson.png" });
             lstPages.Add(new MasterPageItem { Id = 3, Title = "Auto-Look", IconSource = "info.png" });
 

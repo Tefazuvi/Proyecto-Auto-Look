@@ -8,6 +8,7 @@ using Realms;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
+using System.Collections.Generic;
 
 namespace AutoLook.Model
 {
@@ -104,7 +105,7 @@ namespace AutoLook.Model
             }
         }
 
-        public static async Task<string> SaveFavorite(int UserId, int VehicleId)
+        public static async Task<string> SaveFavorite(int UserID, int VehiclesID)
         {
             try
             {
@@ -112,7 +113,10 @@ namespace AutoLook.Model
                 {
                     var uri = new Uri(APIDictionary.API_SaveFavorite);
 
-                    var json = JsonConvert.SerializeObject(UserId);
+                    var json = JsonConvert.SerializeObject(new {
+                        idVehicles = VehiclesID,
+                        idUser = UserID
+                    });
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
@@ -127,6 +131,27 @@ namespace AutoLook.Model
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public static async Task<List<int>> GetFavorite(int UserID)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var uri = new Uri(APIDictionary.API_GetFavorite);
+
+                var json = JsonConvert.SerializeObject(new
+                {
+                    idUser = UserID
+                });
+
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);
+                string ans = await response.Content.ReadAsStringAsync();
+
+                List<int> lstVehiculos = new List<int>();
+                lstVehiculos = JsonConvert.DeserializeObject<List<int>>(ans);
+                return lstVehiculos;
             }
         }
     }

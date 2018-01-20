@@ -68,75 +68,53 @@
                                         <Label Text="EXTRAS" TextColor="Gray" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                             <Label Text="Vidrios eléctricos" HorizontalOptions="StartAndExpand" WidthRequest="220" VerticalOptions="Center" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.ElectricWindows}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                             <Label Text="Cierre central" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.CentralLock}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                             <Label Text="Dirección hidráulica" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.HydraulicSteering}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                             <Label Text="Retrovisores eléctricos" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.ElectricRearView}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                             <Label Text="Alarma" HorizontalOptions="Start" VerticalOptions="StartAndExpand" WidthRequest="220" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.Alarm}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                             <Label Text="Aire acondicionado" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.AirConditioner}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.ArticuloSeleccionadoCommand, Source={x:Reference CarDetails}}" CommandParameter="{Binding Id}" />
-                                        </StackLayout.GestureRecognizers>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,10">
                                             <Label Text="Aros de Lujo" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                            <Switch IsToggled="{Binding isChecked}" HorizontalOptions="EndAndExpand" />
+                                            <Switch IsToggled="{Binding VehiculoActual.LuxuryHoops}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
                                     </StackLayout>
                                     <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal" IsVisible="{Binding IsLogged}">
-                                        <Image x:Name="imgAdd" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25">
-                                        </Image>
-                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center"/>
                                         <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding Path = BindingContext.AddFavorite, Source={x:Reference CarDetails}}" />
+                                            <TapGestureRecognizer Command="{Binding AddFavoriteCommand}" CommandParameter="{Binding VehiculoActual.Id}" />
                                         </StackLayout.GestureRecognizers>
+                                        <Image x:Name="imgAdd" HorizontalOptions="End" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25" />
+                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center" />
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>

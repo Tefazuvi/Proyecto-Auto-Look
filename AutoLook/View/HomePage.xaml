@@ -13,7 +13,7 @@
                     <Image Source="AutoLookLogo.png" HeightRequest="130" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Padding="10,0">
-                    <Button Text="Filtrar" Command="{Binding FiltersCommand}" VerticalOptions="Start" WidthRequest="80" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
+                    <!--<Button Text="Filtrar" Command="{Binding FiltersCommand}" VerticalOptions="Start" WidthRequest="80" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30" />-->
                     <Label Text="Ordenar por: " TextColor="#000066" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" />
                     <Picker x:Name="IndustryTypePicker1" SelectedIndex="{Binding FiltroOrdenar}" HorizontalOptions="FillAndExpand" WidthRequest="80">
                         <Picker.Items>
