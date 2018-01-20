@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{CC8FDD71-57BF-49EE-9C2A-CF558A655D84}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/Model/MasterPageItem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoLook/View/ReceiveCar.xaml">
     <Files>
       <File FileName="AutoLook/Model/UserSystem.cs" Line="11" Column="9" />
       <File FileName="AutoLook/View/LoginPage.xaml" Line="21" Column="21" />
       <File FileName="AutoLook/View/Filters.xaml" Line="51" Column="15" />
-      <File FileName="iOS/Main.cs" Line="22" Column="1" />
-      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="889" Column="30" />
+      <File FileName="AutoLook/ViewModel/AutoLookViewModel.cs" Line="381" Column="21" />
       <File FileName="AutoLook/View/Favorites.xaml" Line="14" Column="31" />
       <File FileName="AutoLook/View/HomePage.xaml" Line="61" Column="15" />
       <File FileName="AutoLook/View/MainPage.xaml" Line="17" Column="20" />
-      <File FileName="AutoLook/View/SideMenu.xaml" Line="26" Column="15" />
-      <File FileName="AutoLook/Model/MasterPageItem.cs" Line="23" Column="70" />
+      <File FileName="AutoLook/View/ReceiveCarDetail.xaml" Line="62" Column="15" />
+      <File FileName="AutoLook/View/ReceiveCar.xaml" Line="36" Column="206" />
+      <File FileName="AutoLook/View/CarDetails.xaml" Line="112" Column="155" />
+      <File FileName="iOS/Main.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

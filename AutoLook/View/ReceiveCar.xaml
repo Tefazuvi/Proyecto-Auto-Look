@@ -6,7 +6,6 @@
                 <StackLayout BackgroundColor="#000066" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <Label Text="RECIBIMOS SU CARRO" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="20" Margin="0,20,0,10" />
                 </StackLayout>
-                <!--Login Panel-->
                 <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30,10">
                         <Entry Text="{Binding CarBrand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
@@ -19,7 +18,7 @@
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
-                                            <Image Source="{Binding Path}"/>
+                                            <Image Source="{Binding Path}" />
                                         </ViewCell>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
@@ -31,7 +30,7 @@
                                     <TapGestureRecognizer Command="{Binding Path = BindingContext.AddImageCommand, Source={x:Reference ReceiveCar}}" />
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Button Text="Enviar Consulta" Command="{Binding ReceiveCarCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30" />
+                            <Button Text="Enviar Consulta" Command="{Binding ReceiveCarCommand}" VerticalOptions="Start" BackgroundColor="#9b9b9b" TextColor="White" FontAttributes="Bold" HeightRequest="30"/>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>

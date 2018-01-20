@@ -113,8 +113,8 @@
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding AddFavoriteCommand}" CommandParameter="{Binding VehiculoActual.Id}" />
                                         </StackLayout.GestureRecognizers>
-                                        <Image x:Name="imgAdd" HorizontalOptions="End" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25" />
-                                        <Label Text="Agregar Favorito" TextColor="#000066" VerticalOptions="Start" FontAttributes="Bold" HeightRequest="25" HorizontalOptions="Center" />
+                                        <Image x:Name="imgAdd" HorizontalOptions="Center" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25" />
+                                        <Label Text="Favorito" TextColor="#000066" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" HeightRequest="25" />
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>
