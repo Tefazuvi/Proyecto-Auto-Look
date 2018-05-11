@@ -378,6 +378,21 @@ namespace AutoLook.ViewModel
             }
         }
 
+		private CarModel _Vehiculo = new CarModel();
+
+        public CarModel Vehiculo
+        {
+            get
+            {
+                return _Vehiculo;
+            }
+            set
+            {
+                _Vehiculo = value;
+                OnPropertyChanged("Vehiculo");
+            }
+        }
+
         private ReceiveCarModel _ReceivedActual { get; set; }
 
         public ReceiveCarModel ReceivedActual
@@ -473,20 +488,8 @@ namespace AutoLook.ViewModel
 
         private int CarId { get; set; }
 
-        private string _CarBrand { get; set; }
 
-        public string CarBrand
-        {
-            get
-            {
-                return _CarBrand;
-            }
-            set
-            {
-                _CarBrand = value;
-                OnPropertyChanged("CarBrand");
-            }
-        }
+        /*
 
         private string _CarModelo { get; set; }
 
@@ -530,6 +533,21 @@ namespace AutoLook.ViewModel
             {
                 _CarColour = value;
                 OnPropertyChanged("CarColour");
+            }
+        }
+
+        private CarModel _Car { get; set; }
+
+        public CarModel Car
+        {
+            get
+            {
+                return _Car;
+            }
+            set
+            {
+                _Car = value;
+                OnPropertyChanged("Car");
             }
         }
 
@@ -591,21 +609,6 @@ namespace AutoLook.ViewModel
             {
                 _CarPrice = value;
                 OnPropertyChanged("CarPrice");
-            }
-        }
-
-        private int _MilesSlider { get; set; }
-
-        public int MilesSlider
-        {
-            get
-            {
-                return _MilesSlider;
-            }
-            set
-            {
-                _MilesSlider = value;
-                OnPropertyChanged("MilesSlider");
             }
         }
 
@@ -787,7 +790,7 @@ namespace AutoLook.ViewModel
                 _CarTransmision = value;
                 OnPropertyChanged("CarTransmision");
             }
-        }
+        }*/
 
         /*
         public CarModel(){
@@ -868,7 +871,7 @@ namespace AutoLook.ViewModel
         private async void AddFavorite(int id)
         {
             string saved = "";
-            saved = await User.SaveFavorite(LoggedUser.UserID,id);
+            saved = await User.SaveFavorite(LoggedUser.UserID, id);
             if (Int32.Parse(saved) > 0)
             {
                 GetFavs();
@@ -955,27 +958,27 @@ namespace AutoLook.ViewModel
         private async void AddCar()
         {
             CarModel car = new CarModel();
+            
+            car.Brand = Vehiculo.Brand;
+            car.Model = Vehiculo.Model;
+            car.Colour = Vehiculo.Colour;
+            car.Transmision = Vehiculo.Transmision;
+            car.Year = Vehiculo.Year;
+            car.Miles = Vehiculo.Miles;
+            car.Type = Vehiculo.Type;
+            car.Price = Vehiculo.Price;
+            car.DoorsQuantity = Vehiculo.DoorsQuantity;
+            car.Capacity = Vehiculo.Capacity;
+            car.Motor = Vehiculo.Motor;
+            car.Gas = Vehiculo.Gas;
 
-            car.Brand = CarBrand;
-            car.Model = CarModelo;
-            car.Colour = CarColour;
-            car.Transmision = CarTransmision;
-            car.Year = CarYear;
-            car.Miles = CarMiles;
-            car.Type = CarType;
-            car.Price = CarPrice;
-            car.DoorsQuantity = CarDoorsQuantity;
-            car.Capacity = CarCapacity;
-            car.Motor = CarMotor;
-            car.Gas = CarGas;
-
-            car.ElectricWindows = CarElectricWindows;
-            car.CentralLock = CarCentralLock;
-            car.HydraulicSteering = CarHydraulicSteering;
-            car.ElectricRearView = CarElectricRearView;
-            car.Alarm = CarAlarm;
-            car.AirConditioner = CarAirConditioner;
-            car.LuxuryHoops = CarLuxuryHoops;
+            car.ElectricWindows = Vehiculo.ElectricWindows;
+            car.CentralLock = Vehiculo.CentralLock;
+            car.HydraulicSteering = Vehiculo.HydraulicSteering;
+            car.ElectricRearView = Vehiculo.ElectricRearView;
+            car.Alarm = Vehiculo.Alarm;
+            car.AirConditioner = Vehiculo.AirConditioner;
+            car.LuxuryHoops = Vehiculo.LuxuryHoops;
             car.lstImagenes = lstImages;
 
             string saved = "";
@@ -984,10 +987,11 @@ namespace AutoLook.ViewModel
             if (Int32.Parse(saved) > 0)
             {
                 lstImages = new ObservableCollection<ImageFile>();
-                CarBrand = "";
+                Vehiculo = new CarModel();
+                /*CarBrand = "";
                 CarModelo = "";
                 CarColour = "";
-                CarTransmision= "";
+                CarTransmision = "";
                 CarYear = 0;
                 CarMiles = 0;
                 CarType = "";
@@ -1003,6 +1007,7 @@ namespace AutoLook.ViewModel
                 CarAlarm = false;
                 CarAirConditioner = false;
                 CarLuxuryHoops = false;
+                */
                 lstOriginalVehiculos = await CarModel.GetCars();
                 lstVehiculos = new ObservableCollection<CarModel>(lstOriginalVehiculos);
                 App.Current.MainPage.DisplayAlert("Success", "Se ha agregado el carro correctamente.", "OK");
@@ -1018,12 +1023,12 @@ namespace AutoLook.ViewModel
         {
             ReceiveCarModel car = new ReceiveCarModel();
 
-            car.Brand = CarBrand;
-            car.Model = CarModelo;
-            car.Year = CarYear;
-            car.Miles = CarMiles;
-            car.Damage = CarDamage;
-            car.lstImagenes = lstImages;
+            car.Brand = ReceivedActual.Brand;
+            car.Model = ReceivedActual.Model;
+            car.Year = ReceivedActual.Year;
+            car.Miles = ReceivedActual.Miles;
+            car.Damage = ReceivedActual.Damage;
+            car.lstImagenes = ReceivedActual.lstImagenes;
 
             string saved = "";
             saved = await ReceiveCarModel.SaveCar(car, UserId);
@@ -1031,12 +1036,13 @@ namespace AutoLook.ViewModel
             if (Int32.Parse(saved) > 0)
             {
                 lstImages = new ObservableCollection<ImageFile>();
-                CarBrand = "";
+                ReceivedActual = new ReceiveCarModel();
+                /*CarBrand = "";
                 CarModelo = "";
                 CarYear = 0;
                 CarMiles = 0;
                 CarDamage = "";
-
+*/
                 lstReceived = await ReceiveCarModel.GetCars();
                 App.Current.MainPage.DisplayAlert("Success", "Su Consulta ha sido enviada", "OK");
                 PageManager(1);
@@ -1047,6 +1053,7 @@ namespace AutoLook.ViewModel
             }
         }
 
+
         private async void DeleteUser()
         {
             UserSystem.DeleteUserRealm(LoggedUser.UserID);
@@ -1054,7 +1061,9 @@ namespace AutoLook.ViewModel
             if (Int32.Parse(deleted) > 0)
             {
                 await App.Current.MainPage.DisplayAlert("Eliminado", "La informacion del usuario ha sido eliminada.", "OK");
+                await setLogOption(false);
                 PageManager(1);
+
             }
             else
             {
@@ -1164,10 +1173,12 @@ namespace AutoLook.ViewModel
                     if (lstImages.Count >= 4)
                     {
                         await App.Current.MainPage.DisplayAlert("Maximo de imagenes", "Tiene un total de 6 imagenes", "OK");
-                    }else{
-                    ImageFile image = new ImageFile { Path = file.Path };
-                    image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path), 250, 250);
-                    lstImages.Add(image);
+                    }
+                    else
+                    {
+                        ImageFile image = new ImageFile { Path = file.Path };
+                        image.Image = ImageResizer.ResizeImage(File.ReadAllBytes(image.Path), 250, 250);
+                        lstImages.Add(image);
                     }
                 }
                 return;

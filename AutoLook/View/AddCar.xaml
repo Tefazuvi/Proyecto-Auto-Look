@@ -15,58 +15,58 @@
                 <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30,10">
-                            <Entry Text="{Binding CarBrand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarModelo}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarMiles}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarColour}" Placeholder="Color" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarTransmision}" Placeholder="Transmision" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarYear}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarType}" Placeholder="Tipo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarPrice}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarDoorsQuantity}" Placeholder="Cantidad de Puertas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarCapacity}" Placeholder="Capacidad" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarMotor}" Placeholder="Motor" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
-                            <Entry Text="{Binding CarGas}" Placeholder="Gas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Brand}" Placeholder="Marca" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Model}" Placeholder="Modelo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Miles}" Placeholder="Millas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Colour}" Placeholder="Color" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Transmision}" Placeholder="Transmision" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Year}" Placeholder="Año" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Type}" Placeholder="Tipo" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Price}" Placeholder="Precio" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.DoorsQuantity}" Placeholder="Cantidad de Puertas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Capacity}" Placeholder="Capacidad" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Motor}" Placeholder="Motor" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
+                            <Entry Text="{Binding Vehiculo.Gas}" Placeholder="Gas" TextColor="Gray" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" HeightRequest="30" />
                             <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Vidrios eléctricos" HorizontalOptions="StartAndExpand" WidthRequest="220" VerticalOptions="Center" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarElectricWindows}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.ElectricWindows}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Cierre central" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarCentralLock}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.CentralLock}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Dirección hidráulica" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarHydraulicSteering}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.HydraulicSteering}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Retrovisores eléctricos" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarElectricRearView}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.ElectricRearView}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Alarma" HorizontalOptions="Start" VerticalOptions="StartAndExpand" WidthRequest="220" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarAlarm}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.Alarm}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Aire acondicionado" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarAirConditioner}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.AirConditioner}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="20,0,0,0">
                                     <Label Text="Aros de Lujo" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
-                                    <Switch IsToggled="{Binding CarLuxuryHoops}" HorizontalOptions="EndAndExpand" />
+                                    <Switch IsToggled="{Binding Vehiculo.LuxuryHoops}" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout VerticalOptions="StartAndExpand" HeightRequest="200">

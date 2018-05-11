@@ -172,6 +172,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\ImageFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\ImageResizer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\UserSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\INavigateService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\ErrorHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)View\" />

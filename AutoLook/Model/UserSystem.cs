@@ -8,7 +8,6 @@ namespace AutoLook.Model
     {
         [PrimaryKey]
         public int UserID { get; set; }
-
         public string Email { get; set; }
         public string Pass { get; set; }
         public bool Remember { get; set; }

@@ -28,11 +28,11 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="30">
                             <Image Source="map.png" HeightRequest="30" Margin="20,0,10,0" />
                             <Label Text="Calle Blancos, 150 m. Oeste de Amazon, contiguo a la línea del tren." TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,20,0"/>
-                            <!--<Image Source="waze.png" HeightRequest="50" Margin="10,0,10,0">
+                            <Image Source="waze.png" HeightRequest="50" Margin="10,0,10,0">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Path=BindingContext.NavigateWazeCommand, Source={x:Reference ContactPage}}" />
                                 </Image.GestureRecognizers>
-                            </Image>-->
+                            </Image>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Padding="10">
                             <Image Source="phone.png" HeightRequest="30" Margin="48,0,10,0" />

@@ -42,10 +42,6 @@ namespace AutoLook.Model
             {
                 return lstImagenes.FirstOrDefault();
             }
-            set
-            {
-
-            }
         }
 
         public ObservableCollection<ImageFile> lstImagenes { get; set; }
@@ -66,7 +62,6 @@ namespace AutoLook.Model
                     var uri = new Uri(APIDictionary.API_SaveCar);
 
                     var json = JsonConvert.SerializeObject(car);
-                    //json.MaxJsonLength = Int32.MaxValue;
 
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
                     HttpResponseMessage response = await client.PostAsync(uri, content).ConfigureAwait(false);

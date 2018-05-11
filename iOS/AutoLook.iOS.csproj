@@ -163,6 +163,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="NavigateService.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AutoLookLogo.png" />

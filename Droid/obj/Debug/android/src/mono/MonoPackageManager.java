@@ -106,7 +106,6 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "AutoLook.Droid.dll" comes first in this list. */
-		"AutoLook.Droid.dll",
 		"CarouselView.FormsPlugin.Abstractions.dll",
 		"CarouselView.FormsPlugin.Android.dll",
 		"FormsViewGroup.dll",
