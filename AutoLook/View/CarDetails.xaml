@@ -32,6 +32,12 @@
                             <Label Text="{Binding Posicion}" TextColor="Black" FontSize="18" HorizontalOptions="Center" Margin="10,0,0,0" VerticalOptions="CenterAndExpand" />
                             <Label Text="{Binding VehiculoActual.lstImagenes.Count, StringFormat='/{0}'}" TextColor="Black" FontSize="18" Margin="-5,0,0,0" VerticalOptions="CenterAndExpand" />
                         </StackLayout>
+                        <StackLayout Grid.Row="1" WidthRequest="50" HorizontalOptions="StartAndExpand" Orientation="Horizontal" IsVisible="{Binding IsLogged}">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddFavoriteCommand}" CommandParameter="{Binding VehiculoActual.Id}" />
+                            </StackLayout.GestureRecognizers>
+                            <Image x:Name="imgAdd" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25" />
+                        </StackLayout>
                         <ScrollView Grid.Row="2" BackgroundColor="#F4F4F4" Padding="12">
                             <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="FillAndExpand">
                                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
@@ -108,13 +114,6 @@
                                             <Label Text="Aros de Lujo" HorizontalOptions="StartAndExpand" VerticalOptions="Center" WidthRequest="220" TextColor="Gray" />
                                             <Switch IsToggled="{Binding VehiculoActual.LuxuryHoops}" HorizontalOptions="EndAndExpand" />
                                         </StackLayout>
-                                    </StackLayout>
-                                    <StackLayout Padding="60,10" VerticalOptions="CenterAndExpand" Orientation="Horizontal" IsVisible="{Binding IsLogged}">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding AddFavoriteCommand}" CommandParameter="{Binding VehiculoActual.Id}" />
-                                        </StackLayout.GestureRecognizers>
-                                        <Image x:Name="imgAdd" HorizontalOptions="Center" VerticalOptions="Center" Source="heart.png" HeightRequest="25" WidthRequest="25" />
-                                        <Label Text="Favorito" TextColor="#000066" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" HeightRequest="25" />
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>
